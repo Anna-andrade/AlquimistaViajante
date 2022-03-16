@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1AACBF27E26426003C83BA /* AppDelegate.swift */; };
+		4C1AACCB27E26426003C83BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AACC927E26426003C83BA /* Main.storyboard */; };
+		4C1AACCD27E26427003C83BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AACCC27E26427003C83BA /* Assets.xcassets */; };
+		4C1AACD027E26427003C83BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AACCE27E26427003C83BA /* LaunchScreen.storyboard */; };
+		4C1AACD427E26441003C83BA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6476527DFBC710094B1B6 /* GameViewController.swift */; };
 		4C4D8ED627DFC10500C413CB /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED527DFC10500C413CB /* GameController.swift */; };
 		4C4D8ED827DFC9B100C413CB /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED727DFC9B100C413CB /* Reagents.swift */; };
 		4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED927DFC9C100C413CB /* Products.swift */; };
@@ -28,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1AACBF27E26426003C83BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4C1AACCA27E26426003C83BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C1AACCC27E26427003C83BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C1AACCF27E26427003C83BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C4D8ED527DFC10500C413CB /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		4C4D8ED727DFC9B100C413CB /* Reagents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reagents.swift; sourceTree = "<group>"; };
 		4C4D8ED927DFC9C100C413CB /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
@@ -50,6 +60,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C1AACBA27E26426003C83BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBD6475727DFBC710094B1B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,6 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */ = {
+			isa = PBXGroup;
+			children = (
+				4C1AACBF27E26426003C83BA /* AppDelegate.swift */,
+				4C1AACC927E26426003C83BA /* Main.storyboard */,
+				4C1AACCC27E26427003C83BA /* Assets.xcassets */,
+				4C1AACCE27E26427003C83BA /* LaunchScreen.storyboard */,
+			);
+			path = AlquimistaViajanteAppleTv;
+			sourceTree = "<group>";
+		};
 		4C4D8ED227DFC0A200C413CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DBD6475C27DFBC710094B1B6 /* AlquimistaViajante */,
+				4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */,
 				DBD6475B27DFBC710094B1B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				DBD6475A27DFBC710094B1B6 /* AlquimistaViajante.app */,
+				4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -128,6 +158,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C1AACBC27E26426003C83BA /* AlquimistaViajanteAppleTv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C1AACD327E26427003C83BA /* Build configuration list for PBXNativeTarget "AlquimistaViajanteAppleTv" */;
+			buildPhases = (
+				4C1AACB927E26426003C83BA /* Sources */,
+				4C1AACBA27E26426003C83BA /* Frameworks */,
+				4C1AACBB27E26426003C83BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlquimistaViajanteAppleTv;
+			productName = AlquimistaViajanteAppleTv;
+			productReference = 4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DBD6475927DFBC710094B1B6 /* AlquimistaViajante */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBD6477127DFBC730094B1B6 /* Build configuration list for PBXNativeTarget "AlquimistaViajante" */;
@@ -152,9 +199,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					4C1AACBC27E26426003C83BA = {
+						CreatedOnToolsVersion = 13.3;
+					};
 					DBD6475927DFBC710094B1B6 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -174,11 +224,22 @@
 			projectRoot = "";
 			targets = (
 				DBD6475927DFBC710094B1B6 /* AlquimistaViajante */,
+				4C1AACBC27E26426003C83BA /* AlquimistaViajanteAppleTv */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C1AACBB27E26426003C83BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1AACCB27E26426003C83BA /* Main.storyboard in Resources */,
+				4C1AACCD27E26427003C83BA /* Assets.xcassets in Resources */,
+				4C1AACD027E26427003C83BA /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBD6475827DFBC710094B1B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +253,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C1AACB927E26426003C83BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C1AACD427E26441003C83BA /* GameViewController.swift in Sources */,
+				4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DBD6475627DFBC710094B1B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +287,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4C1AACC927E26426003C83BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C1AACCA27E26426003C83BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4C1AACCE27E26427003C83BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C1AACCF27E26427003C83BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		DBD6476727DFBC710094B1B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -236,6 +322,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4C1AACD127E26427003C83BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76RG2M4UVB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.dev.mvinicius.AlquimistaViajanteAppleTv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Debug;
+		};
+		4C1AACD227E26427003C83BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 76RG2M4UVB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.dev.mvinicius.AlquimistaViajanteAppleTv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.4;
+			};
+			name = Release;
+		};
 		DBD6476F27DFBC730094B1B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,6 +551,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C1AACD327E26427003C83BA /* Build configuration list for PBXNativeTarget "AlquimistaViajanteAppleTv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C1AACD127E26427003C83BA /* Debug */,
+				4C1AACD227E26427003C83BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DBD6475527DFBC710094B1B6 /* Build configuration list for PBXProject "AlquimistaViajante" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
