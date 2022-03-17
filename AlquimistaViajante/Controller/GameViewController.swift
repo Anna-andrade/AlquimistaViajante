@@ -10,25 +10,16 @@ import SpriteKit
 import GameplayKit
 
 class GameViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
+        let skView = SKView()
+        let scene = GameSceneReaction()
+        scene.scaleMode = .aspectFit
+        scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
+        skView.presentScene(scene)
+        skView.ignoresSiblingOrder = true
+        self.view = skView
     }
 
     override var shouldAutorotate: Bool {
