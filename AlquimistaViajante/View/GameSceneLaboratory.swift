@@ -10,16 +10,60 @@ import SpriteKit
 
 class GameSceneLaboratory: SKScene {
     override func didMove(to view: SKView) {
-        let bookNode = SKSpriteNode(imageNamed: "Book")
+        
+        let backgroundNode = SKSpriteNode(imageNamed: "background")
+        self.addChild(backgroundNode)
+        backgroundNode.size = CGSize(width: self.frame.width, height: self.frame.height)
+        backgroundNode.zPosition = 0
+        
+        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
-        bookNode.size = CGSize(width: 152.0, height: 152.0)
-        bookNode.position = CGPoint(x: 165.45, y: 473.56)
-        bookNode.zPosition = 0
+        bookNode.size = CGSize(width: 150.0, height: 150.0)
+        bookNode.position = CGPoint(x: 250, y: 300)
+        bookNode.zPosition = 3
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         self.addChild(tableNode)
-        tableNode.size = CGSize(width: 1000, height: 557)
-        tableNode.position = CGPoint(x: 550, y: 367.19)
-        bookNode.zPosition = 1
+        tableNode.size = CGSize(width: 950, height: 400)
+        tableNode.position = CGPoint(x: 550, y: 200)
+        bookNode.zPosition = 4
+        
+        let beakerNode = SKSpriteNode(imageNamed: "beaker")
+        self.addChild(beakerNode)
+        beakerNode.size = CGSize(width: 150, height: 150)
+        beakerNode.position = CGPoint(x: 900, y: 150)
+        beakerNode.zPosition = 5
+        
+        let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
+        self.addChild(bookcaseNode)
+        bookcaseNode.size = CGSize(width: 170, height: 150)
+        bookcaseNode.position = CGPoint(x: 250, y: 200)
+        bookcaseNode.zPosition = 2
+        
+        let shelfNode = SKSpriteNode(imageNamed: "shelf")
+        self.addChild(shelfNode)
+        shelfNode.size = CGSize(width: 950, height: 150)
+        shelfNode.position = CGPoint(x: 550, y: 500)
+        shelfNode.zPosition = 1
+        
+        let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
+        self.addChild(bunsenBurnerNode)
+        bunsenBurnerNode.size = CGSize(width: 150, height: 150)
+        bunsenBurnerNode.position = CGPoint(x: 250, y: 620)
+        
+        let glassFunnelNode = SKSpriteNode(imageNamed: "glassFunnel")
+        self.addChild(glassFunnelNode)
+        glassFunnelNode.size = CGSize(width: 150, height: 150)
+        glassFunnelNode.position = CGPoint(x: 460, y: 620)
+        
+        let flatBottomFlaskNode = SKSpriteNode(imageNamed: "roundBottomFlask")
+        self.addChild(flatBottomFlaskNode)
+        flatBottomFlaskNode.size = CGSize(width: 150, height: 150)
+        flatBottomFlaskNode.position = CGPoint(x: 650, y: 620)
+        
+        let testTubeNode = SKSpriteNode(imageNamed: "testTube")
+        self.addChild(testTubeNode)
+        testTubeNode.size = CGSize(width: 150, height: 150)
+        testTubeNode.position = CGPoint(x: 850, y: 620)
     }
 }
