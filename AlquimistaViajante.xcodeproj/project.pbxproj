@@ -31,6 +31,8 @@
 		DBD6476B27DFBC730094B1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD6476A27DFBC730094B1B6 /* Assets.xcassets */; };
 		DBD6476E27DFBC730094B1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD6476C27DFBC730094B1B6 /* LaunchScreen.storyboard */; };
 		DBE57A4427E3AD3500D99BBB /* GameSceneReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EDF27DFD4F000C413CB /* GameSceneReaction.swift */; };
+		DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */; };
+		DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,7 @@
 		DBD6476827DFBC710094B1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBD6476A27DFBC730094B1B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DBD6476D27DFBC730094B1B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+Background.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 		DBD6475127DFBC710094B1B6 = {
 			isa = PBXGroup;
 			children = (
+				DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */,
 				DBD6475C27DFBC710094B1B6 /* AlquimistaViajante */,
 				4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */,
 				DBD6475B27DFBC710094B1B6 /* Products */,
@@ -260,6 +264,7 @@
 			files = (
 				DBE57A4427E3AD3500D99BBB /* GameSceneReaction.swift in Sources */,
 				4C1AACD427E26441003C83BA /* GameViewController.swift in Sources */,
+				DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +283,7 @@
 				4C4D8EE627DFD63500C413CB /* GameControllerLaboratory.swift in Sources */,
 				4C4D8EE427DFD5A900C413CB /* GameSceneFiltration.swift in Sources */,
 				4C4D8ED827DFC9B100C413CB /* Reagents.swift in Sources */,
+				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */,
 				DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */,
 				4C4D8EE927DFD66200C413CB /* GameControllerReaction.swift in Sources */,
