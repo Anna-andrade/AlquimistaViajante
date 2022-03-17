@@ -9,14 +9,17 @@ import Foundation
 import SpriteKit
 
 extension SKScene {
-    func drawBackgroundWall() {
-        let backgroundWallNode = SKSpriteNode(imageNamed: "Background")
-        let width = Int(self.size.width)
-        let height = Int(self.size.height)
+    func drawBackgroundWall(side: CGFloat) {
+        let width = self.size.width
+        let height = self.size.height
         
-        for i in 0...width {
-            for j in 0...height{
+        for i in 0...Int(width/side) {
+            for j in 0...Int(height/side){
                 let backgroundWallNode = SKSpriteNode(imageNamed: "Background")
+                addChild(backgroundWallNode)
+                backgroundWallNode.position = CGPoint (x: backgroundWallNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
+                backgroundWallNode.zPosition = -1
+                
             }
         }
         
