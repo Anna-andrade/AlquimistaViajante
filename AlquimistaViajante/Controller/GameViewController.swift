@@ -20,6 +20,7 @@ class GameViewController: UIViewController {
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true
         self.view = skView
+        
     }
 
     override var shouldAutorotate: Bool {
