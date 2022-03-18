@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06AD714627E51B69008A4B90 /* EstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD714527E51B69008A4B90 /* EstadosFormas.swift */; };
+		06AD714727E51B6D008A4B90 /* EstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD714527E51B69008A4B90 /* EstadosFormas.swift */; };
+		06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED727DFC9B100C413CB /* Reagents.swift */; };
+		06AD714927E51B72008A4B90 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED927DFC9C100C413CB /* Products.swift */; };
 		4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1AACBF27E26426003C83BA /* AppDelegate.swift */; };
 		4C1AACCB27E26426003C83BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AACC927E26426003C83BA /* Main.storyboard */; };
 		4C1AACCD27E26427003C83BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1AACCC27E26427003C83BA /* Assets.xcassets */; };
@@ -36,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06AD714527E51B69008A4B90 /* EstadosFormas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadosFormas.swift; sourceTree = "<group>"; };
 		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1AACBF27E26426003C83BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C1AACCA27E26426003C83BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -95,6 +100,7 @@
 		4C4D8ED227DFC0A200C413CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				06AD714527E51B69008A4B90 /* EstadosFormas.swift */,
 				4C4D8ED727DFC9B100C413CB /* Reagents.swift */,
 				4C4D8ED927DFC9C100C413CB /* Products.swift */,
 				4C4D8EDB27DFCA4200C413CB /* Button.swift */,
@@ -271,8 +277,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBE57A4427E3AD3500D99BBB /* GameSceneReaction.swift in Sources */,
+				06AD714727E51B6D008A4B90 /* EstadosFormas.swift in Sources */,
 				4C1AACD427E26441003C83BA /* GameViewController.swift in Sources */,
+				06AD714927E51B72008A4B90 /* Products.swift in Sources */,
 				DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
+				06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */,
 				4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +301,7 @@
 				4C4D8EE427DFD5A900C413CB /* GameSceneFiltration.swift in Sources */,
 				4C4D8ED827DFC9B100C413CB /* Reagents.swift in Sources */,
 				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
+				06AD714627E51B69008A4B90 /* EstadosFormas.swift in Sources */,
 				4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */,
 				DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */,
 				4C4D8EE927DFD66200C413CB /* GameControllerReaction.swift in Sources */,
