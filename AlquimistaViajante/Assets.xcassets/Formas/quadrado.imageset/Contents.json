@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "l0_Formas2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "hexagono@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

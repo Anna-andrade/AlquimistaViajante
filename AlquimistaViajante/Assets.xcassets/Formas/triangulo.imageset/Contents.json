@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "l0_Formas1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "quadrado@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

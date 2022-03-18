@@ -11,10 +11,11 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
+    let scene = GameSceneReaction()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let skView = SKView()
-        let scene = GameSceneReaction()
         scene.scaleMode = .aspectFit
         scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         skView.presentScene(scene)
@@ -38,4 +39,13 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            guard let sceneRect = scene as? GameSceneReaction else { return }
+            print("oi")
+            sceneRect.shake()
+        }
+    }
+    
 }
