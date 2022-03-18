@@ -127,10 +127,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		DBD6475127DFBC710094B1B6 = {
+		4C513DD927E4EF5C00F6AC56 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DBD6475127DFBC710094B1B6 = {
+			isa = PBXGroup;
+			children = (
 				DBD6475C27DFBC710094B1B6 /* AlquimistaViajante */,
 				4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */,
 				DBD6475B27DFBC710094B1B6 /* Products */,
@@ -149,6 +156,7 @@
 		DBD6475C27DFBC710094B1B6 /* AlquimistaViajante */ = {
 			isa = PBXGroup;
 			children = (
+				4C513DD927E4EF5C00F6AC56 /* Extension */,
 				4C4D8ED227DFC0A200C413CB /* Model */,
 				4C4D8ED327DFC0B100C413CB /* View */,
 				DBD6475D27DFBC710094B1B6 /* AppDelegate.swift */,
