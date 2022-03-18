@@ -15,7 +15,7 @@ class GameSceneLaboratory: SKScene {
         let backgroundNode = SKSpriteNode(imageNamed: "background")
         self.addChild(backgroundNode)
         backgroundNode.size = CGSize(width: self.frame.width, height: self.frame.height)
-        backgroundNode.zPosition = 0
+        backgroundNode.zPosition = -1
         
         let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
@@ -57,7 +57,7 @@ class GameSceneLaboratory: SKScene {
         glassFunnelNode.size = CGSize(width: 150, height: 150)
         glassFunnelNode.position = CGPoint(x: 460, y: 620)
         
-        let flatBottomFlaskNode = SKSpriteNode(imageNamed: "roundBottomFlask")
+        let flatBottomFlaskNode = SKSpriteNode(imageNamed: "flatBottomFlask")
         self.addChild(flatBottomFlaskNode)
         flatBottomFlaskNode.size = CGSize(width: 150, height: 150)
         flatBottomFlaskNode.position = CGPoint(x: 650, y: 620)
@@ -66,5 +66,17 @@ class GameSceneLaboratory: SKScene {
         self.addChild(testTubeNode)
         testTubeNode.size = CGSize(width: 150, height: 150)
         testTubeNode.position = CGPoint(x: 850, y: 620)
+        
+        let mortarNode = SKSpriteNode(imageNamed: "mortar")
+        self.addChild(mortarNode)
+        mortarNode.size = CGSize(width: 120, height: 120)
+        mortarNode.position = CGPoint(x: 460, y: 170)
+        mortarNode.zPosition = 5
+        
+        let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
+        self.addChild(mortarBottomNode)
+        mortarBottomNode.size = CGSize(width: 120, height: 120)
+        mortarBottomNode.position = CGPoint(x: 460, y: 170)
+        mortarBottomNode.zPosition = 5
     }
 }
