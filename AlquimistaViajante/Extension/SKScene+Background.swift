@@ -21,7 +21,19 @@ extension SKScene {
                 backgroundWallNode.position = CGPoint (x: backgroundWallNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
                 backgroundWallNode.zPosition = -1
                 
+                let backgroundFloorNode = SKSpriteNode(imageNamed: "floor")
+                backgroundFloorNode.size = CGSize(width: side, height: side/2)
+                addChild(backgroundFloorNode)
+                backgroundFloorNode.position = CGPoint (x: backgroundFloorNode.size.width*CGFloat(i), y: backgroundFloorNode.size.height*CGFloat(j)/2)
+                backgroundFloorNode.zPosition = 0
             }
+        }
+        
+        func drawBackgroundLaboratory(side: CGFloat) {
+            let width = self.size.width
+            let height = self.size.height
+            
+            for i in 0...Int(width)
         }
         
     }
