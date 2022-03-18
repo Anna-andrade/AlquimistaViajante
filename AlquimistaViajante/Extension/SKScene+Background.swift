@@ -23,6 +23,7 @@ extension SKScene {
                 
             }
         }
+    }
         func drawBackgroundFloor(side: CGFloat) {
             let width = self.size.width
             let height = self.size.height
@@ -43,7 +44,7 @@ extension SKScene {
                 }
             }
             
-        }
+        
         
     }
 }
