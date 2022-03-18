@@ -19,7 +19,7 @@ extension SKScene {
                 backgroundWallNode.size = CGSize(width: side, height: side)
                 addChild(backgroundWallNode)
                 backgroundWallNode.position = CGPoint (x: backgroundWallNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
-                backgroundWallNode.zPosition = -1
+                backgroundWallNode.zPosition = -2
                 
             }
         }
@@ -34,13 +34,13 @@ extension SKScene {
                     backgroundWallNode.size = CGSize(width: side, height: side)
                     addChild(backgroundWallNode)
                     backgroundWallNode.position = CGPoint (x: backgroundWallNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
-                    backgroundWallNode.zPosition = -1
+                    backgroundWallNode.zPosition = -3
                     
                     let backgroundFloorNode = SKSpriteNode(imageNamed: "floor")
                     backgroundFloorNode.size = CGSize(width: side, height: side/2)
                     addChild(backgroundFloorNode)
                     backgroundFloorNode.position = CGPoint (x: backgroundFloorNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
-                    backgroundFloorNode.zPosition = 0
+                    backgroundFloorNode.zPosition = -1
                 }
             }
             
