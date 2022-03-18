@@ -52,7 +52,7 @@ class GameSceneLaboratory: SKScene {
         glassFunnelNode.size = CGSize(width: 150, height: 150)
         glassFunnelNode.position = CGPoint(x: 460, y: 720)
         
-        let flatBottomFlaskNode = SKSpriteNode(imageNamed: "flatBottomFlask")
+        let flatBottomFlaskNode = SKSpriteNode(imageNamed: "flask")
         self.addChild(flatBottomFlaskNode)
         flatBottomFlaskNode.size = CGSize(width: 150, height: 150)
         flatBottomFlaskNode.position = CGPoint(x: 650, y: 720)
