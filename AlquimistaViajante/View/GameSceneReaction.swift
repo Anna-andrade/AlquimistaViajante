@@ -12,6 +12,14 @@ class GameSceneReaction: SKScene {
     
     lazy var arrayCompostos:[Composto] = [Composto(lados: [3,nil])]
     
+    var border: UIBezierPath {
+            let path = UIBezierPath()
+            path.move(to: CGPoint(x: 0, y:0))
+            path.addCurve(to: CGPoint(x: 0, y:-300), controlPoint1: CGPoint(x: 200, y: 0), controlPoint2: CGPoint(x: 200, y: -300))
+            path.addCurve(to: CGPoint(x: 0, y: 0), controlPoint1: CGPoint(x: -200, y: -300), controlPoint2: CGPoint(x: -200, y: 0))
+            return path
+        }
+    
     override func didMove(to view: SKView) {
         self.isUserInteractionEnabled = true
         physicsWorld.contactDelegate = self
@@ -20,8 +28,8 @@ class GameSceneReaction: SKScene {
         
         for composto in arrayCompostos {
                 self.addChild(composto)
-                composto.position = CGPoint(x: Int.random(in: 50...200), y: Int.random(in: 50...700))
-            composto.zPosition = 5
+                composto.position = CGPoint(x: self.size.width/2, y: self.size.height/2-10)
+            composto.zPosition = 1
         }
         
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
@@ -31,10 +39,13 @@ class GameSceneReaction: SKScene {
     
     func setupScene(){
         removeAllChildren()
-        let flaskNode = SKSpriteNode(imageNamed: "flask")
+        let texture = SKTexture(imageNamed: "flaskEmpty")
+        let size = CGSize(width: 600, height: 600)
+        let flaskNode = SKSpriteNode(texture: texture, size: size)
+        flaskNode.physicsBody = SKPhysicsBody (edgeLoopFrom: border.cgPath)
+        flaskNode.physicsBody?.isDynamic = false
         self.addChild(flaskNode)
         flaskNode.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
-        flaskNode.size = CGSize(width: 400, height: 400)
         flaskNode.zPosition = 1
         drawBackgroundWall(side: 500)
     }
@@ -47,10 +58,10 @@ class GameSceneReaction: SKScene {
             }
         }
     }
-    
+
     func shake(){
             for composto in arrayCompostos {
-                composto.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -500...500), dy: Int.random(in: -500...500)))
+                composto.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -1000...1000), dy: Int.random(in: -1000...1000)))
         }
     }
 }
