@@ -26,7 +26,7 @@ extension SKScene {
     }
         func drawBackgroundFloor(side: CGFloat) {
             let width = self.size.width
-            let height = self.size.height
+            let height = self.size.height/2
             
             for i in 0...Int(width/side)+1 {
                 for j in 0...Int(height/side)+1{
@@ -37,13 +37,13 @@ extension SKScene {
                     backgroundWallNode.zPosition = -3
                     
                     let backgroundFloorNode = SKSpriteNode(imageNamed: "floor")
-                    backgroundFloorNode.size = CGSize(width: side, height: side/2)
+                    backgroundFloorNode.size = CGSize(width: side, height: side)
                     addChild(backgroundFloorNode)
                     backgroundFloorNode.position = CGPoint (x: backgroundFloorNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
                     backgroundFloorNode.zPosition = -1
                 }
             }
-            
+            // colocar 20% do tamanho, com 1 asset só 
         
         
     }
