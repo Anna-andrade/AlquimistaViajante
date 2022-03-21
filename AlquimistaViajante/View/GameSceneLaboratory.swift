@@ -73,5 +73,7 @@ class GameSceneLaboratory: SKScene {
         mortarBottomNode.size = CGSize(width: 120, height: 120)
         mortarBottomNode.position = CGPoint(x: 460, y: 170)
         mortarBottomNode.zPosition = 5
+        
+        drawBackgroundWall(side: 500)
     }
 }
