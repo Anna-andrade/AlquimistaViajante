@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let skView = SKView()
-        let scene = GameSceneBreakChemicalBond()
+        let scene = GameSceneLaboratory()
         scene.scaleMode = .aspectFit
         scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.width)
         skView.presentScene(scene)
@@ -22,19 +22,19 @@ class GameViewController: UIViewController {
         self.view = skView
     }
 
-    override var shouldAutorotate: Bool {
+    var shouldAutorotate: Bool {
         return true
     }
 
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
+//    var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+//        if UIDevice.current.userInterfaceIdiom == .phone {
+//            return .allButUpsideDown
+//        } else {
+//            return .all
+//        }
+//    }
 
-    override var prefersStatusBarHidden: Bool {
+    var prefersStatusBarHidden: Bool {
         return true
     }
 }
