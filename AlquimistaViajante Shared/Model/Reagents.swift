@@ -14,7 +14,7 @@ class Forma:SKSpriteNode{
     
     public init(QuantVert:Int){
         self.QuantVert = QuantVert
-        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 60, height: 60))
+        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 30, height: 30))
         self.name = "forma"
         nameTexture()
     }

@@ -10,37 +10,27 @@ import SpriteKit
 
 class GameSceneReaction: SKScene {
     
-    lazy var arrayCompostos:[Composto] = [Composto(lados: [3,nil])]
-    
-    var border: UIBezierPath {
-            let path = UIBezierPath()
-            path.move(to: CGPoint(x: 0, y:50))
-            path.addCurve(to: CGPoint(x: 0, y:-250), controlPoint1: CGPoint(x: 200, y: 50), controlPoint2: CGPoint(x: 200, y: -250))
-            path.addCurve(to: CGPoint(x: 0, y: 50), controlPoint1: CGPoint(x: -200, y: -250), controlPoint2: CGPoint(x: -200, y: 50))
-            return path
-        }
+    lazy var arrayCompostos:[Composto] = [Composto(lados: [3,nil]),Composto(lados: [3,nil]),Composto(lados: [3,nil])]
     
     override func didMove(to view: SKView) {
         self.isUserInteractionEnabled = true
         physicsWorld.contactDelegate = self
         
         setupScene()
-        
+        var i = 0.0
         for composto in arrayCompostos {
                 self.addChild(composto)
-                composto.position = CGPoint(x: self.size.width/2, y: self.size.height/2-10)
+                composto.position = CGPoint(x: self.size.width/2, y: self.size.height/2+150-(i*150) )
+            i += 1
             composto.zPosition = 3
         }
     }
     
     func setupScene(){
         removeAllChildren()
-        let texture = SKTexture(imageNamed: "flatBottomFlask")
-        texture.filteringMode = .nearest
         let size = CGSize(width: 600, height: 600)
-        let flaskNode = SKSpriteNode(texture: texture, size: size)
-        flaskNode.physicsBody = SKPhysicsBody (edgeLoopFrom: border.cgPath)
-        flaskNode.physicsBody?.isDynamic = false
+        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: size)
+        flaskNode.isUserInteractionEnabled = true
         self.addChild(flaskNode)
         flaskNode.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         flaskNode.zPosition = 1

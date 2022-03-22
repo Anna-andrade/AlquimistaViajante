@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0688FF9527EA564E00C930A3 /* FlaskNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9427EA564E00C930A3 /* FlaskNode.swift */; };
+		0688FF9627EA564E00C930A3 /* FlaskNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9427EA564E00C930A3 /* FlaskNode.swift */; };
+		0688FF9927EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */; };
+		0688FF9A27EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */; };
 		06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED727DFC9B100C413CB /* Reagents.swift */; };
 		06AD714927E51B72008A4B90 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED927DFC9C100C413CB /* Products.swift */; };
 		06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
@@ -45,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0688FF9427EA564E00C930A3 /* FlaskNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskNode.swift; sourceTree = "<group>"; };
+		0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductsDelegate.swift; sourceTree = "<group>"; };
 		06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumEstadosFormas.swift; sourceTree = "<group>"; };
 		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1AACBF27E26426003C83BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0688FF9727EA6BD700C930A3 /* Protocolos */ = {
+			isa = PBXGroup;
+			children = (
+				0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */,
+			);
+			path = Protocolos;
+			sourceTree = "<group>";
+		};
 		4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,7 @@
 				4C4D8ED927DFC9C100C413CB /* Products.swift */,
 				4C4D8EDB27DFCA4200C413CB /* Button.swift */,
 				06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */,
+				0688FF9427EA564E00C930A3 /* FlaskNode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -149,6 +164,7 @@
 		DB08E05927E9066A006D9E5F /* AlquimistaViajante Shared */ = {
 			isa = PBXGroup;
 			children = (
+				0688FF9727EA6BD700C930A3 /* Protocolos */,
 				DBD6476A27DFBC730094B1B6 /* Assets.xcassets */,
 				4C4D8ED327DFC0B100C413CB /* View */,
 				4C4D8ED227DFC0A200C413CB /* Model */,
@@ -296,10 +312,12 @@
 				DB08E05F27E9071A006D9E5F /* Reagents.swift in Sources */,
 				DB08E05E27E90716006D9E5F /* GameSceneFiltration.swift in Sources */,
 				DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */,
+				0688FF9A27EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */,
 				DB08E06127E90722006D9E5F /* Button.swift in Sources */,
 				DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				DB08E05C27E9070A006D9E5F /* GameSceneLaboratory.swift in Sources */,
 				DB08E05B27E906B9006D9E5F /* GameViewController.swift in Sources */,
+				0688FF9627EA564E00C930A3 /* FlaskNode.swift in Sources */,
 				4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +330,11 @@
 				4C4D8EED27DFD69000C413CB /* GameControllerChemicalBond.swift in Sources */,
 				4C4D8EDC27DFCA4200C413CB /* Button.swift in Sources */,
 				4C513DDD27E4FCDB00F6AC56 /* GameControllerLaboratory.swift in Sources */,
+				0688FF9927EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */,
 				DBD6476427DFBC710094B1B6 /* GameScene.swift in Sources */,
 				4C4D8EE227DFD58F00C413CB /* GameSceneBreakChemicalBond.swift in Sources */,
 				4C4D8EDE27DFD4B200C413CB /* GameSceneLaboratory.swift in Sources */,
+				0688FF9527EA564E00C930A3 /* FlaskNode.swift in Sources */,
 				4C4D8EE427DFD5A900C413CB /* GameSceneFiltration.swift in Sources */,
 				4C4D8ED827DFC9B100C413CB /* Reagents.swift in Sources */,
 				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,

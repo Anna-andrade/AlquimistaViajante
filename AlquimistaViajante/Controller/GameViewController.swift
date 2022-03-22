@@ -43,7 +43,6 @@ class GameViewController: UIViewController {
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             guard let sceneRect = scene as? GameSceneReaction else { return }
-            print("oi")
             sceneRect.shake()
         }
     }

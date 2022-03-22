@@ -15,7 +15,7 @@ class Composto:SKSpriteNode{
     var isReact: Bool = false
     
     public init(lados:[Int?]){
-        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 100, height: 100))
+        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 30, height: 30))
         for i in 0...1 {
             if let verLado = lados[i] {
                 self.formas.append(Forma(QuantVert: verLado))
@@ -46,7 +46,7 @@ class Composto:SKSpriteNode{
         }
         let step: CGFloat = (.pi * 2) / CGFloat(forma0.QuantVert)
         var angle: CGFloat = 0.0
-        let raio = 60.0
+        let raio = 30.0
         
         for i in 0..<formas.count {
             if let forma = formas[i]{
