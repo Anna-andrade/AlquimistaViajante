@@ -22,7 +22,6 @@ class GameViewController: UIViewController {
         skView.ignoresSiblingOrder = true
         skView.showsPhysics = true
         self.view = skView
-        
     }
 
     override var shouldAutorotate: Bool {
