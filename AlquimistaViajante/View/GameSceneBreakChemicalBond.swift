@@ -22,7 +22,7 @@ class GameSceneBreakChemicalBond: SKScene{
         
         let beakerNode = SKSpriteNode(imageNamed: "beaker")
         beakerNode.size = CGSize(width: 250, height:250)
-        beakerNode.position = CGPoint(x: width/2, y: height/3)
+        beakerNode.position = CGPoint(x: width/4, y: height/3)
         addChild(beakerNode)
         beakerNode.zPosition = 1
     }
