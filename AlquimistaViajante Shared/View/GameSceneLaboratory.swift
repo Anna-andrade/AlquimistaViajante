@@ -15,23 +15,22 @@ class GameSceneLaboratory: SKScene {
         let width = self.size.width
         let height = self.size.height
         
-        let bookNode = SKSpriteNode(imageNamed: "Book")
+        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.15, height: height*0.15)
         bookNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*3)
         bookNode.zPosition = 3
         
-        let tableNode = SKSpriteNode(imageNamed: "Table")
+        let tableNode = SKSpriteNode(imageNamed: "table")
         self.addChild(tableNode)
         tableNode.size = CGSize(width: width, height: height/2)
         tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-        bookNode.zPosition = 4
         
         let beakerNode = SKSpriteNode(imageNamed: "beaker")
         self.addChild(beakerNode)
-        beakerNode.size = CGSize(width: width*0.2, height: height*0.15)
-        beakerNode.position = CGPoint(x: 900, y: 175)
-        beakerNode.zPosition = 5
+        beakerNode.size = CGSize(width: width*0.25, height: height*0.25)
+        beakerNode.position = CGPoint(x: beakerNode.size.width*3.5, y: beakerNode.size.height*0.8)
+        beakerNode.zPosition = 2
         
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
@@ -43,9 +42,8 @@ class GameSceneLaboratory: SKScene {
         self.addChild(shelfNode)
         shelfNode.size = CGSize(width: width, height: height/2)
         shelfNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*1.25)
-        shelfNode.zPosition = 1
         
-        let bunsenBurnerNode = SKSpriteNode(imageNamed: "BunsenBurner")
+        let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
         self.addChild(bunsenBurnerNode)
         bunsenBurnerNode.size = CGSize(width: width*0.15, height: height*0.15)
         bunsenBurnerNode.position = CGPoint(x: bunsenBurnerNode.size.width, y: bunsenBurnerNode.size.height*5.25)
@@ -72,13 +70,13 @@ class GameSceneLaboratory: SKScene {
         let mortarNode = SKSpriteNode(imageNamed: "mortar")
         self.addChild(mortarNode)
         mortarNode.size = CGSize(width: width*0.15, height: height*0.15)
-        mortarNode.position = CGPoint(x: mortarNode.size.width*4.25, y: mortarNode.size.height*1.25)
+        mortarNode.position = CGPoint(x: mortarNode.size.width*3.75, y: mortarNode.size.height*1.25)
         mortarNode.zPosition = 2
         
         let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
         self.addChild(mortarBottomNode)
         mortarBottomNode.size = CGSize(width: width*0.15, height: height*0.15)
-        mortarBottomNode.position = CGPoint(x: mortarBottomNode.size.width*4.25, y: mortarBottomNode.size.height*1.25)
+        mortarBottomNode.position = CGPoint(x: mortarBottomNode.size.width*3.75, y: mortarBottomNode.size.height*1.25)
         mortarBottomNode.zPosition = 2
         
         drawBackgroundFloor(side: 1050)
