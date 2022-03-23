@@ -9,6 +9,9 @@ import Foundation
 import SpriteKit
 
 class GameSceneBreakChemicalBond: SKScene{
+    
+    lazy var arrayProduct:[Product] = [Product(lados: [3,nil]),Product(lados: [3,nil]),Product(lados: [3,nil])]
+    
     override func didMove(to view: SKView) {
         
         let width = self.size.width
@@ -20,9 +23,8 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(tableNode)
         tableNode.zPosition = 0
         
-        let beakerNode = SKSpriteNode(imageNamed: "beaker")
-        beakerNode.size = CGSize(width: width/2, height: height/2)
-        beakerNode.position = CGPoint(x: beakerNode.size.width, y: beakerNode.size.height)
+        let beakerNode = BeakerNode(imgName: "beaker", size: CGSize(width: width/2.5, height: width/2.5))
+        beakerNode.position = CGPoint(x: self.size.width/2, y: self.size.height*1.25/2)
         addChild(beakerNode)
         beakerNode.zPosition = 1
         
@@ -33,5 +35,21 @@ class GameSceneBreakChemicalBond: SKScene{
         bunsenBurnerNode.zPosition = 1
         
         drawBackgroundWall(side: 1050)
+    }
+    
+    func eraseComponents(){
+        for i in 0..<arrayProduct.count {
+            if arrayProduct[i].isDead{
+                arrayProduct.remove(at: i)
+                break
+            }
+        }
+    }
+    
+    func assobrar(){
+        for product in arrayProduct {
+            product.breakComposto(scene: self, location: product.position)
+            eraseComponents()
+        }
     }
 }

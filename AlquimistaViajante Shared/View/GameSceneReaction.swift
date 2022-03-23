@@ -30,7 +30,7 @@ class GameSceneReaction: SKScene {
         let w = self.size.width
         let h = self.size.height
         
-        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: CGSize(width: w, height: h))
+        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: CGSize(width: h, height: h))
         flaskNode.isUserInteractionEnabled = true
         flaskNode.delegate = self
 
