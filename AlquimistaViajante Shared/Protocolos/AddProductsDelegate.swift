@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol AddProductsDelegate{
-    func addProducts(product:Composto)
+protocol AddProductsDelegate: AnyObject{
+    func addProducts(product:Product)
 }

@@ -10,7 +10,7 @@ import SpriteKit
 
 class GameSceneReaction: SKScene {
     
-    lazy var arrayCompostos:[Composto] = [Composto(lados: [3,nil]),Composto(lados: [3,nil]),Composto(lados: [3,nil])]
+    lazy var arrayProduct:[Product] = [Product(lados: [3,nil]),Product(lados: [3,nil]),Product(lados: [3,nil])]
     
     override func didMove(to view: SKView) {
         self.isUserInteractionEnabled = true
@@ -18,11 +18,10 @@ class GameSceneReaction: SKScene {
         
         setupScene()
         var i = 0.0
-        for composto in arrayCompostos {
-                self.addChild(composto)
-                composto.position = CGPoint(x: self.size.width/2, y: self.size.height/2+150-(i*150) )
+        for product in arrayProduct {
+                self.addChild(product)
+                product.position = CGPoint(x: self.size.width/2, y: self.size.height/2+100-(i*150) )
             i += 1
-            composto.zPosition = 3
         }
     }
     
@@ -31,6 +30,7 @@ class GameSceneReaction: SKScene {
         let size = CGSize(width: 600, height: 600)
         let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: size)
         flaskNode.isUserInteractionEnabled = true
+        flaskNode.delegate = self
         self.addChild(flaskNode)
         flaskNode.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         flaskNode.zPosition = 1
@@ -38,31 +38,36 @@ class GameSceneReaction: SKScene {
     }
     
     func eraseComponents(){
-        for i in 0..<arrayCompostos.count {
-            if arrayCompostos[i].isDead{
-                arrayCompostos.remove(at: i)
+        for i in 0..<arrayProduct.count {
+            if arrayProduct[i].isDead{
+                arrayProduct.remove(at: i)
                 break
             }
         }
     }
 
     func shake(){
-            for composto in arrayCompostos {
-                composto.physicsBody?.applyImpulse(CGVector(dx: Int.random(in: -1000...1000), dy: Int.random(in: -1000...1000)))
+            for product in arrayProduct {
+                product.physicsBody?.applyForce(CGVector(dx: Int.random(in: -1000...1000), dy: Int.random(in: -1000...1000)))
         }
     }
 }
 
 extension GameSceneReaction:SKPhysicsContactDelegate{
     func didBegin(_ contact: SKPhysicsContact) {
-        guard let compostoAbsorvido = contact.bodyA.node as? Composto  else { return }
-        guard let compostoFinal = contact.bodyB.node as? Composto  else { return }
-        if (compostoFinal.isReact == false && compostoAbsorvido.isReact == false){
-            compostoAbsorvido.selfDestroy()
-            compostoFinal.absorved(composto: compostoAbsorvido)
+        guard let productAbsorvido = contact.bodyA.node as? Product  else { return }
+        guard let productFinal = contact.bodyB.node as? Product  else { return }
+        if (productFinal.isReact == false && productAbsorvido.isReact == false){
+            productAbsorvido.selfDestroy()
+            productFinal.absorved(product: productAbsorvido)
             eraseComponents()
         }
         
+    }
+}
+extension GameSceneReaction:AddProductsDelegate{
+    func addProducts(product: Product) {
+        arrayProduct.append(product)
     }
 }
 

@@ -34,10 +34,12 @@ class FlaskNode:SKNode{
         
         super.init()
         
+        self.physicsBody?.collisionBitMask  = 1
         physicsBody = SKPhysicsBody (edgeLoopFrom: border.cgPath)
         physicsBody?.isDynamic = false
         let frameShape = SKShapeNode(path: border.cgPath)
         frameShape.zPosition = 4
+        frameShape.strokeColor = .clear
         frameShape.name = "frame"
                 
         addChild(imgNode)
@@ -54,13 +56,14 @@ class FlaskNode:SKNode{
         let positionInScene = touch.location(in: self)
         let touchedNode = self.atPoint(positionInScene)
             
-            if let p = (touchedNode as! SKShapeNode).path {
+            if let p = (touchedNode as? SKShapeNode)?.path {
                 if p.contains(positionInScene) {
                     let location = positionInScene
-                    let comp = Composto(lados: [3,nil])
+                    let comp = Product(lados: [3,nil])
                     comp.position = location
                     comp.zPosition = 3
                     addChild(comp)
+                    delegate?.addProducts(product: comp)
                 }
             }
         }

@@ -8,13 +8,13 @@
 import SpriteKit
 import Foundation
 
-class Forma:SKSpriteNode{
+class Reagente:SKSpriteNode{
     
     var QuantVert: Int
     
     public init(QuantVert:Int){
         self.QuantVert = QuantVert
-        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 30, height: 30))
+        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 25, height: 25))
         self.name = "forma"
         nameTexture()
     }
