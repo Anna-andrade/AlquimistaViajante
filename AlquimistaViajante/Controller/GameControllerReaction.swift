@@ -6,3 +6,10 @@
 //
 
 import Foundation
+import SpriteKit
+
+class GameControllerReaction{
+    
+
+    
+}
