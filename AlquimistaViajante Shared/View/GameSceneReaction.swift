@@ -27,14 +27,19 @@ class GameSceneReaction: SKScene {
     
     func setupScene(){
         removeAllChildren()
-        let size = CGSize(width: 600, height: 600)
-        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: size)
+        let flaskNode = SKSpriteNode(imageNamed: "flatBottomFlask")
         flaskNode.isUserInteractionEnabled = true
         flaskNode.delegate = self
+
+        let w = self.size.width
+        let h = self.size.height
+    
         self.addChild(flaskNode)
-        flaskNode.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+        flaskNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
+        flaskNode.size = CGSize(width: w, height: h)
+
         flaskNode.zPosition = 1
-        drawBackgroundWall(side: 500)
+        drawBackgroundWall(side: 1050)
     }
     
     func eraseComponents(){

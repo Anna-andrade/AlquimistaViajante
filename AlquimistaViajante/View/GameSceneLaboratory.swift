@@ -4,7 +4,6 @@
 //
 //  Created by Marcus Vinicius Silva de Sousa on 14/03/22.
 
-// Tentando o commit
 
 import Foundation
 import SpriteKit
