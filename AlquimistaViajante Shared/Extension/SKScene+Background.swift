@@ -43,4 +43,15 @@ extension SKScene {
         
         
     }
+    
+    func drawBackgroundBook(side: CGFloat){
+    
+        
+        let backgroundBookNode = SKSpriteNode(imageNamed: "bookBackgroundNode")
+        backgroundBookNode.size = CGSize(width: side, height: side)
+        addChild(backgroundBookNode)
+        backgroundBookNode.position = CGPoint (x: self.size.width*0.5, y: self.size.height*0.5)
+        backgroundBookNode.zPosition = -1 
+        
+    }
 }
