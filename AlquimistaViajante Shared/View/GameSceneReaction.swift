@@ -27,16 +27,16 @@ class GameSceneReaction: SKScene {
     
     func setupScene(){
         removeAllChildren()
-        let flaskNode = SKSpriteNode(imageNamed: "flatBottomFlask")
+        let w = self.size.width
+        let h = self.size.height
+        
+        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: CGSize(width: w, height: h))
         flaskNode.isUserInteractionEnabled = true
         flaskNode.delegate = self
 
-        let w = self.size.width
-        let h = self.size.height
     
         self.addChild(flaskNode)
         flaskNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
-        flaskNode.size = CGSize(width: w, height: h)
 
         flaskNode.zPosition = 1
         drawBackgroundWall(side: 1050)
