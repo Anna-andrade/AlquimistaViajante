@@ -16,15 +16,16 @@ class GameSceneFiltration: SKScene {
         
         let beakerNode = SKSpriteNode(imageNamed: "beaker")
         addChild(beakerNode)
-        beakerNode.size = CGSize(width: w, height: h)
-        beakerNode.position = CGPoint(x: beakerNode.size.width*0.5, y: beakerNode.size.height*0.4)
+        beakerNode.texture?.filteringMode = .nearest
+        beakerNode.size = CGSize(width: w*0.35, height: h*0.35)
+        beakerNode.position = CGPoint(x: w*0.5, y: h*0.30)
         beakerNode.zPosition = 2
         
         let filterNode = SKSpriteNode(imageNamed: "filter")
         addChild(filterNode)
         filterNode.texture?.filteringMode = .nearest
-        filterNode.scale(to: CGSize(width: 500, height: 1000))
-        filterNode.position = CGPoint(x: filterNode.size.width*0.5, y: filterNode.size.height*0.5)
+        filterNode.scale(to: CGSize(width: w*0.5, height: h*0.75))
+        filterNode.position = CGPoint(x: w*0.5, y: h*0.5)
         filterNode.zPosition = 1
         
         
