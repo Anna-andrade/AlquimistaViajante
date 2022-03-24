@@ -14,7 +14,7 @@ class BeakerNode:SKSpriteNode{
         let w = self.size.width
         let h = self.size.height
             let path = UIBezierPath()
-        path.move(to: CGPoint(x: w/2.75 , y:h/2.35))
+            path.move(to: CGPoint(x: w/2.75 , y:h/2.35))
             path.addLine(to: CGPoint(x: w/2.75, y:-h/2.7))
             path.addLine(to: CGPoint(x: -w/3, y:-h/2.7))
             path.addLine(to: CGPoint(x: -w/3, y:h/2.35))

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0671ABBF27EBAFC8002216DF /* BeakerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671ABBE27EBAFC8002216DF /* BeakerNode.swift */; };
 		0671ABC027EBAFC8002216DF /* BeakerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671ABBE27EBAFC8002216DF /* BeakerNode.swift */; };
+		0687007027ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
+		0687007127ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
 		0688FF9527EA564E00C930A3 /* FlaskNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9427EA564E00C930A3 /* FlaskNode.swift */; };
 		0688FF9627EA564E00C930A3 /* FlaskNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9427EA564E00C930A3 /* FlaskNode.swift */; };
 		0688FF9927EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */; };
@@ -52,6 +54,7 @@
 
 /* Begin PBXFileReference section */
 		0671ABBE27EBAFC8002216DF /* BeakerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeakerNode.swift; sourceTree = "<group>"; };
+		0687006F27ED017E000E38F1 /* ShakeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDelegate.swift; sourceTree = "<group>"; };
 		0688FF9427EA564E00C930A3 /* FlaskNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskNode.swift; sourceTree = "<group>"; };
 		0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductsDelegate.swift; sourceTree = "<group>"; };
 		06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumEstadosFormas.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */,
+				0687006F27ED017E000E38F1 /* ShakeDelegate.swift */,
 			);
 			path = Protocolos;
 			sourceTree = "<group>";
@@ -321,6 +325,7 @@
 				0671ABC027EBAFC8002216DF /* BeakerNode.swift in Sources */,
 				DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				DB08E05C27E9070A006D9E5F /* GameSceneLaboratory.swift in Sources */,
+				0687007127ED017E000E38F1 /* ShakeDelegate.swift in Sources */,
 				DB08E05B27E906B9006D9E5F /* GameViewController.swift in Sources */,
 				0688FF9627EA564E00C930A3 /* FlaskNode.swift in Sources */,
 				4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */,
@@ -347,6 +352,7 @@
 				4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */,
 				DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */,
 				4C4D8EE927DFD66200C413CB /* GameControllerReaction.swift in Sources */,
+				0687007027ED017E000E38F1 /* ShakeDelegate.swift in Sources */,
 				DBD6475E27DFBC710094B1B6 /* AppDelegate.swift in Sources */,
 				4C4D8EEB27DFD67D00C413CB /* GameControllerFiltration.swift in Sources */,
 				4C513DDC27E4FCDB00F6AC56 /* GameController.swift in Sources */,
@@ -571,6 +577,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -600,6 +607,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -10,12 +10,19 @@ import SpriteKit
 
 class GameSceneBreakChemicalBond: SKScene{
     
-    lazy var arrayProduct:[Product] = [Product(lados: [3,nil]),Product(lados: [3,nil]),Product(lados: [3,nil])]
+    lazy var arrayProduct:[Product] = [Product(lados: [3,4]),Product(lados: [3,4]),Product(lados: [3,4])]
     
     override func didMove(to view: SKView) {
         
         let width = self.size.width
         let height = self.size.height
+        
+        for product in arrayProduct {
+            self.addChild(product)
+            product.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+            product.zPosition = 5
+            product.name = "composto"
+        }
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         tableNode.size = CGSize(width: width, height: height/2)
