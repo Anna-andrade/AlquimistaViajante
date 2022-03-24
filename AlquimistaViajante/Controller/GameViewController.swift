@@ -11,7 +11,7 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    let scene = GameSceneReaction()
+    let scene = GameSceneLaboratory()
     
     override func viewDidLoad() {
         super.viewDidLoad()
