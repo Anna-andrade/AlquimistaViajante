@@ -1,0 +1,15 @@
+/* 
+  String+Localization.strings
+  AlquimistaViajante
+
+  Created by Talita Nunes dos Santos on 24/03/22.
+  
+*/
+
+"Introducao" = "Introdução: a Alquimia é o ramo do conhecimento que trata das transformações da matéria.";
+
+"Paragrafo1" = "O que você precisa saber é que transformações acontecem mediante a combinação de diferentes substâncias, que chamamos de reagentes. A combinação de reagentes leva à formação de produtos. Nesse livro você aprenderá a submeter reagentes a condições experimentais adequadas para que reações químicas aconteçam.";
+
+"Paragrafo2" = "Não se esqueça, produtos raramente são formados com 100% de pureza. Quase sempre precisamos realizar procedimentos de purificação de misturas para que possamos obter produtos de interesse isolados. Você aprenderá a realizar esses procedimentos nesse livro.";
+
+"Paragrafo3" = "Tenha em mente que métodos de separação de misturas não são as únicas alternativas para obter produtos de interesse. Frequentemente, precisamos reverter o sentido das reações químicas, e nossos produtos tornam-se reagentes, os quais terão suas ligações quebradas, formando seus componentes iniciais. Esta é uma estratégia interessante, pois você irá lidar com substâncias raras, de difícil obtenção e de alto custo. Este também é um conhecimento que você obterá na atenta leitura destas páginas.";
