@@ -45,15 +45,14 @@ class GameSceneLaboratory: SKScene {
         
         let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
         bunsenBurnerButton.isUserInteractionEnabled = true
-        bunsenBurnerButton.delegate = self
         self.addChild(bunsenBurnerButton)
         bunsenBurnerButton.size = CGSize(width: width*0.15, height: height*0.15)
         bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width, y: bunsenBurnerButton.size.height*5.25)
         bunsenBurnerButton.zPosition = 2
         
         let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-        glassFunnelButton.isUserInteractionEnabled = true
         glassFunnelButton.delegate = self
+        glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
         glassFunnelButton.size = CGSize(width: width*0.15, height: height*0.15)
         glassFunnelButton.position = CGPoint(x: glassFunnelButton.size.width*2.5, y: glassFunnelButton.size.height*5.25)
@@ -84,14 +83,6 @@ class GameSceneLaboratory: SKScene {
         mortarBottomNode.zPosition = 2
         
         drawBackgroundFloor(side: 1050)
+        
     }
-}
-
-extension GameSceneLaboratory: NavigationDelegate{
-    func navigationAction(scene: SKScene) {
-        scene.size = CGSize(width:  self.size.height, height: self.size.height)
-        self.view?.presentScene(scene)
-    }
-    
-    
 }
