@@ -43,17 +43,21 @@ class GameSceneLaboratory: SKScene {
         shelfNode.size = CGSize(width: width, height: height/2)
         shelfNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*1.25)
         
-        let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
-        self.addChild(bunsenBurnerNode)
-        bunsenBurnerNode.size = CGSize(width: width*0.15, height: height*0.15)
-        bunsenBurnerNode.position = CGPoint(x: bunsenBurnerNode.size.width, y: bunsenBurnerNode.size.height*5.25)
-        bunsenBurnerNode.zPosition = 2
+        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+        bunsenBurnerButton.isUserInteractionEnabled = true
+        bunsenBurnerButton.delegate = self
+        self.addChild(bunsenBurnerButton)
+        bunsenBurnerButton.size = CGSize(width: width*0.15, height: height*0.15)
+        bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width, y: bunsenBurnerButton.size.height*5.25)
+        bunsenBurnerButton.zPosition = 2
         
-        let glassFunnelNode = SKSpriteNode(imageNamed: "glassFunnel")
-        self.addChild(glassFunnelNode)
-        glassFunnelNode.size = CGSize(width: width*0.15, height: height*0.15)
-        glassFunnelNode.position = CGPoint(x: glassFunnelNode.size.width*2.5, y: glassFunnelNode.size.height*5.25)
-        glassFunnelNode.zPosition = 2
+        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+        glassFunnelButton.isUserInteractionEnabled = true
+        glassFunnelButton.delegate = self
+        self.addChild(glassFunnelButton)
+        glassFunnelButton.size = CGSize(width: width*0.15, height: height*0.15)
+        glassFunnelButton.position = CGPoint(x: glassFunnelButton.size.width*2.5, y: glassFunnelButton.size.height*5.25)
+        glassFunnelButton.zPosition = 2
         
         let flatBottomFlaskNode = SKSpriteNode(imageNamed: "flatBottomFlask")
         self.addChild(flatBottomFlaskNode)
@@ -81,4 +85,13 @@ class GameSceneLaboratory: SKScene {
         
         drawBackgroundFloor(side: 1050)
     }
+}
+
+extension GameSceneLaboratory: NavigationDelegate{
+    func navigationAction(scene: SKScene) {
+        scene.size = CGSize(width:  self.size.height, height: self.size.height)
+        self.view?.presentScene(scene)
+    }
+    
+    
 }
