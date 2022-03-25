@@ -44,6 +44,7 @@
 		DB08E06527ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08E06327ECFFD4006D9E5F /* SKScene+AddBackButton.swift */; };
 		DB08E06727ED0B65006D9E5F /* SKScene+NagationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08E06627ED0B65006D9E5F /* SKScene+NagationDelegate.swift */; };
 		DB08E06827ED0B65006D9E5F /* SKScene+NagationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08E06627ED0B65006D9E5F /* SKScene+NagationDelegate.swift */; };
+		DB1814F127EE5EF000039C8F /* GameSceneReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EDF27DFD4F000C413CB /* GameSceneReaction.swift */; };
 		DBD6475E27DFBC710094B1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6475D27DFBC710094B1B6 /* AppDelegate.swift */; };
 		DBD6476427DFBC710094B1B6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6476327DFBC710094B1B6 /* GameScene.swift */; };
 		DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6476527DFBC710094B1B6 /* GameViewController.swift */; };
@@ -334,6 +335,7 @@
 				DB08E05F27E9071A006D9E5F /* Reagents.swift in Sources */,
 				DB08E06827ED0B65006D9E5F /* SKScene+NagationDelegate.swift in Sources */,
 				DB08E05E27E90716006D9E5F /* GameSceneFiltration.swift in Sources */,
+				DB1814F127EE5EF000039C8F /* GameSceneReaction.swift in Sources */,
 				DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */,
 				0688FF9A27EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */,
 				DB08E06127E90722006D9E5F /* SKButtonNavigation.swift in Sources */,

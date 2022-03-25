@@ -13,6 +13,8 @@ class GameSceneReaction: SKScene {
     lazy var arrayProduct:[Product] = [Product(lados: [3,nil]),Product(lados: [3,nil]),Product(lados: [3,nil])]
     
     override func didMove(to view: SKView) {
+        
+        
         self.isUserInteractionEnabled = true
         physicsWorld.contactDelegate = self
         
@@ -22,6 +24,9 @@ class GameSceneReaction: SKScene {
                 self.addChild(product)
                 product.position = CGPoint(x: self.size.width/2, y: self.size.height/2+100-(i*150) )
             i += 1
+            
+            
+            addBackButton()
         }
     }
     
@@ -34,11 +39,18 @@ class GameSceneReaction: SKScene {
         flaskButton.isUserInteractionEnabled = true
         flaskButton.delegate = self
 
+//        let tableNode = SKSpriteNode(imageNamed: "table")
+//        tableNode.size = CGSize(width: w, height: h/2)
+//        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
+//        addChild(tableNode)
+//        tableNode.zPosition = 3
+//        ver como colocar o node da mesa nesta scene
+        
     
         self.addChild(flaskButton)
         flaskButton.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
 
-        flaskButton.zPosition = 1
+        flaskButton.zPosition = 2
         drawBackgroundWall(side: 1050)
     }
     

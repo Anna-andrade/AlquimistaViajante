@@ -31,7 +31,7 @@ class GameSceneFiltration: SKScene {
         filterNode.zPosition = 1
         
         
-        drawBackgroundWall(side: 50)
+        drawBackgroundWall(side: 1050)
         addBackButton()
     }
 }
