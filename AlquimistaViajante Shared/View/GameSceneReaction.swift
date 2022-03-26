@@ -39,12 +39,12 @@ class GameSceneReaction: SKScene {
         flaskButton.isUserInteractionEnabled = true
         flaskButton.delegate = self
 
-//        let tableNode = SKSpriteNode(imageNamed: "table")
-//        tableNode.size = CGSize(width: w, height: h/2)
-//        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-//        addChild(tableNode)
-//        tableNode.zPosition = 3
-//        ver como colocar o node da mesa nesta scene
+        let tableNode = SKSpriteNode(imageNamed: "table")
+        tableNode.size = CGSize(width: w, height: h/2)
+        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
+        addChild(tableNode)
+        tableNode.zPosition = 1
+        
         
     
         self.addChild(flaskButton)
