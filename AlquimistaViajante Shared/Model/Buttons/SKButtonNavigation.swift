@@ -33,9 +33,7 @@ class SKButtonNavigation: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.navigationAction(scene: sceneToGo)
-    }
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
        
         
@@ -46,9 +44,10 @@ class SKButtonNavigation: SKSpriteNode{
         }
     }
     
-    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-       
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         changeDelegate?.changeScene(scene: sceneToGo)
+
     }
+    
     
 }
