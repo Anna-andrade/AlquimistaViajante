@@ -42,7 +42,6 @@ class GameSceneBreakChemicalBond: SKScene{
         bunsenBurnerNode.zPosition = 1
         
         drawBackgroundWall(side: 1050)
-        addBackButton()
     }
     
     func eraseComponents(){

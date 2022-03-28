@@ -15,8 +15,6 @@ class GameSceneFiltration: SKScene {
         let w = self.size.width
         let h = self.size.height
         
-        self.isUserInteractionEnabled = true
-        
         let beakerNode = SKSpriteNode(imageNamed: "beaker")
         addChild(beakerNode)
         beakerNode.texture?.filteringMode = .nearest
@@ -32,7 +30,7 @@ class GameSceneFiltration: SKScene {
         filterNode.zPosition = 1
         
         
-        drawBackgroundWall(side: 50)
-        addBackButton()
+        drawBackgroundWall(side: 1050)
+        
     }
 }

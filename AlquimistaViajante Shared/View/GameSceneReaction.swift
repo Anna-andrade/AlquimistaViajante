@@ -30,15 +30,15 @@ class GameSceneReaction: SKScene {
         let w = self.size.width
         let h = self.size.height
         
-        let flaskButton = FlaskButton(imgName: "flatBottomFlask", size: CGSize(width: w, height: h))
-        flaskButton.isUserInteractionEnabled = true
-        flaskButton.delegate = self
+        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: CGSize(width: h, height: h))
+        flaskNode.isUserInteractionEnabled = true
+        flaskNode.delegate = self
 
     
-        self.addChild(flaskButton)
-        flaskButton.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
+        self.addChild(flaskNode)
+        flaskNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
 
-        flaskButton.zPosition = 1
+        flaskNode.zPosition = 1
         drawBackgroundWall(side: 1050)
     }
     
