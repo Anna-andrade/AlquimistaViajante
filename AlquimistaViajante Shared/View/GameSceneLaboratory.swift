@@ -18,13 +18,14 @@ class GameSceneLaboratory: SKScene {
         let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.15, height: height*0.15)
-        bookNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*3)
+        bookNode.position = CGPoint(x: bookNode.size.width*3.45, y: bookNode.size.height*3)
         bookNode.zPosition = 3
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         self.addChild(tableNode)
-        tableNode.size = CGSize(width: width, height: height/2)
+        tableNode.size = CGSize(width: width, height: height/2.5)
         tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
+        tableNode.zPosition = 1
         
         let beakerButton = SKButtonNavigation(imageName: "beaker", sceneToGo: GameSceneFiltration())
         beakerButton.delegate = self
@@ -37,13 +38,14 @@ class GameSceneLaboratory: SKScene {
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
         bookcaseNode.size = CGSize(width: width*0.2, height: height*0.15)
-        bookcaseNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*2.5)
+        bookcaseNode.position = CGPoint(x: bookNode.size.width*3.45, y: bookNode.size.height*2.5)
         bookcaseNode.zPosition = 2
         
         let shelfNode = SKSpriteNode(imageNamed: "shelf")
         self.addChild(shelfNode)
-        shelfNode.size = CGSize(width: width, height: height/2)
-        shelfNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*1.25)
+        shelfNode.size = CGSize(width: width, height: height/3)
+        shelfNode.position = CGPoint(x: shelfNode.size.width*0.5, y: shelfNode.size.height*1.9)
+        shelfNode.zPosition = 1
         
         let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
         bunsenBurnerButton.delegate = self
@@ -85,7 +87,8 @@ class GameSceneLaboratory: SKScene {
         self.addChild(mortarBottomNode)
         mortarBottomNode.size = CGSize(width: width*0.15, height: height*0.15)
         mortarBottomNode.position = CGPoint(x: mortarBottomNode.size.width*3.75, y: mortarBottomNode.size.height*1.25)
-        mortarBottomNode.zPosition = 2
+        mortarBottomNode.zPosition = 4
+        
         
         drawBackgroundFloor(side: 1050)
         
