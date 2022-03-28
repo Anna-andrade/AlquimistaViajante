@@ -12,7 +12,7 @@ class SKButtonNavigation: SKSpriteNode{
     
     var imageName: String
     var sceneToGo: SKScene
-    weak var delegate: NavigationDelegate?
+    weak var changeDelegate: (ChangeSceneDelegate)? = GameController.shared.changeDelegate
     
     init(imageName: String, sceneToGo: SKScene){
         self.sceneToGo = sceneToGo
@@ -25,11 +25,7 @@ class SKButtonNavigation: SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        delegate?.navigationAction(scene: sceneToGo)
-    }
-    
-    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        delegate?.navigationAction(scene: sceneToGo)
+        changeDelegate?.changeScene(scene: sceneToGo)
     }
     
 }

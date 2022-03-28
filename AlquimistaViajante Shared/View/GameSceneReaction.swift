@@ -40,6 +40,7 @@ class GameSceneReaction: SKScene {
 
         flaskButton.zPosition = 1
         drawBackgroundWall(side: 1050)
+        addBackButton()
     }
     
     func eraseComponents(){
