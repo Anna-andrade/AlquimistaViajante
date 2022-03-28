@@ -44,6 +44,7 @@ class GameSceneReaction: SKScene {
         
         
         drawBackgroundWall(side: 1050)
+        addBackButton()
     }
     
     func eraseComponents(){

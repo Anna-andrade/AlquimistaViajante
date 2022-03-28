@@ -9,15 +9,29 @@ import Foundation
 import SpriteKit
 
 class GameSceneBreakChemicalBond: SKScene{
+    
+    lazy var arrayProduct:[Product] = [Product(lados: [3,4]),Product(lados: [3,4]),Product(lados: [3,4])]
+    
     override func didMove(to view: SKView) {
         
         let width = self.size.width
         let height = self.size.height
         
+        for product in arrayProduct {
+            self.addChild(product)
+            product.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+            product.zPosition = 5
+            product.name = "composto"
+        }
         
-        let beakerNode = SKSpriteNode(imageNamed: "beaker")
-        beakerNode.size = CGSize(width: width*0.7, height: height*0.7)
-        beakerNode.position = CGPoint(x: beakerNode.size.width*0.64, y: beakerNode.size.height*0.8)
+        let tableNode = SKSpriteNode(imageNamed: "table")
+        tableNode.size = CGSize(width: width, height: height/2)
+        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
+        addChild(tableNode)
+        tableNode.zPosition = 0
+        
+        let beakerNode = BeakerNode(imgName: "beaker", size: CGSize(width: width/2.5, height: width/2.5))
+       beakerNode.position = CGPoint(x: beakerNode.size.width*0.64, y: beakerNode.size.height*0.8)
         addChild(beakerNode)
         beakerNode.zPosition = 1
         
@@ -29,5 +43,21 @@ class GameSceneBreakChemicalBond: SKScene{
         
         drawBackgroundWall(side: 1050)
         addBackButton()
+    }
+    
+    func eraseComponents(){
+        for i in 0..<arrayProduct.count {
+            if arrayProduct[i].isDead{
+                arrayProduct.remove(at: i)
+                break
+            }
+        }
+    }
+    
+    func assobrar(){
+        for product in arrayProduct {
+            product.breakComposto(scene: self, location: product.position)
+            eraseComponents()
+        }
     }
 }

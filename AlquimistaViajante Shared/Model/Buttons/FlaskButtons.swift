@@ -1,10 +1,9 @@
 //
-//  FlaskNode.swift
+//  FlaskButtons.swift
 //  AlquimistaViajante
 //
-//  Created by Vitor Cheung on 22/03/22.
+//  Created by Vitor Cheung on 28/03/22.
 //
-
 import Foundation
 import SpriteKit
 

@@ -18,7 +18,6 @@ extension SKScene {
         addBackButton.position = CGPoint(x: 140, y: 1080)
         addBackButton.zPosition = 2
         addBackButton.isUserInteractionEnabled = true
-        addBackButton.delegate = self
         addChild(addBackButton)
      
     }

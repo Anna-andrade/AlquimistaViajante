@@ -10,6 +10,7 @@ import SpriteKit
 
 
 class GameSceneFiltration: SKScene {
+        
     override func didMove(to view: SKView) {
         let w = self.size.width
         let h = self.size.height

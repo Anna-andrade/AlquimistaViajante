@@ -12,9 +12,9 @@ class SKButtonNavigation: SKSpriteNode{
     
     var imageName: String
     var sceneToGo: SKScene
-    weak var delegate: NavigationDelegate?
     weak var delegateTexture: ChangeTextureButtonDelegate?
     var imagePress: String = ""
+    weak var changeDelegate: (ChangeSceneDelegate)? = GameController.shared.changeDelegate
     
     init(imageName: String, sceneToGo: SKScene){
         self.sceneToGo = sceneToGo
@@ -47,7 +47,8 @@ class SKButtonNavigation: SKSpriteNode{
     }
     
     override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        delegate?.navigationAction(scene: sceneToGo)
+       
+        changeDelegate?.changeScene(scene: sceneToGo)
     }
     
 }

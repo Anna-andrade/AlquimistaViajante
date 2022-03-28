@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+class GameController{
+    static var shared = GameController()
+     
+    var changeDelegate:ChangeSceneDelegate?
+    
+    
+    
+}

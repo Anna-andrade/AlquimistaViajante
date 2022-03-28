@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0688FF9527EA564E00C930A3 /* FlaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9427EA564E00C930A3 /* FlaskButton.swift */; };
-		0688FF9627EA564E00C930A3 /* FlaskButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9427EA564E00C930A3 /* FlaskButton.swift */; };
+		0655C6D627F2262600E0FF07 /* FlaskButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D527F2262600E0FF07 /* FlaskButtons.swift */; };
+		0655C6D727F2262600E0FF07 /* FlaskButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D527F2262600E0FF07 /* FlaskButtons.swift */; };
+		0655C6D927F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */; };
+		0655C6DA27F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */; };
+		0671ABBF27EBAFC8002216DF /* BeakerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671ABBE27EBAFC8002216DF /* BeakerNode.swift */; };
+		0671ABC027EBAFC8002216DF /* BeakerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671ABBE27EBAFC8002216DF /* BeakerNode.swift */; };
+		0687007027ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
+		0687007127ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
 		0688FF9927EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */; };
 		0688FF9A27EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */; };
 		06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED727DFC9B100C413CB /* Reagents.swift */; };
@@ -58,7 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0688FF9427EA564E00C930A3 /* FlaskButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskButton.swift; sourceTree = "<group>"; };
+		0655C6D527F2262600E0FF07 /* FlaskButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskButtons.swift; sourceTree = "<group>"; };
+		0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSceneDelegate.swift; sourceTree = "<group>"; };
+		0671ABBE27EBAFC8002216DF /* BeakerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeakerNode.swift; sourceTree = "<group>"; };
+		0687006F27ED017E000E38F1 /* ShakeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDelegate.swift; sourceTree = "<group>"; };
 		0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductsDelegate.swift; sourceTree = "<group>"; };
 		06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumEstadosFormas.swift; sourceTree = "<group>"; };
 		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +123,10 @@
 			isa = PBXGroup;
 			children = (
 				0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */,
+				0687006F27ED017E000E38F1 /* ShakeDelegate.swift */,
 				4C367FCD27ECECFD0042BE50 /* NavigationDelegate.swift */,
 				DB1814F227F245EA00039C8F /* ChangeTextureButtonDelegate.swift */,
+				0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */,
 			);
 			path = Protocolos;
 			sourceTree = "<group>";
@@ -135,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4D8EDB27DFCA4200C413CB /* SKButtonNavigation.swift */,
-				0688FF9427EA564E00C930A3 /* FlaskButton.swift */,
+				0655C6D527F2262600E0FF07 /* FlaskButtons.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -147,6 +158,7 @@
 				4C4D8ED727DFC9B100C413CB /* Reagents.swift */,
 				4C4D8ED927DFC9C100C413CB /* Products.swift */,
 				06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */,
+				0671ABBE27EBAFC8002216DF /* BeakerNode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,7 +193,6 @@
 			children = (
 				DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */,
 				DB08E06327ECFFD4006D9E5F /* SKScene+AddBackButton.swift */,
-				DB08E06627ED0B65006D9E5F /* SKScene+NagationDelegate.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -335,6 +346,7 @@
 				06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */,
 				DB08E06527ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
 				06FDB76F27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */,
+				0655C6D727F2262600E0FF07 /* FlaskButtons.swift in Sources */,
 				DB08E06027E9071E006D9E5F /* Products.swift in Sources */,
 				DB08E05F27E9071A006D9E5F /* Reagents.swift in Sources */,
 				DB08E06827ED0B65006D9E5F /* SKScene+NagationDelegate.swift in Sources */,
@@ -344,10 +356,13 @@
 				DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */,
 				0688FF9A27EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */,
 				DB08E06127E90722006D9E5F /* SKButtonNavigation.swift in Sources */,
+				0671ABC027EBAFC8002216DF /* BeakerNode.swift in Sources */,
+				DB08E06127E90722006D9E5F /* SKButtonNavigation.swift in Sources */,
 				DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				DB08E05C27E9070A006D9E5F /* GameSceneLaboratory.swift in Sources */,
+				0687007127ED017E000E38F1 /* ShakeDelegate.swift in Sources */,
 				DB08E05B27E906B9006D9E5F /* GameViewController.swift in Sources */,
-				0688FF9627EA564E00C930A3 /* FlaskButton.swift in Sources */,
+				0655C6DA27F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */,
 				4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,19 +371,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB08E06727ED0B65006D9E5F /* SKScene+NagationDelegate.swift in Sources */,
 				4C4D8EE027DFD4F000C413CB /* GameSceneReaction.swift in Sources */,
 				4C4D8EED27DFD69000C413CB /* GameControllerChemicalBond.swift in Sources */,
 				4C4D8EDC27DFCA4200C413CB /* SKButtonNavigation.swift in Sources */,
 				DB08E06427ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
 				DB1814F327F245EA00039C8F /* ChangeTextureButtonDelegate.swift in Sources */,
+				0655C6D627F2262600E0FF07 /* FlaskButtons.swift in Sources */,
 				4C513DDD27E4FCDB00F6AC56 /* GameControllerLaboratory.swift in Sources */,
 				0688FF9927EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */,
 				DBD6476427DFBC710094B1B6 /* GameScene.swift in Sources */,
 				4C367FCE27ECECFD0042BE50 /* NavigationDelegate.swift in Sources */,
 				4C4D8EE227DFD58F00C413CB /* GameSceneBreakChemicalBond.swift in Sources */,
 				4C4D8EDE27DFD4B200C413CB /* GameSceneLaboratory.swift in Sources */,
-				0688FF9527EA564E00C930A3 /* FlaskButton.swift in Sources */,
 				4C4D8EE427DFD5A900C413CB /* GameSceneFiltration.swift in Sources */,
 				4C4D8ED827DFC9B100C413CB /* Reagents.swift in Sources */,
 				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
@@ -376,9 +390,12 @@
 				4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */,
 				DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */,
 				4C4D8EE927DFD66200C413CB /* GameControllerReaction.swift in Sources */,
+				0687007027ED017E000E38F1 /* ShakeDelegate.swift in Sources */,
 				DBD6475E27DFBC710094B1B6 /* AppDelegate.swift in Sources */,
 				4C4D8EEB27DFD67D00C413CB /* GameControllerFiltration.swift in Sources */,
+				0655C6D927F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */,
 				4C513DDC27E4FCDB00F6AC56 /* GameController.swift in Sources */,
+				0671ABBF27EBAFC8002216DF /* BeakerNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -599,6 +616,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -628,6 +646,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
