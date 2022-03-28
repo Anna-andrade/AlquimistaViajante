@@ -12,6 +12,15 @@ class GameController{
      
     var changeDelegate:ChangeSceneDelegate?
     var arrayProduct:[Product] = []
+    
+    func eraseComponents(){
+        for i in 0..<arrayProduct.count {
+            if arrayProduct[i].isDead{
+                arrayProduct.remove(at: i)
+                break
+            }
+        }
+    }
 
     func filterComp(){
         var arrayFilter:[Product] = []
