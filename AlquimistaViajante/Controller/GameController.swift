@@ -11,7 +11,23 @@ class GameController{
     static var shared = GameController()
      
     var changeDelegate:ChangeSceneDelegate?
-    
-    
+    var arrayProduct:[Product] = []
+
+    func filterComp(){
+        var arrayFilter:[Product] = []
+        var moreSides = 0
+        for product in arrayProduct {
+            if product.reagentes[1] == nil{
+                if product.reagentes[0]?.QuantVert ?? 0>moreSides{
+                    moreSides = product.reagentes[0]?.QuantVert ?? 0
+                    arrayFilter.append(product)
+                }
+                else if product.reagentes[0]?.QuantVert ?? 0 == moreSides{
+                    arrayFilter.append(product)
+                }
+            }
+        }
+        arrayProduct = arrayFilter
+    }
     
 }

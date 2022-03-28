@@ -11,6 +11,8 @@
 		0655C6D727F2262600E0FF07 /* FlaskButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D527F2262600E0FF07 /* FlaskButtons.swift */; };
 		0655C6D927F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */; };
 		0655C6DA27F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */; };
+		0655C6DC27F24DEA00E0FF07 /* MortarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */; };
+		0655C6DD27F24DEA00E0FF07 /* MortarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */; };
 		0671ABBF27EBAFC8002216DF /* BeakerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671ABBE27EBAFC8002216DF /* BeakerNode.swift */; };
 		0671ABC027EBAFC8002216DF /* BeakerNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0671ABBE27EBAFC8002216DF /* BeakerNode.swift */; };
 		0687007027ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
@@ -61,6 +63,7 @@
 /* Begin PBXFileReference section */
 		0655C6D527F2262600E0FF07 /* FlaskButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskButtons.swift; sourceTree = "<group>"; };
 		0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSceneDelegate.swift; sourceTree = "<group>"; };
+		0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarButton.swift; sourceTree = "<group>"; };
 		0671ABBE27EBAFC8002216DF /* BeakerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeakerNode.swift; sourceTree = "<group>"; };
 		0687006F27ED017E000E38F1 /* ShakeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDelegate.swift; sourceTree = "<group>"; };
 		0688FF9827EA6D0B00C930A3 /* AddProductsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductsDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +142,7 @@
 			children = (
 				4C4D8EDB27DFCA4200C413CB /* SKButtonNavigation.swift */,
 				0655C6D527F2262600E0FF07 /* FlaskButtons.swift */,
+				0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -341,6 +345,7 @@
 				0655C6D727F2262600E0FF07 /* FlaskButtons.swift in Sources */,
 				DB08E06027E9071E006D9E5F /* Products.swift in Sources */,
 				DB08E05F27E9071A006D9E5F /* Reagents.swift in Sources */,
+				0655C6DD27F24DEA00E0FF07 /* MortarButton.swift in Sources */,
 				DB08E05E27E90716006D9E5F /* GameSceneFiltration.swift in Sources */,
 				DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */,
 				0688FF9A27EA6D0B00C930A3 /* AddProductsDelegate.swift in Sources */,
@@ -375,6 +380,7 @@
 				4C4D8ED827DFC9B100C413CB /* Reagents.swift in Sources */,
 				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */,
+				0655C6DC27F24DEA00E0FF07 /* MortarButton.swift in Sources */,
 				4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */,
 				DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */,
 				4C4D8EE927DFD66200C413CB /* GameControllerReaction.swift in Sources */,
