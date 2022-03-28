@@ -27,13 +27,15 @@ class GameSceneLaboratory: SKScene {
         tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
         tableNode.zPosition = 1
         
-        let beakerButton = SKButtonNavigation(imageName: "beaker", sceneToGo: GameSceneFiltration())
+        let beakerButton = SKButtonNavigation(imageName: "beaker", sceneToGo: GameSceneFiltration(), imagePress: "beakerPress")
         beakerButton.delegate = self
-        beakerButton.isUserInteractionEnabled = true
+        beakerButton.isUserInteractionEnabled = false
         self.addChild(beakerButton)
         beakerButton.size = CGSize(width: width*0.2, height: height*0.2)
         beakerButton.position = CGPoint(x: beakerButton.size.width*2.3, y: beakerButton.size.height*0.99)
         beakerButton.zPosition = 2
+        beakerButton.delegateTexture = self
+        
         
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
@@ -47,7 +49,7 @@ class GameSceneLaboratory: SKScene {
         shelfNode.position = CGPoint(x: shelfNode.size.width*0.5, y: shelfNode.size.height*1.9)
         shelfNode.zPosition = 1
         
-        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond(), imagePress: "bunsenPress")
         bunsenBurnerButton.delegate = self
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
@@ -55,7 +57,7 @@ class GameSceneLaboratory: SKScene {
         bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width*1, y: bunsenBurnerButton.size.height*5.25)
         bunsenBurnerButton.zPosition = 2
         
-        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration(), imagePress: "filterPress")
         glassFunnelButton.delegate = self
         glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
@@ -63,7 +65,7 @@ class GameSceneLaboratory: SKScene {
         glassFunnelButton.position = CGPoint(x: glassFunnelButton.size.width*2.5, y: glassFunnelButton.size.height*5.25)
         glassFunnelButton.zPosition = 2
         
-        let flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+        let flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction(), imagePress: "flaskPress")
         flatBottomFlaskButton.delegate = self
         flatBottomFlaskButton.isUserInteractionEnabled = true
         self.addChild(flatBottomFlaskButton)

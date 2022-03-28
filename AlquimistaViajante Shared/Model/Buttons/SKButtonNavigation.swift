@@ -13,8 +13,17 @@ class SKButtonNavigation: SKSpriteNode{
     var imageName: String
     var sceneToGo: SKScene
     weak var delegate: NavigationDelegate?
+    weak var delegateTexture: ChangeTextureButtonDelegate?
+    var imagePress: String = ""
     
     init(imageName: String, sceneToGo: SKScene){
+        self.sceneToGo = sceneToGo
+        self.imageName = imageName
+        let texture = SKTexture(imageNamed: imageName)
+        super.init(texture: texture, color: .clear, size: CGSize())
+    }
+    init(imageName: String, sceneToGo: SKScene, imagePress: String){
+        self.imagePress = imagePress
         self.sceneToGo = sceneToGo
         self.imageName = imageName
         let texture = SKTexture(imageNamed: imageName)
@@ -26,6 +35,15 @@ class SKButtonNavigation: SKSpriteNode{
     }
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         delegate?.navigationAction(scene: sceneToGo)
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+       
+        
+        if imagePress != "" {
+            let texture = SKTexture(imageNamed: imagePress)
+             self.texture = texture
+             delegateTexture?.changeTextureButton(button: self)
+        }
     }
     
     override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {

@@ -15,3 +15,11 @@ extension SKScene: NavigationDelegate{
         self.view?.presentScene(scene)
     }
 }
+
+extension SKScene: ChangeTextureButtonDelegate {
+    func changeTextureButton(button: SKButtonNavigation) {
+        button.removeFromParent()
+        addChild(button)
+    }
+    
+}
