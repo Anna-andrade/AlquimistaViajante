@@ -21,8 +21,8 @@ class BeakerNode:SKSpriteNode{
             return path
         }
     
-    init(imgName:String, size:CGSize) {
-        let texture = SKTexture(imageNamed: imgName)
+    init(size:CGSize) {
+        let texture = SKTexture(imageNamed: "beaker")
         texture.filteringMode = .nearest
         super.init(texture: texture, color: .clear, size: size)
         physicsBody = SKPhysicsBody (edgeLoopFrom: border().cgPath)
