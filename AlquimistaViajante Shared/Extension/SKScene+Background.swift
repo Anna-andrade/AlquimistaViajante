@@ -10,6 +10,7 @@ import Foundation
 import SpriteKit
 
 extension SKScene {
+    
     func drawBackgroundWall(side: CGFloat) {
         let width = self.size.width
         let height = self.size.height

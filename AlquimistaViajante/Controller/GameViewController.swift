@@ -17,10 +17,13 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
     var maisFraco = false
     var time = Timer()
     
-    let scene:SKScene = GameSceneReaction()
+    var scene:SKScene = GameSceneLaboratory()
+    let skView = SKView()
+    var GC = GameController.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GC.changeDelegate = self
         
         recordingSession = AVAudioSession.sharedInstance()
 
@@ -47,13 +50,13 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
     }
     
     func loadScene(){
-        let skView = SKView()
         scene.scaleMode = .aspectFit
         scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         skView.presentScene(scene)
         skView.ignoresSiblingOrder = true
         skView.showsPhysics = true
         self.view = skView
+        
     }
 
     override var shouldAutorotate: Bool {
@@ -163,4 +166,11 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
         return decibel
     }
     
+}
+
+extension GameViewController:ChangeSceneDelegate{
+    func changeScene(scene:SKScene){
+        self.scene = scene
+        loadScene()
+    }
 }

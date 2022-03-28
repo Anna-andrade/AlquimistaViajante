@@ -10,6 +10,7 @@ import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
+    
     override func didMove(to view: SKView) {
         
         let width = self.size.width
@@ -51,14 +52,14 @@ class GameSceneLaboratory: SKScene {
         bunsenBurnerButton.zPosition = 2
         
         let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-        glassFunnelButton.delegate = self
         glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
         glassFunnelButton.size = CGSize(width: width*0.15, height: height*0.15)
         glassFunnelButton.position = CGPoint(x: glassFunnelButton.size.width*2.5, y: glassFunnelButton.size.height*5.25)
         glassFunnelButton.zPosition = 2
         
-        let flatBottomFlaskNode = SKSpriteNode(imageNamed: "flatBottomFlask")
+        let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+        flatBottomFlaskNode.isUserInteractionEnabled = true
         self.addChild(flatBottomFlaskNode)
         flatBottomFlaskNode.size = CGSize(width: width*0.15, height: height*0.15)
         flatBottomFlaskNode.position = CGPoint(x: flatBottomFlaskNode.size.width*4.5, y: flatBottomFlaskNode.size.height*5.25)
