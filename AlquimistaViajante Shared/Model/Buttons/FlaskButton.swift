@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class FlaskNode:SKNode{
+class FlaskButton:SKNode{
     
     weak var delegate:AddProductsDelegate?
     var imgNode:SKSpriteNode
