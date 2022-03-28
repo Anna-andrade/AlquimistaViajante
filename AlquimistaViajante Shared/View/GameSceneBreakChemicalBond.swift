@@ -14,21 +14,16 @@ class GameSceneBreakChemicalBond: SKScene{
         let width = self.size.width
         let height = self.size.height
         
-        let tableNode = SKSpriteNode(imageNamed: "table")
-        tableNode.size = CGSize(width: width, height: height/2)
-        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-        addChild(tableNode)
-        tableNode.zPosition = 0
         
         let beakerNode = SKSpriteNode(imageNamed: "beaker")
-        beakerNode.size = CGSize(width: width/2, height: height/2)
-        beakerNode.position = CGPoint(x: beakerNode.size.width, y: beakerNode.size.height)
+        beakerNode.size = CGSize(width: width*0.7, height: height*0.7)
+        beakerNode.position = CGPoint(x: beakerNode.size.width*0.64, y: beakerNode.size.height*0.8)
         addChild(beakerNode)
         beakerNode.zPosition = 1
         
         let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
         bunsenBurnerNode.size = CGSize(width: width*0.25, height: height*0.25)
-        bunsenBurnerNode.position = CGPoint(x: bunsenBurnerNode.size.width*2.15625, y: bunsenBurnerNode.size.height*0.875)
+        bunsenBurnerNode.position = CGPoint(x: bunsenBurnerNode.size.width*2, y: bunsenBurnerNode.size.height*0.875)
         addChild(bunsenBurnerNode)
         bunsenBurnerNode.zPosition = 1
         

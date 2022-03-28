@@ -19,15 +19,15 @@ class GameSceneFiltration: SKScene {
         let beakerNode = SKSpriteNode(imageNamed: "beaker")
         addChild(beakerNode)
         beakerNode.texture?.filteringMode = .nearest
-        beakerNode.size = CGSize(width: w*0.35, height: h*0.35)
-        beakerNode.position = CGPoint(x: w*0.5, y: h*0.30)
+        beakerNode.size = CGSize(width: w*0.5, height: h*0.5)
+        beakerNode.position = CGPoint(x: w*0.48, y: h*0.19)
         beakerNode.zPosition = 2
         
         let filterNode = SKSpriteNode(imageNamed: "filter")
         addChild(filterNode)
         filterNode.texture?.filteringMode = .nearest
         filterNode.scale(to: CGSize(width: w*0.5, height: h*0.75))
-        filterNode.position = CGPoint(x: w*0.5, y: h*0.5)
+        filterNode.position = CGPoint(x: w*0.5, y: h*0.42)
         filterNode.zPosition = 1
         
         
