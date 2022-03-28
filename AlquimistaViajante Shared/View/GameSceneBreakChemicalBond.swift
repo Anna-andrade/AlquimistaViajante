@@ -10,14 +10,14 @@ import SpriteKit
 
 class GameSceneBreakChemicalBond: SKScene{
     
-    lazy var arrayProduct:[Product] = [Product(lados: [3,4]),Product(lados: [3,4]),Product(lados: [3,4])]
-    
+    let GC = GameController.shared
+
     override func didMove(to view: SKView) {
         
         let width = self.size.width
         let height = self.size.height
         
-        for product in arrayProduct {
+        for product in GC.arrayProduct {
             self.addChild(product)
             product.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
             product.zPosition = 5
@@ -45,19 +45,11 @@ class GameSceneBreakChemicalBond: SKScene{
         addBackButton()
     }
     
-    func eraseComponents(){
-        for i in 0..<arrayProduct.count {
-            if arrayProduct[i].isDead{
-                arrayProduct.remove(at: i)
-                break
-            }
-        }
-    }
     
     func assobrar(){
-        for product in arrayProduct {
+        for product in GC.arrayProduct {
             product.breakComposto(scene: self, location: product.position)
-            eraseComponents()
+            GC.eraseComponents()
         }
     }
 }
