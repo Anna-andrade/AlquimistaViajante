@@ -31,8 +31,8 @@ class GameSceneLaboratory: SKScene {
         beakerButton.delegate = self
         beakerButton.isUserInteractionEnabled = true
         self.addChild(beakerButton)
-        beakerButton.size = CGSize(width: width*0.25, height: height*0.25)
-        beakerButton.position = CGPoint(x: beakerButton.size.width*3.5, y: beakerButton.size.height*0.8)
+        beakerButton.size = CGSize(width: width*0.2, height: height*0.2)
+        beakerButton.position = CGPoint(x: beakerButton.size.width*2.3, y: beakerButton.size.height*0.99)
         beakerButton.zPosition = 2
         
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
@@ -52,7 +52,7 @@ class GameSceneLaboratory: SKScene {
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
         bunsenBurnerButton.size = CGSize(width: width*0.15, height: height*0.15)
-        bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width, y: bunsenBurnerButton.size.height*5.25)
+        bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width*1, y: bunsenBurnerButton.size.height*5.25)
         bunsenBurnerButton.zPosition = 2
         
         let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
@@ -68,25 +68,25 @@ class GameSceneLaboratory: SKScene {
         flatBottomFlaskButton.isUserInteractionEnabled = true
         self.addChild(flatBottomFlaskButton)
         flatBottomFlaskButton.size = CGSize(width: width*0.15, height: height*0.15)
-        flatBottomFlaskButton.position = CGPoint(x: flatBottomFlaskButton.size.width*4.5, y: flatBottomFlaskButton.size.height*5.25)
+        flatBottomFlaskButton.position = CGPoint(x: flatBottomFlaskButton.size.width*4, y: flatBottomFlaskButton.size.height*5.25)
         flatBottomFlaskButton.zPosition = 2
         
         let testTubeNode = SKSpriteNode(imageNamed: "testTube")
         self.addChild(testTubeNode)
         testTubeNode.size = CGSize(width: width*0.15, height: height*0.15)
-        testTubeNode.position = CGPoint(x: testTubeNode.size.width*6, y: testTubeNode.size.height*5.25)
+        testTubeNode.position = CGPoint(x: testTubeNode.size.width*5.5, y: testTubeNode.size.height*5.25)
         testTubeNode.zPosition = 2
         
         let mortarNode = SKSpriteNode(imageNamed: "mortar")
         self.addChild(mortarNode)
-        mortarNode.size = CGSize(width: width*0.15, height: height*0.15)
-        mortarNode.position = CGPoint(x: mortarNode.size.width*3.75, y: mortarNode.size.height*1.25)
+        mortarNode.size = CGSize(width: width*0.15, height: height*0.12)
+        mortarNode.position = CGPoint(x: mortarNode.size.width*1.4, y: mortarNode.size.height*1.5)
         mortarNode.zPosition = 2
         
         let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
         self.addChild(mortarBottomNode)
         mortarBottomNode.size = CGSize(width: width*0.15, height: height*0.15)
-        mortarBottomNode.position = CGPoint(x: mortarBottomNode.size.width*3.75, y: mortarBottomNode.size.height*1.25)
+        mortarBottomNode.position = CGPoint(x: mortarNode.size.width*1.4, y: mortarNode.size.height*1.5)
         mortarBottomNode.zPosition = 4
         
         
