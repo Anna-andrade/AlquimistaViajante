@@ -24,21 +24,21 @@ class GameSceneLaboratory: SKScene {
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         self.addChild(tableNode)
-        tableNode.size = CGSize(width: width, height: width/2.5)
-        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: height*0.26)
+        tableNode.size = CGSize(width: width*0.9, height: width*0.45)
+        tableNode.position = CGPoint(x: width*0.5, y: height*0.29)
         tableNode.zPosition = 1
         
         let beakerButton = SKButtonNavigation(imageName: "beaker", sceneToGo: GameSceneFiltration(), imagePress: "beakerPress")
         beakerButton.isUserInteractionEnabled = false
         self.addChild(beakerButton)
-        beakerButton.size = CGSize(width: width*0.2, height: width*0.2)
-        beakerButton.position = CGPoint(x: beakerButton.size.width*2.3, y: beakerButton.size.height*0.99)
+        beakerButton.size = CGSize(width: width*0.18, height: width*0.18)
+        beakerButton.position = CGPoint(x: beakerButton.size.width*2.3, y: height*0.27)
         beakerButton.zPosition = 2
         
         
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
-        bookcaseNode.size = CGSize(width: width*0.2, height: width*0.15)
+        bookcaseNode.size = CGSize(width: width*0.15, height: width*0.15)
         bookcaseNode.position = CGPoint(x: bookNode.size.width*3.45, y: height*0.5)
         bookcaseNode.zPosition = 2
         
@@ -78,13 +78,13 @@ class GameSceneLaboratory: SKScene {
         let mortarNode = SKSpriteNode(imageNamed: "mortar")
         self.addChild(mortarNode)
         mortarNode.size = CGSize(width: width*0.15, height: width*0.12)
-        mortarNode.position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.214)
+        mortarNode.position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.224)
         mortarNode.zPosition = 2
         
         let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
         self.addChild(mortarBottomNode)
         mortarBottomNode.size = CGSize(width: width*0.15, height: width*0.15)
-        mortarBottomNode.position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.21)
+        mortarBottomNode.position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.22)
         mortarBottomNode.zPosition = 4
         
         
