@@ -3,14 +3,14 @@
 //  AlquimistaViajante
 //
 //  Created by Marcus Vinicius Silva de Sousa on 14/03/22.
-
+// swiftlint:disable function_body_length
+// swiftlint:disable trailing_whitespace
 
 import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
     override func didMove(to view: SKView) {
-        
         let width = self.size.width
         let height = self.size.height
         

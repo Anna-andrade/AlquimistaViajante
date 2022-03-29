@@ -10,11 +10,18 @@ import Foundation
 
 class Reagente:SKSpriteNode{
     
-    var QuantVert: Int
+    var quantVert: Int
     
-    public init(QuantVert:Int){
-        self.QuantVert = QuantVert
+    public init(quantVert:Int){
+        self.quantVert = quantVert
         super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 25, height: 25))
+        self.name = "forma"
+        nameTexture()
+    }
+    
+    public init(quantVert:Int, size:CGSize){
+        self.quantVert = quantVert
+        super.init(texture: nil, color: UIColor.clear, size: size)
         self.name = "forma"
         nameTexture()
     }
@@ -24,15 +31,15 @@ class Reagente:SKSpriteNode{
     }
     
     public func subLadosForma(){
-        if QuantVert>3{
-            QuantVert -= 1
+        if quantVert>3{
+            quantVert -= 1
             nameTexture()
         }
     }
     
     public func addLadosForma(){
-        if QuantVert<6{
-            QuantVert += 1
+        if quantVert<6{
+            quantVert += 1
             nameTexture()
         }
     }
@@ -41,7 +48,7 @@ class Reagente:SKSpriteNode{
         
         var nomeForma: String
         
-        switch QuantVert{
+        switch quantVert{
             case 3:
                 nomeForma = "triangulo"
             case 4:
@@ -55,8 +62,6 @@ class Reagente:SKSpriteNode{
             default:
                 nomeForma = "circulo"
         }
-        
         self.texture = SKTexture(imageNamed: nomeForma)
     }
-    
 }
