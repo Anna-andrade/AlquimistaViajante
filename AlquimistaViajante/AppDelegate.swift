@@ -4,7 +4,8 @@
 //
 //  Created by Anna Carolina Costa Andrade on 14/03/22.
 //
-
+// swiftlint:disable vertical_whitespace
+// swiftlint:disable line_length
 import UIKit
 
 @main
@@ -37,4 +38,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

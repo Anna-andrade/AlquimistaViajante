@@ -18,7 +18,7 @@ extension SKScene {
         for i in 0...Int(width/side)+1 {
             for j in 0...Int(height/side)+1{
                 let backgroundWallNode = SKSpriteNode(imageNamed: "Background")
-                backgroundWallNode.size = CGSize(width: side, height: side)
+                backgroundWallNode.size = CGSize(width: width, height: height)
                 addChild(backgroundWallNode)
                 backgroundWallNode.position = CGPoint (x: backgroundWallNode.size.width*CGFloat(i), y: backgroundWallNode.size.height*CGFloat(j))
                 backgroundWallNode.zPosition = -2
@@ -42,6 +42,18 @@ extension SKScene {
             backgroundFloorNode.position = CGPoint (x: backgroundFloorNode.size.width*0.5, y: backgroundFloorNode.size.width*0.18)
             backgroundFloorNode.zPosition = -1
         
+        
+    }
+    
+    func drawBackgroundBook(side: CGFloat){
+        let width = self.size.width
+        let height = self.size.height
+        
+        let backgroundBookNode = SKSpriteNode(imageNamed: "bookBackgroundNode")
+        backgroundBookNode.size = CGSize(width: width, height: height)
+        addChild(backgroundBookNode)
+        backgroundBookNode.position = CGPoint (x: self.size.width*0.5, y: self.size.height*0.5)
+        backgroundBookNode.zPosition = -1 
         
     }
 }

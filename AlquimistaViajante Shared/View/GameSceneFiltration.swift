@@ -8,8 +8,12 @@
 import Foundation
 import SpriteKit
 
-
 class GameSceneFiltration: SKScene {
+    
+    let GC = GameController.shared
+    
+    var time: Timer?
+    var count = 0
         
     override func didMove(to view: SKView) {
         let w = self.size.width
@@ -17,22 +21,32 @@ class GameSceneFiltration: SKScene {
         
         self.isUserInteractionEnabled = true
         
-        let beakerNode = SKSpriteNode(imageNamed: "beaker")
+        let beakerNode = BeakerNode( size: CGSize(width: w*0.3, height: w*0.3))
         addChild(beakerNode)
         beakerNode.texture?.filteringMode = .nearest
-        beakerNode.size = CGSize(width: w*0.5, height: h*0.5)
         beakerNode.position = CGPoint(x: w*0.48, y: h*0.19)
         beakerNode.zPosition = 2
         
         let filterNode = SKSpriteNode(imageNamed: "filter")
         addChild(filterNode)
         filterNode.texture?.filteringMode = .nearest
-        filterNode.scale(to: CGSize(width: w*0.5, height: h*0.75))
-        filterNode.position = CGPoint(x: w*0.5, y: h*0.42)
+        filterNode.scale(to: CGSize(width: w*0.35, height: w*0.7))
+        filterNode.position = CGPoint(x: w*0.5, y: h*0.5)
         filterNode.zPosition = 1
-        
         
         drawBackgroundWall(side: 1050)
         addBackButton()
     }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if count>10 && count<15{
+            GC.filterComp()
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(measureIntensity), userInfo: nil, repeats: true)
+    }
+    @objc func measureIntensity() {
+         count += 1
+     }
 }

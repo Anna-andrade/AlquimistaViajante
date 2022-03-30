@@ -13,6 +13,12 @@ class GameSceneLaboratory: SKScene {
     
     override func didMove(to view: SKView) {
         
+        setup()
+    }
+    
+    func setup(){
+        removeAllChildren()
+        
         let width = self.size.width
         let height = self.size.height
         
@@ -28,13 +34,10 @@ class GameSceneLaboratory: SKScene {
         tableNode.position = CGPoint(x: width*0.5, y: height*0.29)
         tableNode.zPosition = 1
         
-        let beakerButton = SKButtonNavigation(imageName: "beaker", sceneToGo: GameSceneFiltration(), imagePress: "beakerPress")
-        beakerButton.isUserInteractionEnabled = false
-        self.addChild(beakerButton)
-        beakerButton.size = CGSize(width: width*0.18, height: width*0.18)
-        beakerButton.position = CGPoint(x: beakerButton.size.width*2.3, y: height*0.27)
-        beakerButton.zPosition = 2
-        
+        let beakerNode = BeakerNode(size: CGSize(width: width*0.18, height: width*0.18))
+        self.addChild(beakerNode)
+        beakerNode.position = CGPoint(x: beakerNode.size.width*2.3, y: height*0.27)
+        beakerNode.zPosition = 2
         
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
@@ -75,20 +78,21 @@ class GameSceneLaboratory: SKScene {
         testTubeNode.position = CGPoint(x: testTubeNode.size.width*5.5, y: height*0.86)
         testTubeNode.zPosition = 2
         
-        let mortarNode = SKSpriteNode(imageNamed: "mortar")
+        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: width*0.15), lados: [3,nil])
+        position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.22)
+        mortarNode.isUserInteractionEnabled = true
+        mortarNode.delegate = self
         self.addChild(mortarNode)
-        mortarNode.size = CGSize(width: width*0.15, height: width*0.12)
         mortarNode.position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.224)
         mortarNode.zPosition = 2
         
-        let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
-        self.addChild(mortarBottomNode)
-        mortarBottomNode.size = CGSize(width: width*0.15, height: width*0.15)
-        mortarBottomNode.position = CGPoint(x: mortarNode.size.width*1.4, y: height*0.22)
-        mortarBottomNode.zPosition = 4
-        
-        
         drawBackgroundFloor(side: 1050)
-        
+    }
+
+}
+
+extension GameSceneLaboratory:loadSceneDelegate{
+    func loadScene() {
+        setup()
     }
 }
