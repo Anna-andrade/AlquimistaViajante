@@ -9,19 +9,40 @@ import Foundation
 import SpriteKit
 
 class MortarButton:SKSpriteNode{
+    weak var delegate: loadSceneDelegate?
+    let GC = GameController.shared
+    let lados: [Int?]
     
+    init(size: CGSize, lados: [Int?]){
+        self.lados = lados
+        super.init(texture: nil, color: .clear, size: size)
+        setup()
+        
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     func setup(){
+        removeAllChildren()
         let mortarNode = SKSpriteNode(imageNamed: "mortar")
         self.addChild(mortarNode)
-        mortarNode.size = CGSize(width: self.size.width*0.15, height: self.size.width*0.15)
-        mortarNode.position = CGPoint(x: mortarNode.size.width*3.75, y: mortarNode.size.height*1.25)
-        mortarNode.zPosition = 2
+        mortarNode.size = CGSize(width: size.height, height: size.width)
+        mortarNode.zPosition = 4
+        
+        let imgProduct = Product(lados: lados)
+        addChild(imgProduct)
+        imgProduct.zPosition = 3
+        imgProduct.position = CGPoint(x: 0, y: 30)
+        imgProduct.reagentes[0]?.size = CGSize(width: size.height/1.5, height: size.height/1.5)
+        imgProduct.size = CGSize(width: size.height/1.5, height: size.height/1.5)
         
         let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
         self.addChild(mortarBottomNode)
-        mortarBottomNode.size = CGSize(width: self.size.width*0.15, height: self.size.width*0.15)
-        mortarBottomNode.position = CGPoint(x: mortarBottomNode.size.width*3.75, y: mortarBottomNode.size.height*1.25)
-        mortarBottomNode.zPosition = 2
-        
+        mortarBottomNode.size = CGSize(width: size.height, height: size.width)
+        mortarBottomNode.zPosition = 1
+    }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        GC.arrayProduct.append(Product(lados: lados))
+        delegate?.loadScene()
     }
 }

@@ -9,7 +9,6 @@ import SpriteKit
 
 class FlaskButton:SKNode{
     
-    weak var delegate:AddProductsDelegate?
     var imgNode:SKSpriteNode
     var size:CGSize
     
@@ -45,31 +44,18 @@ class FlaskButton:SKNode{
         frameShape.zPosition = 4
         frameShape.strokeColor = .clear
         frameShape.name = "frame"
-                
+        
+        let range = Int(size.width/8)
+        let ajusteAltura = Int(size.height/10)
+        for product in GameController.shared.arrayProduct {
+            product.position = CGPoint(x: Int.random(in: -range ... range), y: Int.random(in: -range-ajusteAltura ... range-ajusteAltura))
+            self.addChild(product)
+        }
         addChild(imgNode)
         addChild(frameShape)
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-        let positionInScene = touch.location(in: self)
-        let touchedNode = self.atPoint(positionInScene)
-            
-            if let p = (touchedNode as? SKShapeNode)?.path {
-                if p.contains(positionInScene) {
-                    let location = positionInScene
-                    let comp = Product(lados: [3,nil])
-                    comp.position = location
-                    comp.zPosition = 3
-                    addChild(comp)
-                    delegate?.addProducts(product: comp)
-                }
-            }
-        }
     }
 }
