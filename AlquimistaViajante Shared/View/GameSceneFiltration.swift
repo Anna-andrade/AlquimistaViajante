@@ -8,7 +8,6 @@
 import Foundation
 import SpriteKit
 
-
 class GameSceneFiltration: SKScene {
     
     let GC = GameController.shared
@@ -35,11 +34,9 @@ class GameSceneFiltration: SKScene {
         filterNode.position = CGPoint(x: w*0.5, y: h*0.5)
         filterNode.zPosition = 1
         
-        
         drawBackgroundWall(side: 1050)
         addBackButton()
     }
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if count>10 && count<15{
             GC.filterComp()
@@ -49,7 +46,6 @@ class GameSceneFiltration: SKScene {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         time = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(measureIntensity), userInfo: nil, repeats: true)
     }
-    
     @objc func measureIntensity() {
          count += 1
      }

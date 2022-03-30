@@ -13,6 +13,12 @@ class GameSceneLaboratory: SKScene {
     
     override func didMove(to view: SKView) {
         
+        setup()
+    }
+    
+    func setup(){
+        removeAllChildren()
+        
         let width = self.size.width
         let height = self.size.height
         
@@ -27,9 +33,8 @@ class GameSceneLaboratory: SKScene {
         tableNode.size = CGSize(width: width, height: height/2)
         tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
         
-        let beakerNode = SKSpriteNode(imageNamed: "beaker")
+        let beakerNode = BeakerNode(size: CGSize(width: width*0.25, height: width*0.25))
         self.addChild(beakerNode)
-        beakerNode.size = CGSize(width: width*0.25, height: height*0.25)
         beakerNode.position = CGPoint(x: beakerNode.size.width*3.5, y: beakerNode.size.height*0.8)
         beakerNode.zPosition = 2
         
@@ -71,19 +76,20 @@ class GameSceneLaboratory: SKScene {
         testTubeNode.position = CGPoint(x: testTubeNode.size.width*6, y: testTubeNode.size.height*5.25)
         testTubeNode.zPosition = 2
         
-        let mortarNode = SKSpriteNode(imageNamed: "mortar")
+        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
+        mortarNode.isUserInteractionEnabled = true
+        mortarNode.delegate = self
         self.addChild(mortarNode)
-        mortarNode.size = CGSize(width: width*0.15, height: height*0.15)
         mortarNode.position = CGPoint(x: mortarNode.size.width*3.75, y: mortarNode.size.height*1.25)
         mortarNode.zPosition = 2
         
-        let mortarBottomNode = SKSpriteNode(imageNamed: "mortarBottom")
-        self.addChild(mortarBottomNode)
-        mortarBottomNode.size = CGSize(width: width*0.15, height: height*0.15)
-        mortarBottomNode.position = CGPoint(x: mortarBottomNode.size.width*3.75, y: mortarBottomNode.size.height*1.25)
-        mortarBottomNode.zPosition = 2
-        
         drawBackgroundFloor(side: 1050)
-        
+    }
+
+}
+
+extension GameSceneLaboratory:loadSceneDelegate{
+    func loadScene() {
+        setup()
     }
 }
