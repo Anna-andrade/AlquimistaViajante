@@ -23,7 +23,7 @@ class GameViewControllerTVOs: UIViewController {
         self.view = skView
     }
 
-    override var shouldAutorotate: Bool {
+    var shouldAutorotate: Bool {
         return true
     }
 
@@ -35,7 +35,16 @@ class GameViewControllerTVOs: UIViewController {
 //        }
 //    }
 
-    override var prefersStatusBarHidden: Bool {
+    var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+extension GameViewControllerTVOs {
+
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+         if let scene = (view as? SKView)?.scene {
+             return [scene]
+         }
+         return []
     }
 }

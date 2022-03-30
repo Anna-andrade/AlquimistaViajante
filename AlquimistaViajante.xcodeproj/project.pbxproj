@@ -44,7 +44,6 @@
 		4CCE1F2327F3A8FD0012DC55 /* SKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE1F2127F3A8FD0012DC55 /* SKButton.swift */; };
 		4CCE1F2427F4BEC20012DC55 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C513DDA27E4FCDA00F6AC56 /* GameController.swift */; };
 		4CCE1F2527F4BEF80012DC55 /* GameSceneReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EDF27DFD4F000C413CB /* GameSceneReaction.swift */; };
-		4CCE1F2627F4C4DE0012DC55 /* GameViewControllerTVOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08E05A27E906B9006D9E5F /* GameViewControllerTVOs.swift */; };
 		DB08E05B27E906B9006D9E5F /* GameViewControllerTVOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08E05A27E906B9006D9E5F /* GameViewControllerTVOs.swift */; };
 		DB08E05C27E9070A006D9E5F /* GameSceneLaboratory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EDD27DFD4B200C413CB /* GameSceneLaboratory.swift */; };
 		DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EE127DFD58F00C413CB /* GameSceneBreakChemicalBond.swift */; };
@@ -398,7 +397,6 @@
 				0687007027ED017E000E38F1 /* ShakeDelegate.swift in Sources */,
 				DBD6475E27DFBC710094B1B6 /* AppDelegate.swift in Sources */,
 				4C4D8EEB27DFD67D00C413CB /* GameControllerFiltration.swift in Sources */,
-				4CCE1F2627F4C4DE0012DC55 /* GameViewControllerTVOs.swift in Sources */,
 				0655C6D927F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */,
 				4C513DDC27E4FCDB00F6AC56 /* GameController.swift in Sources */,
 				0671ABBF27EBAFC8002216DF /* BeakerNode.swift in Sources */,
@@ -620,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = 76RG2M4UVB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -650,7 +648,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = 76RG2M4UVB;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

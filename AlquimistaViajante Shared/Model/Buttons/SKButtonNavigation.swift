@@ -13,6 +13,12 @@ class SKButtonNavigation: SKSpriteNode{
     var imageName: String
     var sceneToGo: SKScene
     weak var changeDelegate: (ChangeSceneDelegate)? = GameController.shared.changeDelegate
+    var touchStart: CGPoint?
+    var isFocusable: Bool = true
+    
+    var canBecomeFocusable: Bool{
+        return isFocusable
+    }
     
     init(imageName: String, sceneToGo: SKScene){
         self.sceneToGo = sceneToGo
@@ -28,25 +34,19 @@ class SKButtonNavigation: SKSpriteNode{
         changeDelegate?.changeScene(scene: sceneToGo)
     }
 #if os(tvOS)
-        var touchStart: CGPoint?
-        var isFocusable: Bool = true
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
         
-        var canBecomeFocusable: Bool{
-            return isFocusable
+        if context.previouslyFocusedItem === self{
+            self.setScale(self.xScale/1.1)
+            self.setScale(self.yScale/1.1)
+            self.alpha = 0.50
         }
-        override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
-            
-            if context.previouslyFocusedItem === self{
-                self.setScale(self.xScale/1.1)
-                self.setScale(self.yScale/1.1)
-                self.alpha = 0.50
-            }
-            
-            if context.nextFocusedItem === self{
-                self.setScale(self.xScale*1.1)
-                self.setScale(self.yScale*1.1)
-                self.alpha = 1
-            }
+        
+        if context.nextFocusedItem === self{
+            self.setScale(self.xScale*1.1)
+            self.setScale(self.yScale*1.1)
+            self.alpha = 1
         }
-    #endif
+    }
+#endif
 }
