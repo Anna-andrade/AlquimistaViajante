@@ -9,10 +9,20 @@ import Foundation
 import SpriteKit
 
 class GameSceneBreakChemicalBond: SKScene{
+    
+    let GC = GameController.shared
+
     override func didMove(to view: SKView) {
         
         let width = self.size.width
         let height = self.size.height
+        
+        for product in GC.arrayProduct {
+            self.addChild(product)
+            product.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
+            product.zPosition = 5
+            product.name = "composto"
+        }
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         tableNode.size = CGSize(width: width, height: height/2)
@@ -20,9 +30,8 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(tableNode)
         tableNode.zPosition = 0
         
-        let beakerNode = SKSpriteNode(imageNamed: "beaker")
-        beakerNode.size = CGSize(width: width/2, height: height/2)
-        beakerNode.position = CGPoint(x: beakerNode.size.width, y: beakerNode.size.height)
+        let beakerNode = BeakerNode( size: CGSize(width: width/2.5, height: width/2.5))
+        beakerNode.position = CGPoint(x: self.size.width/2, y: self.size.height*1.25/2)
         addChild(beakerNode)
         beakerNode.zPosition = 1
         
@@ -33,5 +42,14 @@ class GameSceneBreakChemicalBond: SKScene{
         bunsenBurnerNode.zPosition = 1
         
         drawBackgroundWall(side: 1050)
+        addBackButton()
+    }
+    
+    
+    func assobrar(){
+        for product in GC.arrayProduct {
+            product.breakComposto(scene: self, location: product.position)
+            GC.eraseComponents()
+        }
     }
 }

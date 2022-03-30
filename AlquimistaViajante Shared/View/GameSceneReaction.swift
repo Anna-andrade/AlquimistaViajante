@@ -10,7 +10,7 @@ import SpriteKit
 
 class GameSceneReaction: SKScene {
     
-    lazy var arrayProduct:[Product] = [Product(lados: [3,nil]),Product(lados: [3,nil]),Product(lados: [3,nil])]
+    let GC = GameController.shared
     
     override func didMove(to view: SKView) {
         self.isUserInteractionEnabled = true
@@ -18,7 +18,7 @@ class GameSceneReaction: SKScene {
         
         setupScene()
         var i = 0.0
-        for product in arrayProduct {
+        for product in GC.arrayProduct {
                 self.addChild(product)
                 product.position = CGPoint(x: self.size.width/2, y: self.size.height/2+100-(i*150) )
             i += 1
@@ -30,29 +30,30 @@ class GameSceneReaction: SKScene {
         let w = self.size.width
         let h = self.size.height
         
-        let flaskNode = FlaskNode(imgName: "flatBottomFlask", size: CGSize(width: w, height: h))
-        flaskNode.isUserInteractionEnabled = true
-        flaskNode.delegate = self
+        let flaskButton = FlaskButton(imgName: "flatBottomFlask", size: CGSize(width: w, height: h))
+        flaskButton.isUserInteractionEnabled = true
+        flaskButton.delegate = self
 
     
-        self.addChild(flaskNode)
-        flaskNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
+        self.addChild(flaskButton)
+        flaskButton.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
 
-        flaskNode.zPosition = 1
+        flaskButton.zPosition = 1
         drawBackgroundWall(side: 1050)
+        addBackButton()
     }
     
     func eraseComponents(){
-        for i in 0..<arrayProduct.count {
-            if arrayProduct[i].isDead{
-                arrayProduct.remove(at: i)
+        for i in 0..<GC.arrayProduct.count {
+            if GC.arrayProduct[i].isDead{
+                GC.arrayProduct.remove(at: i)
                 break
             }
         }
     }
 
     func shake(){
-            for product in arrayProduct {
+        for product in GC.arrayProduct {
                 product.physicsBody?.applyForce(CGVector(dx: Int.random(in: -1000...1000), dy: Int.random(in: -1000...1000)))
         }
     }
@@ -72,7 +73,7 @@ extension GameSceneReaction:SKPhysicsContactDelegate{
 }
 extension GameSceneReaction:AddProductsDelegate{
     func addProducts(product: Product) {
-        arrayProduct.append(product)
+        GC.arrayProduct.append(product)
     }
 }
 

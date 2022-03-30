@@ -8,26 +8,31 @@
 import Foundation
 import SpriteKit
 
-class FlaskNode:SKNode{
+class FlaskButton:SKNode{
     
     weak var delegate:AddProductsDelegate?
     var imgNode:SKSpriteNode
+    var size:CGSize
     
-    var border: UIBezierPath {
-            let path = UIBezierPath()
-            path.move(to: CGPoint(x: -75, y:50))
-            path.addLine(to: CGPoint(x: -75, y:150))
-            path.addLine(to: CGPoint(x: 75, y:150))
-            path.addLine(to: CGPoint(x: 75, y:50))
-            path.addCurve(to: CGPoint(x: 40, y:-250), controlPoint1: CGPoint(x: 175, y: 30), controlPoint2: CGPoint(x: 200, y: -225))
-            path.addLine(to: CGPoint(x: -40, y:-250))
-            path.addCurve(to: CGPoint(x: -75, y: 50), controlPoint1: CGPoint(x: -200, y: -225), controlPoint2: CGPoint(x: -175, y: 30))
-            return path
+    private func border()-> UIBezierPath {
+        let w = self.size.width
+        let h = self.size.height
+
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: -w/8, y:h/16))
+        path.addLine(to: CGPoint(x: -w/8, y:h/4))
+        path.addLine(to: CGPoint(x: w/7.5, y:h/4))
+        path.addLine(to: CGPoint(x: w/7.5, y:h/16))
+        path.addCurve(to: CGPoint(x: w/9, y:-h/2.6), controlPoint1: CGPoint(x: w/3.5, y: h/20), controlPoint2: CGPoint(x: w/3.2, y: -h/2.6))
+        path.addLine(to: CGPoint(x: -w/9, y:-h/2.6))
+        path.addCurve(to: CGPoint(x: -w/8, y:h/16), controlPoint1: CGPoint(x: -w/3.2, y: -h/2.6), controlPoint2: CGPoint(x: -w/3.5, y: h/20))
+        return path
         }
     
 
     
     init(imgName:String, size:CGSize) {
+        self.size = size
         let texture = SKTexture(imageNamed: imgName)
         texture.filteringMode = .nearest
         self.imgNode = SKSpriteNode(texture: texture, size: size)
@@ -35,9 +40,9 @@ class FlaskNode:SKNode{
         super.init()
         
         self.physicsBody?.collisionBitMask  = 1
-        physicsBody = SKPhysicsBody (edgeLoopFrom: border.cgPath)
+        physicsBody = SKPhysicsBody (edgeLoopFrom: border().cgPath)
         physicsBody?.isDynamic = false
-        let frameShape = SKShapeNode(path: border.cgPath)
+        let frameShape = SKShapeNode(path: border().cgPath)
         frameShape.zPosition = 4
         frameShape.strokeColor = .clear
         frameShape.name = "frame"
