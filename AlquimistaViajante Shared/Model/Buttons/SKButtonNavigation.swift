@@ -25,6 +25,8 @@ class SKButtonNavigation: SKSpriteNode{
         self.imageName = imageName
         let texture = SKTexture(imageNamed: imageName)
         super.init(texture: texture, color: .clear, size: CGSize())
+        self.isUserInteractionEnabled = true
+        self.focusBehavior = .focusable
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -39,7 +41,7 @@ class SKButtonNavigation: SKSpriteNode{
         if context.previouslyFocusedItem === self{
             self.setScale(self.xScale/1.1)
             self.setScale(self.yScale/1.1)
-            self.alpha = 0.50
+            self.alpha = 0.5
         }
         
         if context.nextFocusedItem === self{
