@@ -24,9 +24,9 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(tableNode)
         tableNode.zPosition = 0
         
-        let beakerNode = BeakerNode(imgName: "beaker", size: CGSize(width: width/2.5, height: width/2.5))
-        beakerNode.position = CGPoint(x: beakerNode.size.width*0.64, y: beakerNode.size.height*0.8)
-        beakerNode.zPosition = 1
+        beakerNode = BeakerNode(size: CGSize(width: width/2.5, height: width/2.5))
+        beakerNode?.position = CGPoint(x: width*0.64, y: height*0.8)
+        beakerNode?.zPosition = 1
         guard let verBeakerNode = beakerNode else { return }
         addChild(verBeakerNode)
         
