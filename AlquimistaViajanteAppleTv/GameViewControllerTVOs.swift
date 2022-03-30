@@ -9,12 +9,12 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class GameViewControllerTVOs: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let skView = SKView()
-        let scene = GameSceneBreakChemicalBond()
+        let scene = GameSceneLaboratory()
         scene.scaleMode = .aspectFit
         scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.width)
         skView.presentScene(scene)
@@ -23,7 +23,7 @@ class GameViewController: UIViewController {
         self.view = skView
     }
 
-    var shouldAutorotate: Bool {
+    override var shouldAutorotate: Bool {
         return true
     }
 
@@ -35,7 +35,7 @@ class GameViewController: UIViewController {
 //        }
 //    }
 
-    var prefersStatusBarHidden: Bool {
+    override var prefersStatusBarHidden: Bool {
         return true
     }
 }
