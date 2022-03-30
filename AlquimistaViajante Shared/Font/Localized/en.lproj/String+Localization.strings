@@ -1,0 +1,15 @@
+/* 
+  String+Localization.strings
+  AlquimistaViajante
+
+  Created by Talita Nunes dos Santos on 24/03/22.
+  
+*/
+
+"Introducao" = "Introduction: Alchemy is the branch of knowledge that deals with the transformations of matter.";
+
+"Paragrafo1" = "What you need to know is that transformations happen by combining different substances, which we call reagents. The combination of reagents leads to the formation of products. In this book you will learn how to subject reagents to appropriate experimental conditions for chemical reactions to occur.";
+
+"Paragrafo2" = "Do not forget, products are rarely formed with 100% purity. Indeed, we need often to perform blend purification procedures so that we can obtain purified products of interest. You will learn how to perform these procedures in this book.";
+
+"Paragrafo3" = "Keep in mind that mixing separation methods are not the only alternatives to obtaining products of interest. Often, we need to reverse the way of chemical reactions, and our products become reagents, which will have their chemical bond broken, forming their initial components. This is an interesting strategy as you will deal with rare, difficult-to-obtain and high-cost substances. This knowledge you will get in the attentive reading of these pages.";
