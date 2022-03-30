@@ -11,7 +11,7 @@ class GameSceneLaboratory: SKScene {
     let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
     let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
     let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
-    let bookNode = SKButtonNavigation(imageNamed: "book", sceneToGo: GameSceneBook())
+//    let bookNode = SKButtonNavigation(imageNamed: "book", sceneToGo: GameSceneBook())
     
     var gesture = UITapGestureRecognizer()
     
@@ -26,7 +26,7 @@ class GameSceneLaboratory: SKScene {
         let width = self.size.width
         let height = self.size.height
         
-//        let bookNode = SKButtonNavigation(imageNamed: "book", sceneToGo: GameSceneBook())
+        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.15, height: height*0.15)
         bookNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*3)
