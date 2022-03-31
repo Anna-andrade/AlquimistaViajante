@@ -7,9 +7,8 @@
 
 import Foundation
 
-class GameController{
+class GameController {
     static var shared = GameController()
-     
     var changeDelegate:ChangeSceneDelegate?
     var arrayProduct:[Product] = []
     
@@ -28,6 +27,7 @@ class GameController{
         for product in arrayProduct {
             if product.reagentes[1] == nil{
                 if product.reagentes[0]?.quantVert ?? 0>moreSides{
+                    arrayFilter = []
                     moreSides = product.reagentes[0]?.quantVert ?? 0
                     arrayFilter.append(product)
                 }
