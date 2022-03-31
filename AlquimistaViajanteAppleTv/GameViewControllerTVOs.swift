@@ -9,11 +9,12 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameViewController: UIViewController {
+class GameViewControllerTVOs: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let skView = SKView()
-        let scene = GameSceneBook()
+        let scene = GameSceneLaboratory()
         scene.scaleMode = .aspectFit
         scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         skView.presentScene(scene)
@@ -28,5 +29,14 @@ class GameViewController: UIViewController {
 
     var prefersStatusBarHidden: Bool {
         return true
+    }
+}
+extension GameViewControllerTVOs {
+
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+         if let scene = (view as? SKView)?.scene {
+             return [scene]
+         }
+         return []
     }
 }

@@ -4,12 +4,16 @@
 //
 //  Created by Marcus Vinicius Silva de Sousa on 14/03/22.
 
-// Tentando o commit
-
 import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
+    let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+    let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+    let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+    let bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    
+    var gesture = UITapGestureRecognizer()
     
     override func didMove(to view: SKView) {
         
@@ -22,7 +26,7 @@ class GameSceneLaboratory: SKScene {
         let width = self.size.width
         let height = self.size.height
         
-        let bookNode = SKSpriteNode(imageNamed: "book")
+//        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.15, height: height*0.15)
         bookNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*3)
@@ -48,22 +52,22 @@ class GameSceneLaboratory: SKScene {
         self.addChild(shelfNode)
         shelfNode.size = CGSize(width: width, height: height/2)
         shelfNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*1.25)
-
-        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+        
+//        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
         bunsenBurnerButton.size = CGSize(width: width*0.15, height: height*0.15)
         bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width, y: bunsenBurnerButton.size.height*5.25)
         bunsenBurnerButton.zPosition = 2
-
-        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+        
+//        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
         glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
         glassFunnelButton.size = CGSize(width: width*0.15, height: height*0.15)
         glassFunnelButton.position = CGPoint(x: glassFunnelButton.size.width*2.5, y: glassFunnelButton.size.height*5.25)
         glassFunnelButton.zPosition = 2
-
-        let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+        
+//        let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
         flatBottomFlaskNode.isUserInteractionEnabled = true
         self.addChild(flatBottomFlaskNode)
         flatBottomFlaskNode.size = CGSize(width: width*0.15, height: height*0.15)
@@ -84,6 +88,32 @@ class GameSceneLaboratory: SKScene {
         mortarNode.zPosition = 2
         
         drawBackgroundFloor(side: 1050)
+        
+#if os(tvOS)
+        addTapGestureRecognizer()
+#endif
+    }
+#if os(tvOS)
+    func addTapGestureRecognizer(){
+        gesture.addTarget(self, action: #selector(clicked))
+        self.view?.addGestureRecognizer(gesture)
+    }
+    @objc func clicked(){
+        if bunsenBurnerButton.isFocused {
+            // acao do bunsenBurner
+        } else if glassFunnelButton.isFocused {
+            // acao do glassFunnelButton
+        } else if flatBottomFlaskNode.isFocused {
+            // acao flatBottomFlaskNode
+        }
+    }
+#endif
+}
+
+#if os(tvOS)
+extension GameSceneLaboratory {
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [bunsenBurnerButton]
     }
 
 }
@@ -93,3 +123,4 @@ extension GameSceneLaboratory:loadSceneDelegate{
         setup()
     }
 }
+#endif
