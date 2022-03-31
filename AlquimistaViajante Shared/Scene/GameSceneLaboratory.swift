@@ -14,7 +14,7 @@ class GameSceneLaboratory: SKScene {
     lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
     lazy var flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
     lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
-    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
+    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.15, height: width*0.15), lados: [3,nil])
     
     var gesture = UITapGestureRecognizer()
     
@@ -101,11 +101,19 @@ class GameSceneLaboratory: SKScene {
     }
     @objc func clicked(){
         if bunsenBurnerButton.isFocused {
-            self.view?.presentScene(GameSceneBreakChemicalBond())
+            removeAllChildren()
+            bunsenBurnerButton.changeScene()
         } else if glassFunnelButton.isFocused {
-            self.view?.presentScene(GameSceneFiltration())
+            removeAllChildren()
+            glassFunnelButton.changeScene()
         } else if flatBottomFlaskNode.isFocused {
-            self.view?.presentScene(GameSceneReaction())
+            removeAllChildren()
+            flatBottomFlaskNode.changeScene()
+        } else if mortarNode.isFocused{
+            removeAllChildren()
+            mortarNode.addProductScene()
+        }else if bookNode.isFocused{
+            bookNode.changeScene()
         }
     }
 #endif
@@ -114,7 +122,7 @@ class GameSceneLaboratory: SKScene {
 #if os(tvOS)
 extension GameSceneLaboratory {
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
-        return [bunsenBurnerButton]
+        return [mortarNode]
     }
 
 }

@@ -13,7 +13,6 @@ class SKButtonNavigation: SKSpriteNode{
     var imageName: String
     var sceneToGo: SKScene
     weak var changeDelegate: (ChangeSceneDelegate)? = GameController.shared.changeDelegate
-    var touchStart: CGPoint?
     var isFocusable: Bool = true
     
     var canBecomeFocusable: Bool{
@@ -32,7 +31,12 @@ class SKButtonNavigation: SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+#if os(iOS)
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        changeScene()
+    }
+#endif
+    func changeScene(){
         changeDelegate?.changeScene(scene: sceneToGo)
     }
 #if os(tvOS)
