@@ -8,10 +8,13 @@ import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
-    let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
-    let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-    let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
-    let bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    lazy var width = self.size.width
+    lazy var height = self.size.height
+    lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+    lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+    lazy var flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+    lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
     
     var gesture = UITapGestureRecognizer()
     
@@ -22,10 +25,7 @@ class GameSceneLaboratory: SKScene {
     
     func setup(){
         removeAllChildren()
-        
-        let width = self.size.width
-        let height = self.size.height
-        
+
 //        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.15, height: height*0.15)
@@ -36,18 +36,18 @@ class GameSceneLaboratory: SKScene {
         self.addChild(tableNode)
         tableNode.size = CGSize(width: width, height: height/2)
         tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-        
+
         let beakerNode = BeakerNode(size: CGSize(width: width*0.25, height: width*0.25))
         self.addChild(beakerNode)
         beakerNode.position = CGPoint(x: beakerNode.size.width*3.5, y: beakerNode.size.height*0.8)
         beakerNode.zPosition = 2
-        
+
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
         bookcaseNode.size = CGSize(width: width*0.2, height: height*0.15)
         bookcaseNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*2.5)
         bookcaseNode.zPosition = 2
-        
+
         let shelfNode = SKSpriteNode(imageNamed: "shelf")
         self.addChild(shelfNode)
         shelfNode.size = CGSize(width: width, height: height/2)
@@ -73,14 +73,14 @@ class GameSceneLaboratory: SKScene {
         flatBottomFlaskNode.size = CGSize(width: width*0.15, height: height*0.15)
         flatBottomFlaskNode.position = CGPoint(x: flatBottomFlaskNode.size.width*4.5, y: flatBottomFlaskNode.size.height*5.25)
         flatBottomFlaskNode.zPosition = 2
-        
+
         let testTubeNode = SKSpriteNode(imageNamed: "testTube")
         self.addChild(testTubeNode)
         testTubeNode.size = CGSize(width: width*0.15, height: height*0.15)
         testTubeNode.position = CGPoint(x: testTubeNode.size.width*6, y: testTubeNode.size.height*5.25)
         testTubeNode.zPosition = 2
         
-        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
+//        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
         mortarNode.isUserInteractionEnabled = true
         mortarNode.delegate = self
         self.addChild(mortarNode)
@@ -118,10 +118,10 @@ extension GameSceneLaboratory {
     }
 
 }
-
+#endif
 extension GameSceneLaboratory:loadSceneDelegate{
     func loadScene() {
         setup()
     }
 }
-#endif
+

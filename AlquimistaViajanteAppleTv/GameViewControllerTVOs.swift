@@ -27,14 +27,6 @@ class GameViewControllerTVOs: UIViewController {
         return true
     }
 
-//    var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        if UIDevice.current.userInterfaceIdiom == .phone {
-//            return .allButUpsideDown
-//        } else {
-//            return .all
-//        }
-//    }
-
     var prefersStatusBarHidden: Bool {
         return true
     }
