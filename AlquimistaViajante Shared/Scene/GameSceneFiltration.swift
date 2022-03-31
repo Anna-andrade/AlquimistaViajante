@@ -71,9 +71,7 @@ class GameSceneFiltration: SKScene {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if cliked != false{
-            return
-        }
+
         time?.invalidate()
         if count>10 && count<=15 {
             GC.filterComp()
@@ -83,7 +81,7 @@ class GameSceneFiltration: SKScene {
                 GC.arrayProduct.remove(at: i)
             }
         }
-        cliked=true
+        
         createdBeaker()
     }
     
@@ -91,6 +89,7 @@ class GameSceneFiltration: SKScene {
         if cliked != false{
             return
         }
+        cliked=true
         time = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(measureIntensity), userInfo: nil, repeats: true)
         let waterNode = SKSpriteNode(imageNamed: "water")
         waterNode.position = CGPoint(x: w*0.49, y: h*0.8)

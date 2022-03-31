@@ -36,7 +36,6 @@
 		4C4D8EE227DFD58F00C413CB /* GameSceneBreakChemicalBond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EE127DFD58F00C413CB /* GameSceneBreakChemicalBond.swift */; };
 		4C4D8EE427DFD5A900C413CB /* GameSceneFiltration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EE327DFD5A900C413CB /* GameSceneFiltration.swift */; };
 		4C513DDC27E4FCDB00F6AC56 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C513DDA27E4FCDA00F6AC56 /* GameController.swift */; };
-		4C513DDD27E4FCDB00F6AC56 /* GameControllerLaboratory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C513DDB27E4FCDB00F6AC56 /* GameControllerLaboratory.swift */; };
 		4CCE1F2227F3A8FD0012DC55 /* SKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE1F2127F3A8FD0012DC55 /* SKButton.swift */; };
 		4CCE1F2327F3A8FD0012DC55 /* SKButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCE1F2127F3A8FD0012DC55 /* SKButton.swift */; };
 		4CCE1F2427F4BEC20012DC55 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C513DDA27E4FCDA00F6AC56 /* GameController.swift */; };
@@ -91,7 +90,6 @@
 		4C4D8EE127DFD58F00C413CB /* GameSceneBreakChemicalBond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneBreakChemicalBond.swift; sourceTree = "<group>"; };
 		4C4D8EE327DFD5A900C413CB /* GameSceneFiltration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSceneFiltration.swift; sourceTree = "<group>"; };
 		4C513DDA27E4FCDA00F6AC56 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
-		4C513DDB27E4FCDB00F6AC56 /* GameControllerLaboratory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameControllerLaboratory.swift; sourceTree = "<group>"; };
 		4CCE1F2127F3A8FD0012DC55 /* SKButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKButton.swift; sourceTree = "<group>"; };
 		4CCE1F2827F4F99E0012DC55 /* GameViewControllerTVOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerTVOs.swift; sourceTree = "<group>"; };
 		B303ADDD27ED0230006A40F4 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/String+Localization.strings"; sourceTree = "<group>"; };
@@ -142,6 +140,13 @@
 				0655C6E227F3A41A00E0FF07 /* LoadSceneDelegate.swift */,
 			);
 			path = Protocolos;
+			sourceTree = "<group>";
+		};
+		06DA231127F6222500FC25FD /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */ = {
@@ -248,6 +253,7 @@
 				DBD6475C27DFBC710094B1B6 /* AlquimistaViajante */,
 				4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */,
 				DBD6475B27DFBC710094B1B6 /* Products */,
+				06DA231127F6222500FC25FD /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -439,7 +445,6 @@
 				4C4D8EDC27DFCA4200C413CB /* SKButtonNavigation.swift in Sources */,
 				DB08E06427ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
 				0655C6D627F2262600E0FF07 /* FlaskButtons.swift in Sources */,
-				4C513DDD27E4FCDB00F6AC56 /* GameControllerLaboratory.swift in Sources */,
 				4CCE1F2227F3A8FD0012DC55 /* SKButton.swift in Sources */,
 				4C367FCE27ECECFD0042BE50 /* NavigationDelegate.swift in Sources */,
 				4C4D8EE227DFD58F00C413CB /* GameSceneBreakChemicalBond.swift in Sources */,
@@ -694,7 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 76RG2M4UVB;
+				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
@@ -725,7 +730,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 76RG2M4UVB;
+				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";

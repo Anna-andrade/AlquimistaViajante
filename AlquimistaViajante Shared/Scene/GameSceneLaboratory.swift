@@ -8,10 +8,13 @@ import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
-    let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
-    let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-    let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
-    let bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    lazy var width = self.size.width
+    lazy var height = self.size.height
+    lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+    lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+    lazy var flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+    lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
     
     var gesture = UITapGestureRecognizer()
     
@@ -22,10 +25,7 @@ class GameSceneLaboratory: SKScene {
     
     func setup(){
         removeAllChildren()
-        
-        let width = self.size.width
-        let height = self.size.height
-        
+
 //        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.15, height: height*0.15)
@@ -80,7 +80,7 @@ class GameSceneLaboratory: SKScene {
         testTubeNode.position = CGPoint(x: testTubeNode.size.width*6, y: testTubeNode.size.height*5.25)
         testTubeNode.zPosition = 2
         
-        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
+//        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
         mortarNode.isUserInteractionEnabled = true
         mortarNode.delegate = self
         self.addChild(mortarNode)
@@ -117,10 +117,10 @@ extension GameSceneLaboratory {
     }
 
 }
-
+#endif
 extension GameSceneLaboratory:loadSceneDelegate{
     func loadScene() {
         setup()
     }
 }
-#endif
+
