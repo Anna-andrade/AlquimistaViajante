@@ -39,7 +39,7 @@ extension SKScene {
             let backgroundFloorNode = SKSpriteNode(imageNamed: "floor")
             backgroundFloorNode.size = CGSize(width: width, height: height/2)
             addChild(backgroundFloorNode)
-            backgroundFloorNode.position = CGPoint (x: backgroundFloorNode.size.width*0.5, y: backgroundFloorNode.size.width*0.18)
+            backgroundFloorNode.position = CGPoint (x: width*0.5, y: height*0.18)
             backgroundFloorNode.zPosition = -1
         
         
