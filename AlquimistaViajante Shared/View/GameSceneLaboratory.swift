@@ -88,6 +88,7 @@ class GameSceneLaboratory: SKScene {
         mortarNode.zPosition = 2
         
         drawBackgroundFloor(side: 1050)
+        addBackButton()
         
 #if os(tvOS)
         addTapGestureRecognizer()
@@ -100,11 +101,11 @@ class GameSceneLaboratory: SKScene {
     }
     @objc func clicked(){
         if bunsenBurnerButton.isFocused {
-            // acao do bunsenBurner
+            self.view?.presentScene(GameSceneBreakChemicalBond())
         } else if glassFunnelButton.isFocused {
-            // acao do glassFunnelButton
+            self.view?.presentScene(GameSceneFiltration())
         } else if flatBottomFlaskNode.isFocused {
-            // acao flatBottomFlaskNode
+            self.view?.presentScene(GameSceneReaction())
         }
     }
 #endif
