@@ -10,10 +10,11 @@ import SpriteKit
 import GameplayKit
 import AVFoundation
 
-class GameViewController: UIViewController,AVAudioRecorderDelegate {
-    
+class GameViewController: UIViewController {
+#if os(iOS)
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+#endif
     var maisFraco = false
     var time = Timer()
     
@@ -24,7 +25,7 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         GC.changeDelegate = self
-        
+#if os(iOS)
         recordingSession = AVAudioSession.sharedInstance()
 
         do {
@@ -46,6 +47,9 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
         }
             
         self.becomeFirstResponder()
+#else
+        self.loadScene()
+#endif
         
     }
     
@@ -58,7 +62,7 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
         self.view = skView
         
     }
-
+#if os(iOS)
     override var shouldAutorotate: Bool {
         return true
     }
@@ -83,9 +87,10 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
             sceneRect.shake()
         }
     }
-
-    //MARK: Recording
-    
+#endif
+}
+#if os(iOS)
+extension GameViewController:AVAudioRecorderDelegate{
     class func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
@@ -165,12 +170,23 @@ class GameViewController: UIViewController,AVAudioRecorderDelegate {
             
         return decibel
     }
-    
 }
 
+#endif
 extension GameViewController:ChangeSceneDelegate{
     func changeScene(scene:SKScene){
         self.scene = scene
         loadScene()
     }
 }
+#if os(tvOS)
+extension GameViewController {
+
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+         if let scene = (view as? SKView)?.scene {
+             return [scene]
+         }
+         return []
+    }
+}
+#endif

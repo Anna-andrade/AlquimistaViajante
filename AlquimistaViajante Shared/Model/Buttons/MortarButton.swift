@@ -12,10 +12,16 @@ class MortarButton:SKSpriteNode{
     weak var delegate: loadSceneDelegate?
     let GC = GameController.shared
     let lados: [Int?]
+    var isFocusable: Bool = true
+    
+    var canBecomeFocusable: Bool{
+        return isFocusable
+    }
     
     init(size: CGSize, lados: [Int?]){
         self.lados = lados
         super.init(texture: nil, color: .clear, size: size)
+        self.focusBehavior = .focusable
         setup()
         
     }
@@ -41,8 +47,29 @@ class MortarButton:SKSpriteNode{
         mortarBottomNode.size = CGSize(width: size.height, height: size.width)
         mortarBottomNode.zPosition = 1
     }
+#if os(iOS)
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        addProductScene()
+    }
+#endif
+    func addProductScene(){
         GC.arrayProduct.append(Product(lados: lados))
         delegate?.loadScene()
     }
+#if os(tvOS)
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
+        
+        if context.previouslyFocusedItem === self{
+            self.setScale(self.xScale/1.1)
+            self.setScale(self.yScale/1.1)
+            self.alpha = 0.5
+        }
+        
+        if context.nextFocusedItem === self{
+            self.setScale(self.xScale*1.1)
+            self.setScale(self.yScale*1.1)
+            self.alpha = 1
+        }
+    }
+#endif
 }

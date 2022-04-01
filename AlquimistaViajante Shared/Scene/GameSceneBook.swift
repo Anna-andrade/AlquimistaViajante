@@ -51,7 +51,6 @@ class GameSceneBook: SKScene {
         return lbl
     }()
     
-    
     override func didMove(to view: SKView) {
         addChild(BlockOne)
         addChild(BlockTwo)
