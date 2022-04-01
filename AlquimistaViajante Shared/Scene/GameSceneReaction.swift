@@ -31,6 +31,7 @@ class GameSceneReaction: SKScene {
         flaskButton.zPosition = 1
         drawBackgroundWall(side: 1050)
         addBackButton()
+        addLabel(title:"ReactionTitle".localized(),text: "Reaction".localized())
     }
 
     func shake(){

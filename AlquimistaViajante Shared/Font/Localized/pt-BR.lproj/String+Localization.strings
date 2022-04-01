@@ -13,3 +13,12 @@
 "Paragrafo2" = "Não se esqueça, produtos raramente são formados com 100% de pureza. Quase sempre precisamos realizar procedimentos de purificação de misturas para que possamos obter produtos de interesse isolados. Você aprenderá a realizar esses procedimentos nesse livro.";
 
 "Paragrafo3" = "Tenha em mente que métodos de separação de misturas não são as únicas alternativas para obter produtos de interesse. Frequentemente, precisamos reverter o sentido das reações químicas, e nossos produtos tornam-se reagentes, os quais terão suas ligações quebradas, formando seus componentes iniciais. Esta é uma estratégia interessante, pois você irá lidar com substâncias raras, de difícil obtenção e de alto custo. Este também é um conhecimento que você obterá na atenta leitura destas páginas.";
+
+"ReactionTitle" = "Mexa";
+"Reaction" = "para misturar";
+
+"BreakChemicalBondTitle" = "Assopre";
+"BreakChemicalBond" = "para aquecer";
+
+"FiltrationTitle" = "Pressione";
+"Filtration" = "para filtrar";

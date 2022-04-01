@@ -21,6 +21,8 @@
 		0687007127ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
 		06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED727DFC9B100C413CB /* Reagents.swift */; };
 		06AD714927E51B72008A4B90 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED927DFC9C100C413CB /* Products.swift */; };
+		06DA231427F7659600FC25FD /* SKScene+addLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA231327F7659600FC25FD /* SKScene+addLabel.swift */; };
+		06DA231527F7659600FC25FD /* SKScene+addLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DA231327F7659600FC25FD /* SKScene+addLabel.swift */; };
 		06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
 		06FDB76F27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
 		4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1AACBF27E26426003C83BA /* AppDelegate.swift */; };
@@ -76,6 +78,7 @@
 		0655C6E227F3A41A00E0FF07 /* LoadSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSceneDelegate.swift; sourceTree = "<group>"; };
 		0671ABBE27EBAFC8002216DF /* BeakerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeakerNode.swift; sourceTree = "<group>"; };
 		0687006F27ED017E000E38F1 /* ShakeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDelegate.swift; sourceTree = "<group>"; };
+		06DA231327F7659600FC25FD /* SKScene+addLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+addLabel.swift"; sourceTree = "<group>"; };
 		06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumEstadosFormas.swift; sourceTree = "<group>"; };
 		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1AACBF27E26426003C83BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +211,7 @@
 			children = (
 				DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */,
 				DB08E06327ECFFD4006D9E5F /* SKScene+AddBackButton.swift */,
+				06DA231327F7659600FC25FD /* SKScene+addLabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -407,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06AD714927E51B72008A4B90 /* Products.swift in Sources */,
+				06DA231527F7659600FC25FD /* SKScene+addLabel.swift in Sources */,
 				4CCE1F2A27F4F9D20012DC55 /* LoadSceneDelegate.swift in Sources */,
 				4C367FCF27ECECFD0042BE50 /* NavigationDelegate.swift in Sources */,
 				06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */,
@@ -440,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4D8EE027DFD4F000C413CB /* GameSceneReaction.swift in Sources */,
+				06DA231427F7659600FC25FD /* SKScene+addLabel.swift in Sources */,
 				4C4D8EDC27DFCA4200C413CB /* SKButtonNavigation.swift in Sources */,
 				DB08E06427ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
 				0655C6D627F2262600E0FF07 /* FlaskButtons.swift in Sources */,
