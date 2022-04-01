@@ -51,7 +51,6 @@ extension GameSceneReaction:SKPhysicsContactDelegate{
             productFinal.absorved(product: productAbsorvido)
             GC.eraseComponents()
         }
-        
     }
 }
 

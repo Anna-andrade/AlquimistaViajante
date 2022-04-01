@@ -58,6 +58,7 @@ class SKButtonNavigation: SKSpriteNode{
 #endif
     func changeScene(){
         changeDelegate?.changeScene(scene: sceneToGo)
+        
 
     }
 #if os(tvOS)
