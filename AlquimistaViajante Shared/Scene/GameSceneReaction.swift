@@ -13,11 +13,12 @@ class GameSceneReaction: SKScene {
     let GC = GameController.shared
     
     override func didMove(to view: SKView) {
+        
+        
         self.isUserInteractionEnabled = true
         physicsWorld.contactDelegate = self
         
         setupScene()
-
     }
     
     func setupScene() {
@@ -26,9 +27,10 @@ class GameSceneReaction: SKScene {
         
         let flaskButton = FlaskButton(imgName: "flatBottomFlask", size: CGSize(width: w, height: w))
         self.addChild(flaskButton)
-        flaskButton.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
-
-        flaskButton.zPosition = 1
+        flaskButton.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.4)
+        flaskButton.zPosition = 2
+        
+        
         drawBackgroundWall(side: 1050)
         addBackButton()
     }

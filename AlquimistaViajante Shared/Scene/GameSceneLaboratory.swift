@@ -12,9 +12,9 @@ class GameSceneLaboratory: SKScene {
     lazy var height = self.size.height
     lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
     lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-    lazy var flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
+    lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
     lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
-    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.15, height: width*0.15), lados: [3,nil])
+    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.1, height: width*0.1), lados: [3,nil])
     
     var gesture = UITapGestureRecognizer()
     
@@ -28,64 +28,81 @@ class GameSceneLaboratory: SKScene {
 
 //        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
-        bookNode.size = CGSize(width: width*0.15, height: height*0.15)
-        bookNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*3)
+        bookNode.size = CGSize(width: width*0.1, height: width*0.1)
+        bookNode.position = CGPoint(x: width*0.2, y: height*0.6)
         bookNode.zPosition = 3
+        
+        let trashNode = SKSpriteNode(imageNamed: "trash")
+        self.addChild(trashNode)
+        trashNode.size = CGSize(width: width*0.13, height: width*0.13)
+        trashNode.position = CGPoint(x: width*0.9, y: height*0.44)
+        trashNode.zPosition = 3
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         self.addChild(tableNode)
-        tableNode.size = CGSize(width: width, height: height/2)
-        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-
-        let beakerNode = BeakerNode(size: CGSize(width: width*0.25, height: width*0.25))
+        tableNode.size = CGSize(width: width*0.8, height: width*0.35)
+        tableNode.position = CGPoint(x: width*0.43, y: height*0.3)
+        tableNode.zPosition = 1
+        
+        let beakerNode = BeakerNode(size: CGSize(width: width*0.12, height: width*0.12))
         self.addChild(beakerNode)
-        beakerNode.position = CGPoint(x: beakerNode.size.width*3.5, y: beakerNode.size.height*0.8)
+        beakerNode.position = CGPoint(x: width*0.6, y: height*0.27)
         beakerNode.zPosition = 2
 
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
-        bookcaseNode.size = CGSize(width: width*0.2, height: height*0.15)
-        bookcaseNode.position = CGPoint(x: bookNode.size.width*3.75, y: bookNode.size.height*2.5)
+        bookcaseNode.size = CGSize(width: width*0.12, height: width*0.12)
+        bookcaseNode.position = CGPoint(x: width*0.2, y: height*0.5)
         bookcaseNode.zPosition = 2
 
         let shelfNode = SKSpriteNode(imageNamed: "shelf")
         self.addChild(shelfNode)
-        shelfNode.size = CGSize(width: width, height: height/2)
-        shelfNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*1.25)
+        shelfNode.size = CGSize(width: width*0.8, height: width/7.9)
+        shelfNode.position = CGPoint(x: width*0.43, y: height*0.7)
+        shelfNode.zPosition = 1
         
 //        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
-        bunsenBurnerButton.size = CGSize(width: width*0.15, height: height*0.15)
-        bunsenBurnerButton.position = CGPoint(x: bunsenBurnerButton.size.width, y: bunsenBurnerButton.size.height*5.25)
+        bunsenBurnerButton.size = CGSize(width: width*0.11, height: width*0.11)
+        bunsenBurnerButton.position = CGPoint(x: width*0.12, y: height*0.85)
         bunsenBurnerButton.zPosition = 2
         
 //        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
         glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
-        glassFunnelButton.size = CGSize(width: width*0.15, height: height*0.15)
-        glassFunnelButton.position = CGPoint(x: glassFunnelButton.size.width*2.5, y: glassFunnelButton.size.height*5.25)
+        glassFunnelButton.size = CGSize(width: width*0.12, height: width*0.12)
+        glassFunnelButton.position = CGPoint(x: width*0.3, y: height*0.86)
         glassFunnelButton.zPosition = 2
         
-//        let flatBottomFlaskNode = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
-        flatBottomFlaskNode.isUserInteractionEnabled = true
-        self.addChild(flatBottomFlaskNode)
-        flatBottomFlaskNode.size = CGSize(width: width*0.15, height: height*0.15)
-        flatBottomFlaskNode.position = CGPoint(x: flatBottomFlaskNode.size.width*4.5, y: flatBottomFlaskNode.size.height*5.25)
-        flatBottomFlaskNode.zPosition = 2
-
+        // let flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction(), imagePress: "flaskPress")
+        flatBottomFlaskButton.isUserInteractionEnabled = true
+        self.addChild(flatBottomFlaskButton)
+        flatBottomFlaskButton.size = CGSize(width: width*0.11, height: width*0.11)
+        flatBottomFlaskButton.position = CGPoint(x: width*0.5, y: height*0.84)
+        flatBottomFlaskButton.zPosition = 2
+        
         let testTubeNode = SKSpriteNode(imageNamed: "testTube")
         self.addChild(testTubeNode)
-        testTubeNode.size = CGSize(width: width*0.15, height: height*0.15)
-        testTubeNode.position = CGPoint(x: testTubeNode.size.width*6, y: testTubeNode.size.height*5.25)
+        testTubeNode.size = CGSize(width: width*0.13, height: width*0.13)
+        testTubeNode.position = CGPoint(x: width*0.72, y: height*0.87)
         testTubeNode.zPosition = 2
         
 //        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
         mortarNode.isUserInteractionEnabled = true
         mortarNode.delegate = self
         self.addChild(mortarNode)
-        mortarNode.position = CGPoint(x: mortarNode.size.width*3.75, y: mortarNode.size.height*1.25)
+        mortarNode.position = CGPoint(x: width*0.4, y: height*0.25)
         mortarNode.zPosition = 2
+        
+    
+        
+//        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration(), imagePress: "filterPress")
+//        glassFunnelButton.isUserInteractionEnabled = true
+//        self.addChild(glassFunnelButton)
+//        glassFunnelButton.size = CGSize(width: width*0.12, height: width*0.12)
+//        glassFunnelButton.position = CGPoint(x: width*0.3, y: height*0.86)
+//        glassFunnelButton.zPosition = 2
         
         drawBackgroundFloor(side: 1050)
         addBackButton()
@@ -106,9 +123,9 @@ class GameSceneLaboratory: SKScene {
         } else if glassFunnelButton.isFocused {
             removeAllChildren()
             glassFunnelButton.changeScene()
-        } else if flatBottomFlaskNode.isFocused {
+        } else if flatBottomFlaskButton.isFocused {
             removeAllChildren()
-            flatBottomFlaskNode.changeScene()
+            flatBottomFlaskButton.changeScene()
         } else if mortarNode.isFocused{
             removeAllChildren()
             mortarNode.addProductScene()

@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Game View ControllerTVOS-->
         <scene sceneID="dEh-eV-dlg">
             <objects>
                 <viewController id="499-42-d0g" customClass="GameViewController" customModule="AlquimistaViajanteAppleTv" customModuleProvider="target" sceneMemberID="viewController">
