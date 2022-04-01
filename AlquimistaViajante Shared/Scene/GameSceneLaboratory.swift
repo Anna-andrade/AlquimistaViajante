@@ -105,7 +105,7 @@ class GameSceneLaboratory: SKScene {
 //        glassFunnelButton.zPosition = 2
         
         drawBackgroundFloor(side: 1050)
-        addBackButton()
+//        addBackButton()
         
 #if os(tvOS)
         addTapGestureRecognizer()
