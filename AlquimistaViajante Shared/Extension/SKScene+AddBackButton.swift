@@ -12,13 +12,13 @@ extension SKScene {
     func addBackButton(){
         let width = self.size.width
         let height = self.size.height
-        
-        let addBackButton = SKButtonNavigation(imageName: "musicButton", sceneToGo: GameSceneLaboratory())
-        addBackButton.size = CGSize(width: width*0.15, height: height*0.15)
-        addBackButton.position = CGPoint(x: 100, y: 100)
-        addBackButton.zPosition = 1
+
+        let addBackButton = SKButtonNavigation(imageName: "backButton", sceneToGo: GameSceneLaboratory(), imagePress: "backButtonPress")
+        addBackButton.size = CGSize(width: width*0.1, height: width*0.1)
+        addBackButton.position = CGPoint(x: width*0.1, y: height*0.9)
+        addBackButton.zPosition = 2
         addBackButton.isUserInteractionEnabled = true
         addChild(addBackButton)
-     
+        addBackButton.isFocusable = true
     }
 }

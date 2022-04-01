@@ -20,20 +20,20 @@ class GameSceneFiltration: SKScene {
     
     lazy var pointerNode:SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "pointer")
-        node.texture?.filteringMode = .nearest
-        node.scale(to: CGSize(width: w*0.08, height: w*0.08))
+//        node.texture?.filteringMode = .nearest
+        node.scale(to: CGSize(width: w*0.07, height: w*0.07))
         node.zRotation = Double.pi/2
         node.anchorPoint = CGPoint(x: 0.5, y: 0)
-        node.position = CGPoint(x: w*0.8525, y: h*0.9-w*0.2/2-node.size.height/4)
+        node.position = CGPoint(x: w*0.8525, y: h*0.8-w*0.2/2-node.size.height/4)
         node.zPosition = 2
         return node
     }()
     
     lazy var barometerNode : SKSpriteNode = {
         let node = SKSpriteNode(imageNamed: "barometer")
-        node.texture?.filteringMode = .nearest
+//        node.texture?.filteringMode = .nearest
         node.scale(to: CGSize(width: w*0.2, height: w*0.2))
-        node.position = CGPoint(x: w*0.85, y: h*0.9-node.size.height/2)
+        node.position = CGPoint(x: w*0.85, y: h*0.8-node.size.height/2)
         node.zPosition = 1
         return node
     }()
@@ -44,11 +44,11 @@ class GameSceneFiltration: SKScene {
         
         self.isUserInteractionEnabled = true
         
-        let filterNode = SKSpriteNode(imageNamed: "filter")
+        let filterNode = SKSpriteNode(imageNamed: "openFilter13")
         addChild(filterNode)
-        filterNode.texture?.filteringMode = .nearest
-        filterNode.scale(to: CGSize(width: w*0.35, height: w*0.7))
-        filterNode.position = CGPoint(x: w*0.5, y: h*0.5)
+//        filterNode.texture?.filteringMode = .nearest
+        filterNode.size = CGSize(width: w*0.25, height: w*0.4)
+        filterNode.position = CGPoint(x: w*0.5, y: h*0.45)
         filterNode.zPosition = 1
         addChild(barometerNode)
         addChild(pointerNode)
@@ -61,9 +61,9 @@ class GameSceneFiltration: SKScene {
     func createdBeaker(){
         beakerNode?.removeFromParent()
         beakerNode?.removeAllChildren()
-        beakerNode = BeakerNode( size: CGSize(width: w*0.3, height: w*0.3))
-        beakerNode?.texture?.filteringMode = .nearest
-        beakerNode?.position = CGPoint(x: w*0.5, y: h*0.25)
+        beakerNode = BeakerNode( size: CGSize(width: w*0.22, height: w*0.22))
+//        beakerNode?.texture?.filteringMode = .nearest
+        beakerNode?.position = CGPoint(x: w*0.5, y: h*0.2)
         beakerNode?.zPosition = 2
         if let verBeakerNode = beakerNode {
             addChild(beakerNode!)
