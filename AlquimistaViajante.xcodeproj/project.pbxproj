@@ -177,8 +177,8 @@
 		4C4D8ED327DFC0B100C413CB /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				DB0E329E27F76A00007BE10E /* GameSceneFiltration.swift */,
 				4C4D8EDD27DFD4B200C413CB /* GameSceneLaboratory.swift */,
+				DB0E329E27F76A00007BE10E /* GameSceneFiltration.swift */,
 				4C4D8EDF27DFD4F000C413CB /* GameSceneReaction.swift */,
 				4C4D8EE127DFD58F00C413CB /* GameSceneBreakChemicalBond.swift */,
 				B3F02BB627EBA9CE00AB0392 /* GameSceneBook.swift */,
