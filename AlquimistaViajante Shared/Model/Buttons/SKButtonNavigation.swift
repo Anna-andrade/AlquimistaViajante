@@ -28,6 +28,11 @@ class SKButtonNavigation: SKSpriteNode{
         super.init(texture: texture, color: .clear, size: CGSize())
         self.isUserInteractionEnabled = true
         self.focusBehavior = .focusable
+        
+        #if os(tvOS)
+        self.alpha = 0.75
+        #endif
+        
     }
     init(imageName: String, sceneToGo: SKScene, imagePress: String){
         self.imagePress = imagePress
@@ -35,6 +40,11 @@ class SKButtonNavigation: SKSpriteNode{
         self.imageName = imageName
         let texture = SKTexture(imageNamed: imageName)
         super.init(texture: texture, color: .clear, size: CGSize())
+        self.isUserInteractionEnabled = true
+        self.focusBehavior = .focusable
+        #if os(tvOS)
+            self.alpha = 0.75
+        #endif
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -75,6 +85,7 @@ class SKButtonNavigation: SKSpriteNode{
             self.setScale(self.yScale*1.1)
             self.alpha = 1
         }
+        
     }
 #endif
 }

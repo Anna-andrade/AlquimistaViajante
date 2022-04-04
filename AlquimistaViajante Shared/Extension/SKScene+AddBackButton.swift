@@ -19,6 +19,9 @@ extension SKScene {
         addBackButton.zPosition = 2
         addBackButton.isUserInteractionEnabled = true
         addChild(addBackButton)
+        #if os(tvOS)
+            addBackButton.alpha = 0.75
+        #endif
         return addBackButton
     }
 }
