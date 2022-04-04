@@ -10,6 +10,12 @@ import SpriteKit
 
 class BeakerNode:SKSpriteNode{
     
+    var isFocusable: Bool = true
+    
+    var canBecomeFocusable: Bool{
+        return isFocusable
+    }
+    
     private func border() -> UIBezierPath {
         let w = self.size.width
         let h = self.size.height
@@ -42,4 +48,22 @@ class BeakerNode:SKSpriteNode{
             product.position = CGPoint(x: 0, y: 0)
         }
     }
+    
+#if os(tvOS)
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
+        
+        if context.previouslyFocusedItem === self{
+            self.setScale(self.xScale/1.1)
+            self.setScale(self.yScale/1.1)
+            self.alpha = 0.5
+        }
+        
+        if context.nextFocusedItem === self{
+            self.setScale(self.xScale*1.1)
+            self.setScale(self.yScale*1.1)
+            self.alpha = 1
+        }
+    }
+#endif
+    
 }

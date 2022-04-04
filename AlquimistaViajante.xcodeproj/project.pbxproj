@@ -155,6 +155,7 @@
 		4C367FCC27ECDE050042BE50 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				0671ABBE27EBAFC8002216DF /* BeakerNode.swift */,
 				4C4D8EDB27DFCA4200C413CB /* SKButtonNavigation.swift */,
 				0655C6D527F2262600E0FF07 /* FlaskButtons.swift */,
 				0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */,
@@ -169,7 +170,6 @@
 				4C4D8ED727DFC9B100C413CB /* Reagents.swift */,
 				4C4D8ED927DFC9C100C413CB /* Products.swift */,
 				06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */,
-				0671ABBE27EBAFC8002216DF /* BeakerNode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -9,7 +9,7 @@ import Foundation
 import SpriteKit
 
 extension SKScene {
-    func addBackButton(){
+    func addBackButton()->SKButtonNavigation{
         let width = self.size.width
         let height = self.size.height
 
@@ -19,6 +19,6 @@ extension SKScene {
         addBackButton.zPosition = 2
         addBackButton.isUserInteractionEnabled = true
         addChild(addBackButton)
-        addBackButton.isFocusable = true
+        return addBackButton
     }
 }

@@ -177,6 +177,14 @@ extension GameViewController:ChangeSceneDelegate{
     func changeScene(scene:SKScene){
         self.scene = scene
         loadScene()
+        
+        #if os(tvOS)
+        scene.run(SKAction.wait(forDuration: 0.02)) {
+        scene.view?.window?.rootViewController?.setNeedsFocusUpdate()
+        scene.view?.window?.rootViewController?.updateFocusIfNeeded()
+
+        }
+        #endif
     }
 }
 #if os(tvOS)
