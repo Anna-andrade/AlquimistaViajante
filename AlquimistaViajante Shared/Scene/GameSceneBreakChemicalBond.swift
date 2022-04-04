@@ -21,17 +21,14 @@ class GameSceneBreakChemicalBond: SKScene{
         let width = self.size.width
         let height = self.size.height
         
-        let tableNode = SKSpriteNode(imageNamed: "table")
-        tableNode.size = CGSize(width: width, height: height/2)
-        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-        addChild(tableNode)
-        tableNode.zPosition = 0
-        
-//        backButton.isUserInteractionEnabled = true
-//        backButton.focusBehavior = .focusable
-        
-        beakerNode = BeakerNode(size: CGSize(width: width/10, height: width/10))
-        beakerNode?.position = CGPoint(x: width*0.4, y: height*0.9)
+//        let tableNode = SKSpriteNode(imageNamed: "table")
+//        tableNode.size = CGSize(width: width, height: width*0.45)
+//        tableNode.position = CGPoint(x: width*0.5, y: height*0.4)
+//        addChild(tableNode)
+//        tableNode.zPosition = 0
+//        
+        beakerNode = BeakerNode(size: CGSize(width: width*0.3, height: width*0.3))
+        beakerNode?.position = CGPoint(x: width*0.492, y: height*0.55)
         beakerNode?.zPosition = 1
         beakerNode?.isUserInteractionEnabled = true
         beakerNode?.focusBehavior = .focusable
@@ -42,8 +39,8 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(verBeakerNode)
         
         let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
-        bunsenBurnerNode.size = CGSize(width: width*0.25, height: height*0.25)
-        bunsenBurnerNode.position = CGPoint(x: bunsenBurnerNode.size.width*2, y: bunsenBurnerNode.size.height*0.875)
+        bunsenBurnerNode.size = CGSize(width: width*0.15, height: width*0.15)
+        bunsenBurnerNode.position = CGPoint(x: width*0.5, y: height*0.15)
         addChild(bunsenBurnerNode)
         bunsenBurnerNode.zPosition = 1
         
