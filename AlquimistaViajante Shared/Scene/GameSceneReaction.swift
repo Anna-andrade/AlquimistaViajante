@@ -25,7 +25,7 @@ class GameSceneReaction: SKScene {
         removeAllChildren()
         let w = self.size.width
         
-        let flaskButton = FlaskButton(imgName: "flatBottomFlask", size: CGSize(width: w, height: w))
+        let flaskButton = FlaskButton(imgName: "flatBottomFlask", size: CGSize(width: w*0.5, height: w*0.5))
         self.addChild(flaskButton)
         flaskButton.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.4)
         flaskButton.zPosition = 2
