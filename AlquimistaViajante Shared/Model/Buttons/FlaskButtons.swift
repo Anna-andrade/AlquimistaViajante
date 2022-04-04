@@ -9,6 +9,12 @@ import SpriteKit
 
 class FlaskButton:SKNode{
     
+    var isFocusable: Bool = true
+    
+    var canBecomeFocusable: Bool{
+        return isFocusable
+    }
+    
     var imgNode:SKSpriteNode
     var size:CGSize
     
@@ -58,4 +64,21 @@ class FlaskButton:SKNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+#if os(tvOS)
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
+        
+        if context.previouslyFocusedItem === self{
+            self.setScale(self.xScale/1.1)
+            self.setScale(self.yScale/1.1)
+            self.alpha = 0.5
+        }
+        
+        if context.nextFocusedItem === self{
+            self.setScale(self.xScale*1.1)
+            self.setScale(self.yScale*1.1)
+            self.alpha = 1
+        }
+        
+    }
+#endif
 }

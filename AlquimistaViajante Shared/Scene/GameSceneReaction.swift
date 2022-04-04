@@ -13,8 +13,11 @@ class GameSceneReaction: SKScene {
     let GC = GameController.shared
     
     var gesture = UITapGestureRecognizer()
-    lazy var backButton = addBackButton()
     
+    lazy var w = self.size.width
+    lazy var h = self.size.height
+    lazy var backButton = addBackButton()
+    lazy var flaskButton = FlaskButton(imgName: "flatBottomFlask", size: CGSize(width: w*0.5, height: w*0.5))
     
     override func didMove(to view: SKView) {
         
@@ -27,13 +30,17 @@ class GameSceneReaction: SKScene {
     
     func setupScene() {
         removeAllChildren()
-        let w = self.size.width
-        let h = self.size.height
-        
         
         self.addChild(flaskButton)
         flaskButton.position = CGPoint(x: w*0.5, y: h*0.4)
         flaskButton.zPosition = 2
+        flaskButton.isUserInteractionEnabled = true
+        flaskButton.focusBehavior = .focusable
+        
+        #if (tvOS)
+        flaskButton.alpha = 0.75
+        addTapGestureRecognizer()
+        #endif
         
         drawBackgroundWall(side: 1050)
     }
@@ -50,21 +57,16 @@ class GameSceneReaction: SKScene {
     }
     @objc func clicked(){
         
-        if let verBeaker = beakerNode {
             if backButton.isFocused == true{
                 backButton.changeScene()
-                print("NAO ESTA FOCADO")
-            }else if verBeaker.isFocused == true{
-                assobrar()
+            }else if flaskButton.isFocused == true{
+                shake()
             }
         }
-        
-        
-    }
 #endif
 }
 #if os(tvOS)
-extension GameSceneBreakChemicalBond {
+extension GameSceneReaction {
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [backButton]
     }
