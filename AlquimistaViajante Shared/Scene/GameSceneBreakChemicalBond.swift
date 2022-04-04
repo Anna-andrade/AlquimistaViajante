@@ -12,6 +12,8 @@ class GameSceneBreakChemicalBond: SKScene{
     
     let GC = GameController.shared
     var beakerNode : BeakerNode?
+    var gesture = UITapGestureRecognizer()
+    lazy var backButton = addBackButton()
 
     override func didMove(to view: SKView) {
         
@@ -24,9 +26,11 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(tableNode)
         tableNode.zPosition = 0
         
-        beakerNode = BeakerNode(size: CGSize(width: width/2.5, height: width/2.5))
-        beakerNode?.position = CGPoint(x: width*0.64, y: height*0.8)
+        beakerNode = BeakerNode(size: CGSize(width: width/10, height: width/10))
+        beakerNode?.position = CGPoint(x: width*0.4, y: height*0.9)
         beakerNode?.zPosition = 1
+        beakerNode?.isUserInteractionEnabled = true
+        beakerNode?.focusBehavior = .focusable
         guard let verBeakerNode = beakerNode else { return }
         addChild(verBeakerNode)
         
@@ -37,7 +41,10 @@ class GameSceneBreakChemicalBond: SKScene{
         bunsenBurnerNode.zPosition = 1
         
         drawBackgroundWall(side: 1050)
-        addBackButton()
+        
+        #if os(tvOS)
+        addTapGestureRecognizer()
+        #endif
     }
     func assobrar(){
         for product in GC.arrayProduct {
@@ -46,4 +53,36 @@ class GameSceneBreakChemicalBond: SKScene{
             GC.eraseComponents()
         }
     }
+
+#if os(tvOS)
+    func addTapGestureRecognizer(){
+        gesture.addTarget(self, action: #selector(clicked))
+        self.view?.addGestureRecognizer(gesture)
+    }
+    @objc func clicked(){
+        
+        if let verBeaker = beakerNode {
+            if backButton.isFocused == true{
+                backButton.changeScene()
+            }else if verBeaker.isFocused == true{
+                assobrar()
+            }
+            else{
+                print("NAO ESTA FOCADO")
+            }
+        }
+        
+        
+    }
+#endif
+   
 }
+
+#if os(tvOS)
+extension GameSceneBreakChemicalBond {
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [backButton]
+    }
+
+}
+#endif

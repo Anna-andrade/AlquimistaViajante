@@ -118,7 +118,7 @@ class GameSceneLaboratory: SKScene {
     }
     @objc func clicked(){
         if bunsenBurnerButton.isFocused {
-            removeAllChildren()
+//            removeAllChildren()
             bunsenBurnerButton.changeScene()
         } else if glassFunnelButton.isFocused {
             removeAllChildren()
