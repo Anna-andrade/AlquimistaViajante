@@ -26,9 +26,11 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(tableNode)
         tableNode.zPosition = 0
         
-        beakerNode = BeakerNode(size: CGSize(width: width/2.5, height: width/2.5))
-        beakerNode?.position = CGPoint(x: width*0.64, y: height*0.8)
+        beakerNode = BeakerNode(size: CGSize(width: width/10, height: width/10))
+        beakerNode?.position = CGPoint(x: width*0.4, y: height*0.9)
         beakerNode?.zPosition = 1
+        beakerNode?.isUserInteractionEnabled = true
+        beakerNode?.focusBehavior = .focusable
         guard let verBeakerNode = beakerNode else { return }
         addChild(verBeakerNode)
         
@@ -61,7 +63,6 @@ class GameSceneBreakChemicalBond: SKScene{
         
         if let verBeaker = beakerNode {
             if backButton.isFocused == true{
-                removeAllChildren()
                 backButton.changeScene()
             }else if verBeaker.isFocused == true{
                 assobrar()
