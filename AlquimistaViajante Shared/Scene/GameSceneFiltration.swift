@@ -47,8 +47,8 @@ class GameSceneFiltration: SKScene {
         let filterNode = SKSpriteNode(imageNamed: "openFilter13")
         addChild(filterNode)
 //        filterNode.texture?.filteringMode = .nearest
-        filterNode.size = CGSize(width: w*0.25, height: w*0.4)
-        filterNode.position = CGPoint(x: w*0.5, y: h*0.45)
+        filterNode.size = CGSize(width: w*0.25, height: w*0.45)
+        filterNode.position = CGPoint(x: w*0.5, y: h*0.437)
         filterNode.zPosition = 1
         addChild(barometerNode)
         addChild(pointerNode)
@@ -61,9 +61,9 @@ class GameSceneFiltration: SKScene {
     func createdBeaker(){
         beakerNode?.removeFromParent()
         beakerNode?.removeAllChildren()
-        beakerNode = BeakerNode( size: CGSize(width: w*0.22, height: w*0.22))
+        beakerNode = BeakerNode( size: CGSize(width: w*0.2, height: w*0.2))
 //        beakerNode?.texture?.filteringMode = .nearest
-        beakerNode?.position = CGPoint(x: w*0.5, y: h*0.2)
+        beakerNode?.position = CGPoint(x: w*0.499, y: h*0.2)
         beakerNode?.zPosition = 2
         if let verBeakerNode = beakerNode {
             addChild(beakerNode!)
