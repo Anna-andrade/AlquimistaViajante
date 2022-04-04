@@ -12,8 +12,9 @@ class GameSceneBreakChemicalBond: SKScene{
     
     let GC = GameController.shared
     var beakerNode : BeakerNode?
-    var gesture = UITapGestureRecognizer()
     lazy var backButton = addBackButton()
+    
+    var gesture = UITapGestureRecognizer()
 
     override func didMove(to view: SKView) {
         
@@ -26,11 +27,17 @@ class GameSceneBreakChemicalBond: SKScene{
         addChild(tableNode)
         tableNode.zPosition = 0
         
+//        backButton.isUserInteractionEnabled = true
+//        backButton.focusBehavior = .focusable
+        
         beakerNode = BeakerNode(size: CGSize(width: width/10, height: width/10))
         beakerNode?.position = CGPoint(x: width*0.4, y: height*0.9)
         beakerNode?.zPosition = 1
         beakerNode?.isUserInteractionEnabled = true
         beakerNode?.focusBehavior = .focusable
+        #if (tvOS)
+            beakerNode?.alpha = 0.75
+        #endif
         guard let verBeakerNode = beakerNode else { return }
         addChild(verBeakerNode)
         
@@ -64,11 +71,9 @@ class GameSceneBreakChemicalBond: SKScene{
         if let verBeaker = beakerNode {
             if backButton.isFocused == true{
                 backButton.changeScene()
+                print("NAO ESTA FOCADO")
             }else if verBeaker.isFocused == true{
                 assobrar()
-            }
-            else{
-                print("NAO ESTA FOCADO")
             }
         }
         
@@ -83,6 +88,8 @@ extension GameSceneBreakChemicalBond {
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [backButton]
     }
+    
 
 }
 #endif
+
