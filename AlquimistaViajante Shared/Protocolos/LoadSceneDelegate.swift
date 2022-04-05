@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol loadSceneDelegate:AnyObject{
+protocol loadSceneDelegate: AnyObject {
     func loadScene()
 }

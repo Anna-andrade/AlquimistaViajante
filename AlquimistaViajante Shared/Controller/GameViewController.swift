@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     var maisFraco = false
     var time = Timer()
     
-    var scene:SKScene = GameSceneLaboratory()
+    var scene: SKScene = GameSceneLaboratory()
     let skView = SKView()
     var GC = GameController.shared
     
@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { allowed in
+            recordingSession.requestRecordPermission { allowed in
                 DispatchQueue.main.async {
                     if allowed {
                         self.startRecording()
@@ -53,7 +53,7 @@ class GameViewController: UIViewController {
         
     }
     
-    func loadScene(){
+    func loadScene() {
         scene.scaleMode = .aspectFit
         scene.size = CGSize(width: self.view.frame.width, height: self.view.frame.height)
         skView.presentScene(scene)
@@ -79,8 +79,6 @@ class GameViewController: UIViewController {
         return true
     }
     
-    //MARK: Shake
-    
     override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
             guard let sceneRect = scene as? GameSceneReaction else { return }
@@ -90,14 +88,13 @@ class GameViewController: UIViewController {
 #endif
 }
 #if os(iOS)
-extension GameViewController:AVAudioRecorderDelegate{
+extension GameViewController: AVAudioRecorderDelegate {
     class func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
 
-    
     class func getWhistleURL() -> URL {
         return getDocumentsDirectory().appendingPathComponent("whistle.m4a")
     }
@@ -143,7 +140,7 @@ extension GameViewController:AVAudioRecorderDelegate{
         }
     }
     
-   @objc func measureIntensity()->Float {
+   @objc func measureIntensity() -> Float {
         guard let sceneBreak = scene as? GameSceneBreakChemicalBond else { return 0 }
         var decibel = audioRecorder.peakPower(forChannel: 0)
         audioRecorder.updateMeters()
@@ -158,12 +155,12 @@ extension GameViewController:AVAudioRecorderDelegate{
               // 3
             decibel -= minDb
         }
-       if maisFraco{
-           if decibel>=75{
+       if maisFraco {
+           if decibel>=75 {
                sceneBreak.assobrar()
            }
-       }else{
-           if decibel>=79{
+       } else {
+           if decibel>=79 {
                sceneBreak.assobrar()
            }
        }
@@ -173,8 +170,9 @@ extension GameViewController:AVAudioRecorderDelegate{
 }
 
 #endif
-extension GameViewController:ChangeSceneDelegate{
-    func changeScene(scene:SKScene){
+extension GameViewController: ChangeSceneDelegate {
+    func changeScene(scene: SKScene) {
+        self.scene.removeAllChildren()
         self.scene = scene
         loadScene()
         

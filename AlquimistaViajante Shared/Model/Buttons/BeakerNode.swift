@@ -8,11 +8,11 @@
 import Foundation
 import SpriteKit
 
-class BeakerNode:SKSpriteNode{
+class BeakerNode: SKSpriteNode {
     
     var isFocusable: Bool = true
     
-    var canBecomeFocusable: Bool{
+    var canBecomeFocusable: Bool {
         return isFocusable
     }
     
@@ -20,14 +20,14 @@ class BeakerNode:SKSpriteNode{
         let w = self.size.width
         let h = self.size.height
             let path = UIBezierPath()
-            path.move(to: CGPoint(x: w/2.75, y:h/2.35))
-            path.addLine(to: CGPoint(x: w/2.75, y:-h/2.7))
-            path.addLine(to: CGPoint(x: -w/3, y:-h/2.7))
-            path.addLine(to: CGPoint(x: -w/3, y:h/2.35))
+            path.move(to: CGPoint(x: w/2.75, y: h/2.35))
+            path.addLine(to: CGPoint(x: w/2.75, y: -h/2.7))
+            path.addLine(to: CGPoint(x: -w/3, y: -h/2.7))
+            path.addLine(to: CGPoint(x: -w/3, y: h/2.35))
             return path
         }
     
-    init(size:CGSize) {
+    init(size: CGSize) {
         let texture = SKTexture(imageNamed: "beaker")
         texture.filteringMode = .nearest
         super.init(texture: texture, color: .clear, size: size)
@@ -42,28 +42,10 @@ class BeakerNode:SKSpriteNode{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addCompostos (){
+    func addCompostos () {
         for product in GameController.shared.arrayProduct {
             self.addChild(product)
             product.position = CGPoint(x: 0, y: 0)
         }
     }
-    
-#if os(tvOS)
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
-        
-        if context.previouslyFocusedItem === self{
-            self.setScale(self.xScale/1.1)
-            self.setScale(self.yScale/1.1)
-            self.alpha = 0.5
-        }
-        
-        if context.nextFocusedItem === self{
-            self.setScale(self.xScale*1.1)
-            self.setScale(self.yScale*1.1)
-            self.alpha = 1
-        }
-    }
-#endif
-    
 }

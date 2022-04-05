@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-class SKButtonNavigation: SKSpriteNode{
+class SKButtonNavigation: SKSpriteNode {
     
     var imageName: String
     var sceneToGo: SKScene
@@ -17,11 +17,11 @@ class SKButtonNavigation: SKSpriteNode{
     weak var changeDelegate: (ChangeSceneDelegate)? = GameController.shared.changeDelegate
     var isFocusable: Bool = true
     
-    var canBecomeFocusable: Bool{
+    var canBecomeFocusable: Bool {
         return isFocusable
     }
     
-    init(imageName: String, sceneToGo: SKScene){
+    init(imageName: String, sceneToGo: SKScene) {
         self.sceneToGo = sceneToGo
         self.imageName = imageName
         let texture = SKTexture(imageNamed: imageName)
@@ -34,7 +34,7 @@ class SKButtonNavigation: SKSpriteNode{
         #endif
         
     }
-    init(imageName: String, sceneToGo: SKScene, imagePress: String){
+    init(imageName: String, sceneToGo: SKScene, imagePress: String) {
         self.imagePress = imagePress
         self.sceneToGo = sceneToGo
         self.imageName = imageName
@@ -52,8 +52,6 @@ class SKButtonNavigation: SKSpriteNode{
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-       
-        
         if imagePress != "" {
             let texture = SKTexture(imageNamed: imagePress)
              self.texture = texture
@@ -66,26 +64,8 @@ class SKButtonNavigation: SKSpriteNode{
         changeScene()
     }
 #endif
-    func changeScene(){
+    func changeScene() {
+        GameController.shared.removeProductFromScream()
         changeDelegate?.changeScene(scene: sceneToGo)
-        
-
     }
-#if os(tvOS)
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
-        
-        if context.previouslyFocusedItem === self{
-            self.setScale(self.xScale/1.1)
-            self.setScale(self.yScale/1.1)
-            self.alpha = 0.5
-        }
-        
-        if context.nextFocusedItem === self{
-            self.setScale(self.xScale*1.1)
-            self.setScale(self.yScale*1.1)
-            self.alpha = 1
-        }
-        
-    }
-#endif
 }

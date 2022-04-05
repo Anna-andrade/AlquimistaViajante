@@ -8,10 +8,10 @@
 import Foundation
 import SpriteKit
 
-class GameSceneBreakChemicalBond: SKScene{
+class GameSceneBreakChemicalBond: SKScene {
     
     let GC = GameController.shared
-    var beakerNode : BeakerNode?
+    var beakerNode: BeakerNode?
     lazy var backButton = addBackButton()
     
     var gesture = UITapGestureRecognizer()
@@ -20,14 +20,8 @@ class GameSceneBreakChemicalBond: SKScene{
         
         let width = self.size.width
         let height = self.size.height
-        
-//        let tableNode = SKSpriteNode(imageNamed: "table")
-//        tableNode.size = CGSize(width: width, height: width*0.45)
-//        tableNode.position = CGPoint(x: width*0.5, y: height*0.4)
-//        addChild(tableNode)
-//        tableNode.zPosition = 0
-//        
-        beakerNode = BeakerNode(size: CGSize(width: width*0.26, height: width*0.26))
+             
+        beakerNode = BeakerNode(size: CGSize(width: width*0.3, height: width*0.3))
         beakerNode?.position = CGPoint(x: width*0.492, y: height*0.55)
         beakerNode?.zPosition = 1
         beakerNode?.isUserInteractionEnabled = true
@@ -46,11 +40,14 @@ class GameSceneBreakChemicalBond: SKScene{
         
         drawBackgroundWall(side: 1050)
         
+        #if os(iOS)
+            backButton = addBackButton()
+        #endif
         #if os(tvOS)
         addTapGestureRecognizer()
         #endif
     }
-    func assobrar(){
+    func assobrar() {
         for product in GC.arrayProduct {
             guard let verBeakerNode = beakerNode else { return }
             product.breakComposto(node: verBeakerNode, location: product.position)
@@ -59,22 +56,19 @@ class GameSceneBreakChemicalBond: SKScene{
     }
 
 #if os(tvOS)
-    func addTapGestureRecognizer(){
+    func addTapGestureRecognizer() {
         gesture.addTarget(self, action: #selector(clicked))
         self.view?.addGestureRecognizer(gesture)
     }
-    @objc func clicked(){
-        
+    @objc func clicked() {
         if let verBeaker = beakerNode {
-            if backButton.isFocused == true{
+            if backButton.isFocused == true {
+                verBeaker.removeAllChildren()
                 backButton.changeScene()
-                print("NAO ESTA FOCADO")
-            }else if verBeaker.isFocused == true{
+            } else if verBeaker.isFocused == true {
                 assobrar()
             }
         }
-        
-        
     }
 #endif
    
@@ -85,8 +79,5 @@ extension GameSceneBreakChemicalBond {
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [backButton]
     }
-    
-
 }
 #endif
-
