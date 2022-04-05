@@ -15,11 +15,9 @@ class GameSceneLaboratory: SKScene {
     lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
     lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
     lazy var mortarNode = MortarButton(size: CGSize(width: width*0.1, height: width*0.1), lados: [3,nil])
-    
+    lazy var trashNode = TrashButton(scene: self)
     var gesture = UITapGestureRecognizer()
-    
     override func didMove(to view: SKView) {
-        
         setup()
     }
     
@@ -32,7 +30,6 @@ class GameSceneLaboratory: SKScene {
         bookNode.position = CGPoint(x: width*0.2, y: height*0.6)
         bookNode.zPosition = 3
         
-        let trashNode = SKSpriteNode(imageNamed: "trash")
         self.addChild(trashNode)
         trashNode.size = CGSize(width: width*0.13, height: width*0.13)
         trashNode.position = CGPoint(x: width*0.9, y: height*0.44)
@@ -61,21 +58,21 @@ class GameSceneLaboratory: SKScene {
         shelfNode.position = CGPoint(x: width*0.43, y: height*0.7)
         shelfNode.zPosition = 1
         
-//        let bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
+
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
         bunsenBurnerButton.size = CGSize(width: width*0.11, height: width*0.11)
         bunsenBurnerButton.position = CGPoint(x: width*0.12, y: height*0.85)
         bunsenBurnerButton.zPosition = 2
         
-//        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
+
         glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
         glassFunnelButton.size = CGSize(width: width*0.12, height: width*0.12)
         glassFunnelButton.position = CGPoint(x: width*0.3, y: height*0.86)
         glassFunnelButton.zPosition = 2
         
-        // let flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction(), imagePress: "flaskPress")
+
         flatBottomFlaskButton.isUserInteractionEnabled = true
         self.addChild(flatBottomFlaskButton)
         flatBottomFlaskButton.size = CGSize(width: width*0.11, height: width*0.11)
@@ -88,24 +85,13 @@ class GameSceneLaboratory: SKScene {
         testTubeNode.position = CGPoint(x: width*0.72, y: height*0.87)
         testTubeNode.zPosition = 2
         
-//        let mortarNode = MortarButton(size: CGSize(width: width*0.15, height: height*0.15), lados: [3,nil])
         mortarNode.isUserInteractionEnabled = true
         mortarNode.delegate = self
         self.addChild(mortarNode)
         mortarNode.position = CGPoint(x: width*0.4, y: height*0.25)
         mortarNode.zPosition = 2
         
-    
-        
-//        let glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration(), imagePress: "filterPress")
-//        glassFunnelButton.isUserInteractionEnabled = true
-//        self.addChild(glassFunnelButton)
-//        glassFunnelButton.size = CGSize(width: width*0.12, height: width*0.12)
-//        glassFunnelButton.position = CGPoint(x: width*0.3, y: height*0.86)
-//        glassFunnelButton.zPosition = 2
-        
         drawBackgroundFloor(side: 1050)
-//        addBackButton()
         
 #if os(tvOS)
         addTapGestureRecognizer()
@@ -117,6 +103,7 @@ class GameSceneLaboratory: SKScene {
         self.view?.addGestureRecognizer(gesture)
     }
     @objc func clicked(){
+        
         if bunsenBurnerButton.isFocused {
             removeAllChildren()
             bunsenBurnerButton.changeScene()
@@ -130,7 +117,11 @@ class GameSceneLaboratory: SKScene {
             removeAllChildren()
             mortarNode.addProductScene()
         }else if bookNode.isFocused{
-            bookNode.changeScene()
+             bookNode.changeScene()
+        }
+        else if trashNode.isFocused{
+            trashNode.deleteProducts()
+            trashNode.changeScene()
         }
     }
 #endif

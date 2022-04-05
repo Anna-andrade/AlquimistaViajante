@@ -43,22 +43,20 @@ class FlaskButton:SKNode{
         
         super.init()
         
+        self.physicsBody?.contactTestBitMask = 1
         self.physicsBody?.collisionBitMask  = 1
         physicsBody = SKPhysicsBody (edgeLoopFrom: border().cgPath)
         physicsBody?.isDynamic = false
-        let frameShape = SKShapeNode(path: border().cgPath)
-        frameShape.zPosition = 4
-        frameShape.strokeColor = .clear
-        frameShape.name = "frame"
         
         let range = Int(size.width/8)
         let ajusteAltura = Int(size.height/10)
         for product in GameController.shared.arrayProduct {
             product.position = CGPoint(x: Int.random(in: -range ... range), y: Int.random(in: -range-ajusteAltura ... range-ajusteAltura))
+            product.physicsBody?.contactTestBitMask = 1
+            product.physicsBody?.collisionBitMask  = 1
             self.addChild(product)
         }
         addChild(imgNode)
-        addChild(frameShape)
     }
     
     required init?(coder aDecoder: NSCoder) {

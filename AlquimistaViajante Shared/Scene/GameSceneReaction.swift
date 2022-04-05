@@ -21,7 +21,6 @@ class GameSceneReaction: SKScene {
     
     override func didMove(to view: SKView) {
         
-        
         self.isUserInteractionEnabled = true
         physicsWorld.contactDelegate = self
         
@@ -32,14 +31,18 @@ class GameSceneReaction: SKScene {
         removeAllChildren()
         
         self.addChild(flaskButton)
-        flaskButton.position = CGPoint(x: w*0.5, y: h*0.4)
-        flaskButton.zPosition = 2
+        flaskButton.position = CGPoint(x: w*0.5, y: h*0.5)
+        flaskButton.zPosition = 4
         flaskButton.isUserInteractionEnabled = true
         flaskButton.focusBehavior = .focusable
         
-        #if (tvOS)
+        #if os(tvOS)
         flaskButton.alpha = 0.75
         addTapGestureRecognizer()
+        #endif
+        
+        #if os(iOS)
+        backButton = addBackButton()
         #endif
         
         drawBackgroundWall(side: 1050)
@@ -58,6 +61,7 @@ class GameSceneReaction: SKScene {
     @objc func clicked(){
         
             if backButton.isFocused == true{
+                flaskButton.removeAllChildren()
                 backButton.changeScene()
             }else if flaskButton.isFocused == true{
                 shake()

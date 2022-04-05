@@ -21,6 +21,10 @@
 		0687007127ED017E000E38F1 /* ShakeDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0687006F27ED017E000E38F1 /* ShakeDelegate.swift */; };
 		06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED727DFC9B100C413CB /* Reagents.swift */; };
 		06AD714927E51B72008A4B90 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8ED927DFC9C100C413CB /* Products.swift */; };
+		06B7E90327FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */; };
+		06B7E90427FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */; };
+		06B7E90627FB8A37002AEDE5 /* TrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90527FB8A37002AEDE5 /* TrashButton.swift */; };
+		06B7E90727FB8A37002AEDE5 /* TrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90527FB8A37002AEDE5 /* TrashButton.swift */; };
 		06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
 		06FDB76F27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
 		4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1AACBF27E26426003C83BA /* AppDelegate.swift */; };
@@ -77,6 +81,8 @@
 		0655C6E227F3A41A00E0FF07 /* LoadSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSceneDelegate.swift; sourceTree = "<group>"; };
 		0671ABBE27EBAFC8002216DF /* BeakerNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeakerNode.swift; sourceTree = "<group>"; };
 		0687006F27ED017E000E38F1 /* ShakeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDelegate.swift; sourceTree = "<group>"; };
+		06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+didUpdateFocus.swift"; sourceTree = "<group>"; };
+		06B7E90527FB8A37002AEDE5 /* TrashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashButton.swift; sourceTree = "<group>"; };
 		06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumEstadosFormas.swift; sourceTree = "<group>"; };
 		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1AACBF27E26426003C83BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +164,7 @@
 				0671ABBE27EBAFC8002216DF /* BeakerNode.swift */,
 				4C4D8EDB27DFCA4200C413CB /* SKButtonNavigation.swift */,
 				0655C6D527F2262600E0FF07 /* FlaskButtons.swift */,
+				06B7E90527FB8A37002AEDE5 /* TrashButton.swift */,
 				0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */,
 			);
 			path = Buttons;
@@ -200,6 +207,7 @@
 			children = (
 				DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */,
 				DB08E06327ECFFD4006D9E5F /* SKScene+AddBackButton.swift */,
+				06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -407,6 +415,7 @@
 			files = (
 				06AD714927E51B72008A4B90 /* Products.swift in Sources */,
 				4CCE1F2A27F4F9D20012DC55 /* LoadSceneDelegate.swift in Sources */,
+				06B7E90727FB8A37002AEDE5 /* TrashButton.swift in Sources */,
 				06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */,
 				DB08E06527ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
 				06FDB76F27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */,
@@ -418,6 +427,7 @@
 				4CCE1F2427F4BEC20012DC55 /* GameController.swift in Sources */,
 				0655C6DD27F24DEA00E0FF07 /* MortarButton.swift in Sources */,
 				4CF87B5227F6384100AF1FD9 /* GameViewController.swift in Sources */,
+				06B7E90427FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */,
 				DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */,
 				B3F02BB827EBA9CE00AB0392 /* GameSceneBook.swift in Sources */,
 				DB08E06127E90722006D9E5F /* SKButtonNavigation.swift in Sources */,
@@ -442,6 +452,7 @@
 			files = (
 				4C4D8EE027DFD4F000C413CB /* GameSceneReaction.swift in Sources */,
 				4C4D8EDC27DFCA4200C413CB /* SKButtonNavigation.swift in Sources */,
+				06B7E90627FB8A37002AEDE5 /* TrashButton.swift in Sources */,
 				DB08E06427ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
 				DB1814F327F245EA00039C8F /* ChangeTextureButtonDelegate.swift in Sources */,
 				0655C6D627F2262600E0FF07 /* FlaskButtons.swift in Sources */,
@@ -452,6 +463,7 @@
 				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				B3F1C8F427ECFC1400EBD4A8 /* String+Localization.swift in Sources */,
 				06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */,
+				06B7E90327FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */,
 				B3F02BB727EBA9CE00AB0392 /* GameSceneBook.swift in Sources */,
 				0655C6DC27F24DEA00E0FF07 /* MortarButton.swift in Sources */,
 				4C4D8EDA27DFC9C100C413CB /* Products.swift in Sources */,

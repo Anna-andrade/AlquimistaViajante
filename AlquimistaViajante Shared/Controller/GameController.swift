@@ -39,4 +39,10 @@ class GameController {
         arrayProduct = arrayFilter
     }
     
+    func eraseProductFromScream(){
+        for product in arrayProduct {
+            product.removeFromParent()
+        }
+    }
+    
 }

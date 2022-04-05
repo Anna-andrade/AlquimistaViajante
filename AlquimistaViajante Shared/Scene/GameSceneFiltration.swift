@@ -15,6 +15,11 @@ class GameSceneFiltration: SKScene {
     var count = 0
     var cliked = false
     
+    lazy var backButton = addBackButton()
+    let filterNode = SKSpriteNode(imageNamed: "openFilter13")
+    
+    var gesture = UITapGestureRecognizer()
+    
     lazy var w = self.size.width
     lazy var h = self.size.height
     
@@ -44,18 +49,28 @@ class GameSceneFiltration: SKScene {
         
         self.isUserInteractionEnabled = true
         
-        let filterNode = SKSpriteNode(imageNamed: "openFilter13")
         addChild(filterNode)
 //        filterNode.texture?.filteringMode = .nearest
         filterNode.size = CGSize(width: w*0.25, height: w*0.45)
         filterNode.position = CGPoint(x: w*0.5, y: h*0.437)
+        filterNode.isUserInteractionEnabled = true
+        filterNode.focusBehavior = .focusable
         filterNode.zPosition = 1
+    
+        #if os(iOS)
         addChild(barometerNode)
         addChild(pointerNode)
+        backButton = addBackButton()
+        #endif
         createdBeaker()
+
+        
+        #if os(tvOS)
+        beakerNode?.alpha = 0.75
+        addTapGestureRecognizer()
+        #endif
         
         drawBackgroundWall(side: 1050)
-        addBackButton()
     }
 
     func createdBeaker(){
@@ -66,10 +81,10 @@ class GameSceneFiltration: SKScene {
         beakerNode?.position = CGPoint(x: w*0.499, y: h*0.2)
         beakerNode?.zPosition = 2
         if let verBeakerNode = beakerNode {
-            addChild(beakerNode!)
+            addChild(verBeakerNode)
         }
     }
-    
+    #if os(iOS)
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 
         time?.invalidate()
@@ -112,4 +127,36 @@ class GameSceneFiltration: SKScene {
         }
         addChild(pointerNode)
      }
+    #endif
+#if os(tvOS)
+    func addTapGestureRecognizer(){
+        gesture.addTarget(self, action: #selector(clicked))
+        self.view?.addGestureRecognizer(gesture)
+    }
+    @objc func clicked(){
+
+        if backButton.isFocused == true{
+            beakerNode?.removeAllChildren()
+            backButton.changeScene()
+        }else if filterNode.isFocused == true{
+            GC.filterComp()
+            let waterNode = SKSpriteNode(imageNamed: "water")
+            waterNode.position = CGPoint(x: w*0.5, y: h*0.8)
+            waterNode.scale(to: CGSize(width: w/10, height: w/10))
+            addChild(waterNode)
+            waterNode.run(SKAction.moveTo(y: h*0.2, duration: 1.5), completion: waterNode.removeFromParent)
+            createdBeaker()
+        }
+        
+        
+    }
+#endif
 }
+
+#if os(tvOS)
+extension GameSceneFiltration {
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [backButton]
+    }
+}
+#endif

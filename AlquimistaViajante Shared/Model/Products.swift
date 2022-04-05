@@ -27,9 +27,6 @@ class Product:SKSpriteNode{
         addFormasComposto()
         self.zPosition = 4
         self.name = "product"
-//        self.physicsBody?.collisionBitMask = 1 // com quem eu trombo
-//        self.physicsBody?.contactTestBitMask = 2 // quais sao as mascara que eu irei notificar
-//        self.physicsBody?.categoryBitMask = 2 // Qual minha mascara
     }
     
     required init?(coder aDecoder: NSCoder) {

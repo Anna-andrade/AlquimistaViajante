@@ -67,9 +67,8 @@ class SKButtonNavigation: SKSpriteNode{
     }
 #endif
     func changeScene(){
+        GameController.shared.eraseComponents()
         changeDelegate?.changeScene(scene: sceneToGo)
-        
-
     }
 #if os(tvOS)
     override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){

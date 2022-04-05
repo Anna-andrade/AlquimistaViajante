@@ -20,13 +20,7 @@ class GameSceneBreakChemicalBond: SKScene{
         
         let width = self.size.width
         let height = self.size.height
-        
-//        let tableNode = SKSpriteNode(imageNamed: "table")
-//        tableNode.size = CGSize(width: width, height: width*0.45)
-//        tableNode.position = CGPoint(x: width*0.5, y: height*0.4)
-//        addChild(tableNode)
-//        tableNode.zPosition = 0
-//        
+             
         beakerNode = BeakerNode(size: CGSize(width: width*0.3, height: width*0.3))
         beakerNode?.position = CGPoint(x: width*0.492, y: height*0.55)
         beakerNode?.zPosition = 1
@@ -45,6 +39,11 @@ class GameSceneBreakChemicalBond: SKScene{
         bunsenBurnerNode.zPosition = 1
         
         drawBackgroundWall(side: 1050)
+        
+        #if os(iOS)
+            backButton = addBackButton()
+        #endif
+
         
         #if os(tvOS)
         addTapGestureRecognizer()
@@ -67,8 +66,8 @@ class GameSceneBreakChemicalBond: SKScene{
         
         if let verBeaker = beakerNode {
             if backButton.isFocused == true{
+                verBeaker.removeAllChildren()
                 backButton.changeScene()
-                print("NAO ESTA FOCADO")
             }else if verBeaker.isFocused == true{
                 assobrar()
             }
