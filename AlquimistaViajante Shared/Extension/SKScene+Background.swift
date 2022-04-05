@@ -30,14 +30,14 @@ extension SKScene {
             let width = self.size.width
             let height = self.size.height
             
-            let backgroundWallNode = SKSpriteNode(imageNamed: "Background")
+            let backgroundWallNode = SKSpriteNode(imageNamed: "wallNew")
             backgroundWallNode.size = CGSize(width: width, height: height)
             addChild(backgroundWallNode)
             backgroundWallNode.position = CGPoint(x: backgroundWallNode.size.width*0.5, y: backgroundWallNode.size.height*0.5)
             backgroundWallNode.zPosition = -3
             
-            let backgroundFloorNode = SKSpriteNode(imageNamed: "floor")
-            backgroundFloorNode.size = CGSize(width: width, height: height/2)
+            let backgroundFloorNode = SKSpriteNode(imageNamed: "floorNew")
+            backgroundFloorNode.size = CGSize(width: width, height: height*0.5)
             addChild(backgroundFloorNode)
             backgroundFloorNode.position = CGPoint(x: width*0.5, y: height*0.18)
             backgroundFloorNode.zPosition = -1

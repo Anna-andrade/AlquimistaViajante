@@ -56,13 +56,13 @@
 		DB08E06527ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08E06327ECFFD4006D9E5F /* SKScene+AddBackButton.swift */; };
 		DB0E32A227F77DD0007BE10E /* GameSceneFiltration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E32A127F77DD0007BE10E /* GameSceneFiltration.swift */; };
 		DB0E32A327F77DD0007BE10E /* GameSceneFiltration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0E32A127F77DD0007BE10E /* GameSceneFiltration.swift */; };
+		DB0E32A427FCCD2E007BE10E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD6476A27DFBC730094B1B6 /* Assets.xcassets */; };
 		DB1814F127EE5EF000039C8F /* GameSceneReaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4D8EDF27DFD4F000C413CB /* GameSceneReaction.swift */; };
 		DB1814F327F245EA00039C8F /* ChangeTextureButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1814F227F245EA00039C8F /* ChangeTextureButtonDelegate.swift */; };
 		DB1814F427F245EA00039C8F /* ChangeTextureButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1814F227F245EA00039C8F /* ChangeTextureButtonDelegate.swift */; };
 		DBD6475E27DFBC710094B1B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6475D27DFBC710094B1B6 /* AppDelegate.swift */; };
 		DBD6476627DFBC710094B1B6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBD6476527DFBC710094B1B6 /* GameViewController.swift */; };
 		DBD6476927DFBC710094B1B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD6476727DFBC710094B1B6 /* Main.storyboard */; };
-		DBD6476B27DFBC730094B1B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBD6476A27DFBC730094B1B6 /* Assets.xcassets */; };
 		DBD6476E27DFBC730094B1B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBD6476C27DFBC730094B1B6 /* LaunchScreen.storyboard */; };
 		DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */; };
 		DBE57A4727E3C7F200D99BBB /* SKScene+Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */; };
@@ -373,9 +373,9 @@
 			files = (
 				0655C6E127F37E4B00E0FF07 /* .swiftlint.yml in Resources */,
 				DBD6476927DFBC710094B1B6 /* Main.storyboard in Resources */,
-				DBD6476B27DFBC730094B1B6 /* Assets.xcassets in Resources */,
 				B3F1C8E427ECE74700EBD4A8 /* munro.ttf in Resources */,
 				DBD6476E27DFBC730094B1B6 /* LaunchScreen.storyboard in Resources */,
+				DB0E32A427FCCD2E007BE10E /* Assets.xcassets in Resources */,
 				B3F1C8EF27ECFB7B00EBD4A8 /* String+Localization.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
