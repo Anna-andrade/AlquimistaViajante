@@ -11,10 +11,15 @@ import Foundation
 class Reagente: SKSpriteNode {
     
     var quantVert: Int
+    #if os(iOS)
+    static let sideReagente = 25
+    #else
+    static let sideReagente = 40
+    #endif
     
     public init(quantVert: Int) {
         self.quantVert = quantVert
-        super.init(texture: nil, color: UIColor.clear, size: CGSize(width: 25, height: 25))
+        super.init(texture: nil, color: UIColor.clear, size: CGSize(width: Reagente.sideReagente, height: Reagente.sideReagente))
         self.name = "forma"
         nameTexture()
     }
