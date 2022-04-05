@@ -13,10 +13,10 @@ class Product: SKSpriteNode {
     var reagentes: [Reagente?] = []
     var isDead: Bool = false
     var isReact: Bool = false
-    var width = 30.0
+    var width = Double(Reagente.sideReagente) * 1.2
     
     public init(lados: [Int?]) {
-        super.init(texture: nil, color: UIColor.clear, size: CGSize(width: 25, height: 25))
+        super.init(texture: nil, color: UIColor.clear, size: CGSize(width: Reagente.sideReagente, height: Reagente.sideReagente))
         for i in 0...1 {
             if let verLado = lados[i] {
                 self.reagentes.append(Reagente(quantVert: verLado))
@@ -33,7 +33,7 @@ class Product: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addPhysicsBoidy(size: CGSize) {
+    private func addPhysicsBody(size: CGSize) {
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
         self.physicsBody?.contactTestBitMask = 1
         self.physicsBody?.collisionBitMask  = 1
@@ -48,7 +48,7 @@ class Product: SKSpriteNode {
         }
         let step: CGFloat = (.pi * 2) / CGFloat(reagente0.quantVert)
         var angle: CGFloat = 0.0
-        let raio = 25.0
+        let raio = Double(Reagente.sideReagente)
         
         for i in 0..<reagentes.count {
             if let reagente = reagentes[i] {
@@ -66,7 +66,7 @@ class Product: SKSpriteNode {
                 }
                 reagente.zPosition = -1
             addChild(reagente)
-            addPhysicsBoidy(size: CGSize(width: reagentes[1] == nil ? width:1.75*width, height: 30.0))
+            addPhysicsBody(size: CGSize(width: reagentes[1] == nil ? width:1.75*width, height: width))
             }
         }
         

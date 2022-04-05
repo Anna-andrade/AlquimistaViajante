@@ -50,7 +50,11 @@ class GameSceneReaction: SKScene {
 
     func shake() {
         for product in GC.arrayProduct {
-                product.physicsBody?.applyForce(CGVector(dx: Int.random(in: -2000...2000), dy: Int.random(in: -2000...2000)))
+        #if os(iOS)
+            product.physicsBody?.applyForce(CGVector(dx: Int.random(in: -2000...2000), dy: Int.random(in: -2000...2000)))
+        #else
+            product.physicsBody?.applyForce(CGVector(dx: Int.random(in: -1000...1000), dy: Int.random(in: -1000...1000)))
+        #endif
         }
     }
 #if os(tvOS)

@@ -24,12 +24,16 @@ class FlaskButton: SKNode {
 
         let path = UIBezierPath()
         path.move(to: CGPoint(x: -w/8, y: h/7.5))
-        path.addLine(to: CGPoint(x: -w/8, y: h/2.8))
-        path.addLine(to: CGPoint(x: w/6.2, y: h/2.8))
-        path.addLine(to: CGPoint(x: w/6.2, y: h/7.5))
-        path.addCurve(to: CGPoint(x: w/9, y: -h/2.6), controlPoint1: CGPoint(x: w/2.5, y: h/20), controlPoint2: CGPoint(x: w/3.2, y: -h/2.6))
+        path.addLine(to: CGPoint(x: -w/3.5, y: 0))
+        path.addLine(to: CGPoint(x: -w/3.5, y: -h/4))
         path.addLine(to: CGPoint(x: -w/9, y: -h/2.6))
-        path.addCurve(to: CGPoint(x: -w/8, y: h/7.5), controlPoint1: CGPoint(x: -w/3.2, y: -h/2.6), controlPoint2: CGPoint(x: -w/2.5, y: h/20))
+        path.addLine(to: CGPoint(x: w/9, y: -h/2.6))
+        path.addLine(to: CGPoint(x: w/3, y: -h/4))
+        path.addLine(to: CGPoint(x: w/3, y: 0))
+        path.addLine(to: CGPoint(x: w/6.2, y: h/7.5))
+        path.addLine(to: CGPoint(x: w/6.2, y: h/2.8))
+        path.addLine(to: CGPoint(x: -w/8, y: h/2.8))
+        
         return path
         }
     
@@ -43,7 +47,9 @@ class FlaskButton: SKNode {
         
         self.physicsBody?.contactTestBitMask = 1
         self.physicsBody?.collisionBitMask  = 1
-        physicsBody = SKPhysicsBody(edgeLoopFrom: border().cgPath)
+        let path = border()
+        path.lineWidth = 10
+        physicsBody = SKPhysicsBody(edgeLoopFrom: path.cgPath)
         physicsBody?.isDynamic = false
         
         let range = Int(size.width/8)
