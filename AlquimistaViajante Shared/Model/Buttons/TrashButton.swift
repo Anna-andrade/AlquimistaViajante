@@ -8,11 +8,11 @@
 import Foundation
 import SpriteKit
 
-class TrashButton:SKButtonNavigation{
+class TrashButton: SKButtonNavigation {
     
     let GC  = GameController.shared
     
-    init( scene:SKScene) {
+    init( scene: SKScene) {
         super.init(imageName: "trash", sceneToGo: scene)
     }
     
@@ -25,9 +25,8 @@ class TrashButton:SKButtonNavigation{
         deleteProducts()
     }
     
-    func deleteProducts(){
+    func deleteProducts() {
         GC.arrayProduct = []
     }
 
 }
-

@@ -8,10 +8,10 @@
 import Foundation
 import SpriteKit
 
-class GameSceneBreakChemicalBond: SKScene{
+class GameSceneBreakChemicalBond: SKScene {
     
     let GC = GameController.shared
-    var beakerNode : BeakerNode?
+    var beakerNode: BeakerNode?
     lazy var backButton = addBackButton()
     
     var gesture = UITapGestureRecognizer()
@@ -43,13 +43,11 @@ class GameSceneBreakChemicalBond: SKScene{
         #if os(iOS)
             backButton = addBackButton()
         #endif
-
-        
         #if os(tvOS)
         addTapGestureRecognizer()
         #endif
     }
-    func assobrar(){
+    func assobrar() {
         for product in GC.arrayProduct {
             guard let verBeakerNode = beakerNode else { return }
             product.breakComposto(node: verBeakerNode, location: product.position)
@@ -58,22 +56,19 @@ class GameSceneBreakChemicalBond: SKScene{
     }
 
 #if os(tvOS)
-    func addTapGestureRecognizer(){
+    func addTapGestureRecognizer() {
         gesture.addTarget(self, action: #selector(clicked))
         self.view?.addGestureRecognizer(gesture)
     }
-    @objc func clicked(){
-        
+    @objc func clicked() {
         if let verBeaker = beakerNode {
-            if backButton.isFocused == true{
+            if backButton.isFocused == true {
                 verBeaker.removeAllChildren()
                 backButton.changeScene()
-            }else if verBeaker.isFocused == true{
+            } else if verBeaker.isFocused == true {
                 assobrar()
             }
         }
-        
-        
     }
 #endif
    
@@ -84,8 +79,5 @@ extension GameSceneBreakChemicalBond {
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [backButton]
     }
-    
-
 }
 #endif
-

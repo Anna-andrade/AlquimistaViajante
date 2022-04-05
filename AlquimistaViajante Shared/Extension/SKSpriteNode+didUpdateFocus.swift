@@ -7,17 +7,17 @@
 
 import Foundation
 import SpriteKit
-extension SKSpriteNode{
+extension SKSpriteNode {
 #if os(tvOS)
-    open override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
+    open override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         
-        if context.previouslyFocusedItem === self{
+        if context.previouslyFocusedItem === self {
             self.setScale(self.xScale/1.1)
             self.setScale(self.yScale/1.1)
             self.alpha = 0.5
         }
         
-        if context.nextFocusedItem === self{
+        if context.nextFocusedItem === self {
             self.setScale(self.xScale*1.1)
             self.setScale(self.yScale*1.1)
             self.alpha = 1

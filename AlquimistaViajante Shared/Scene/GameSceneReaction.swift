@@ -48,22 +48,22 @@ class GameSceneReaction: SKScene {
         drawBackgroundWall(side: 1050)
     }
 
-    func shake(){
+    func shake() {
         for product in GC.arrayProduct {
                 product.physicsBody?.applyForce(CGVector(dx: Int.random(in: -2000...2000), dy: Int.random(in: -2000...2000)))
         }
     }
 #if os(tvOS)
-    func addTapGestureRecognizer(){
+    func addTapGestureRecognizer() {
         gesture.addTarget(self, action: #selector(clicked))
         self.view?.addGestureRecognizer(gesture)
     }
-    @objc func clicked(){
+    @objc func clicked() {
         
-            if backButton.isFocused == true{
+            if backButton.isFocused == true {
                 flaskButton.removeAllChildren()
                 backButton.changeScene()
-            }else if flaskButton.isFocused == true{
+            } else if flaskButton.isFocused == true {
                 shake()
             }
         }
@@ -75,19 +75,17 @@ extension GameSceneReaction {
         return [backButton]
     }
     
-
 }
 #endif
 
-extension GameSceneReaction:SKPhysicsContactDelegate{
+extension GameSceneReaction: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
         guard let productAbsorvido = contact.bodyA.node as? Product  else { return }
         guard let productFinal = contact.bodyB.node as? Product  else { return }
-        if (productFinal.isReact == false && productAbsorvido.isReact == false){
+        if productFinal.isReact == false && productAbsorvido.isReact == false {
             productAbsorvido.selfDestroy()
             productFinal.absorved(product: productAbsorvido)
             GC.eraseComponents()
         }
     }
 }
-

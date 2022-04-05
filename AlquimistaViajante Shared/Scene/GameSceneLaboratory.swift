@@ -14,14 +14,14 @@ class GameSceneLaboratory: SKScene {
     lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
     lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
     lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
-    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.1, height: width*0.1), lados: [3,nil])
+    lazy var mortarNode = MortarButton(size: CGSize(width: width*0.1, height: width*0.1), lados: [3, nil])
     lazy var trashNode = TrashButton(scene: self)
     var gesture = UITapGestureRecognizer()
     override func didMove(to view: SKView) {
         setup()
     }
     
-    func setup(){
+    func setup() {
         removeAllChildren()
 
 //        let bookNode = SKSpriteNode(imageNamed: "book")
@@ -58,21 +58,18 @@ class GameSceneLaboratory: SKScene {
         shelfNode.position = CGPoint(x: width*0.43, y: height*0.7)
         shelfNode.zPosition = 1
         
-
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
         bunsenBurnerButton.size = CGSize(width: width*0.11, height: width*0.11)
         bunsenBurnerButton.position = CGPoint(x: width*0.12, y: height*0.85)
         bunsenBurnerButton.zPosition = 2
         
-
         glassFunnelButton.isUserInteractionEnabled = true
         self.addChild(glassFunnelButton)
         glassFunnelButton.size = CGSize(width: width*0.12, height: width*0.12)
         glassFunnelButton.position = CGPoint(x: width*0.3, y: height*0.86)
         glassFunnelButton.zPosition = 2
         
-
         flatBottomFlaskButton.isUserInteractionEnabled = true
         self.addChild(flatBottomFlaskButton)
         flatBottomFlaskButton.size = CGSize(width: width*0.11, height: width*0.11)
@@ -90,36 +87,28 @@ class GameSceneLaboratory: SKScene {
         self.addChild(mortarNode)
         mortarNode.position = CGPoint(x: width*0.4, y: height*0.25)
         mortarNode.zPosition = 2
-        
         drawBackgroundFloor(side: 1050)
-        
 #if os(tvOS)
         addTapGestureRecognizer()
 #endif
     }
 #if os(tvOS)
-    func addTapGestureRecognizer(){
+    func addTapGestureRecognizer() {
         gesture.addTarget(self, action: #selector(clicked))
         self.view?.addGestureRecognizer(gesture)
     }
-    @objc func clicked(){
-        
+    @objc func clicked() {
         if bunsenBurnerButton.isFocused {
-            removeAllChildren()
             bunsenBurnerButton.changeScene()
         } else if glassFunnelButton.isFocused {
-            removeAllChildren()
             glassFunnelButton.changeScene()
         } else if flatBottomFlaskButton.isFocused {
-            removeAllChildren()
             flatBottomFlaskButton.changeScene()
-        } else if mortarNode.isFocused{
-            removeAllChildren()
+        } else if mortarNode.isFocused {
             mortarNode.addProductScene()
-        }else if bookNode.isFocused{
+        } else if bookNode.isFocused {
              bookNode.changeScene()
-        }
-        else if trashNode.isFocused{
+        } else if trashNode.isFocused {
             trashNode.deleteProducts()
             trashNode.changeScene()
         }
@@ -135,9 +124,8 @@ extension GameSceneLaboratory {
 
 }
 #endif
-extension GameSceneLaboratory:loadSceneDelegate{
+extension GameSceneLaboratory: loadSceneDelegate {
     func loadScene() {
         setup()
     }
 }
-

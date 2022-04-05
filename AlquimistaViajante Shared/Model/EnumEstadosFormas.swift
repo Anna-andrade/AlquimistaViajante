@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum EstadosFormas{
+enum EstadosFormas {
     case add, sub
 }

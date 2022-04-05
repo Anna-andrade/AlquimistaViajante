@@ -4,10 +4,7 @@
 //
 //  Created by Talita Nunes dos Santos on 24/03/22.
 //
-
-import Foundation
 import func Foundation.NSLocalizedString
-
 
 extension String {
         // Nova função:

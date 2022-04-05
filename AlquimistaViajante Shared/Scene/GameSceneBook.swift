@@ -107,12 +107,12 @@ class GameSceneBook: SKScene {
         
     }
 #if os(tvOS)
-    func addTapGestureRecognizer(){
+    func addTapGestureRecognizer() {
         gesture.addTarget(self, action: #selector(clicked))
         self.view?.addGestureRecognizer(gesture)
     }
-    @objc func clicked(){
-            if backButton.isFocused == true{
+    @objc func clicked() {
+            if backButton.isFocused == true {
                 backButton.changeScene()
         }
     }
@@ -123,7 +123,5 @@ extension GameSceneBook {
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
         return [backButton]
     }
-    
-
 }
 #endif
