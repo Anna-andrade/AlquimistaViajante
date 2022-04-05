@@ -7,6 +7,6 @@
 
 import Foundation
 import SpriteKit
-protocol ChangeSceneDelegate: AnyObject{
-    func changeScene(scene:SKScene)
+protocol ChangeSceneDelegate: AnyObject {
+    func changeScene(scene: SKScene)
 }

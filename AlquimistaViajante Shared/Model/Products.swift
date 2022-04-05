@@ -8,42 +8,39 @@
 import SpriteKit
 import Foundation
 
-class Product:SKSpriteNode{
+class Product: SKSpriteNode {
     
     var reagentes: [Reagente?] = []
     var isDead: Bool = false
     var isReact: Bool = false
-    var width = 30.0
+    var width = Double(Reagente.sideReagente) * 1.2
     
-    public init(lados:[Int?]){
-        super.init(texture: nil, color: UIColor.clear, size:  CGSize(width: 25, height: 25))
+    public init(lados: [Int?]) {
+        super.init(texture: nil, color: UIColor.clear, size: CGSize(width: Reagente.sideReagente, height: Reagente.sideReagente))
         for i in 0...1 {
             if let verLado = lados[i] {
                 self.reagentes.append(Reagente(quantVert: verLado))
-            }else{
+            } else {
                 self.reagentes.append(nil)
             }
         }
         addFormasComposto()
         self.zPosition = 4
         self.name = "product"
-//        self.physicsBody?.collisionBitMask = 1 // com quem eu trombo
-//        self.physicsBody?.contactTestBitMask = 2 // quais sao as mascara que eu irei notificar
-//        self.physicsBody?.categoryBitMask = 2 // Qual minha mascara
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func addPhysicsBoidy(size:CGSize){
+    private func addPhysicsBody(size: CGSize) {
         self.physicsBody = SKPhysicsBody(rectangleOf: size)
         self.physicsBody?.contactTestBitMask = 1
         self.physicsBody?.collisionBitMask  = 1
         self.physicsBody?.affectedByGravity = false
     }
     
-    private func addFormasComposto(){
+    private func addFormasComposto() {
         removeAllChildren()
         guard let reagente0 = reagentes[0] else {
             print("forma não existe")
@@ -51,10 +48,10 @@ class Product:SKSpriteNode{
         }
         let step: CGFloat = (.pi * 2) / CGFloat(reagente0.quantVert)
         var angle: CGFloat = 0.0
-        let raio = 25.0
+        let raio = Double(Reagente.sideReagente)
         
         for i in 0..<reagentes.count {
-            if let reagente = reagentes[i]{
+            if let reagente = reagentes[i] {
                 reagente.position = reagentes[1] == nil ? CGPoint(x: 0, y: 0) : CGPoint(x: -Double(width/2.5), y: 0)
                 let initAngle = reagente.quantVert == 4 ? Double.pi/4 : reagente.quantVert == 6 ? Double.pi/6 :0
                 reagente.zRotation = initAngle
@@ -69,21 +66,20 @@ class Product:SKSpriteNode{
                 }
                 reagente.zPosition = -1
             addChild(reagente)
-            //funciona apenas para dois composto
-                addPhysicsBoidy(size: CGSize(width: reagentes[1] == nil ? width:1.75*width, height: 30.0))
+            addPhysicsBody(size: CGSize(width: reagentes[1] == nil ? width:1.75*width, height: width))
             }
         }
         
     }
     
-    public func altVert(estado:EstadosFormas){
+    public func altVert(estado: EstadosFormas) {
         for reagente in reagentes {
-            if let veriReagente = reagente{
+            if let veriReagente = reagente {
             switch estado {
-                case .add:
-                    veriReagente.addLadosForma()
-                case .sub:
-                    veriReagente.subLadosForma()
+            case .add:
+                veriReagente.addLadosForma()
+            case .sub:
+                veriReagente.subLadosForma()
                 }
             }
         }
@@ -92,22 +88,22 @@ class Product:SKSpriteNode{
     }
     
     private func composicao() {
-        guard let reagente1 = reagentes[1] else{return}
-        guard let reagente0 = reagentes[0] else{return}
-        if reagente0.quantVert == reagente1.quantVert && (reagente0.quantVert != 6 && reagente1.quantVert != 6){
+        guard let reagente1 = reagentes[1] else {return}
+        guard let reagente0 = reagentes[0] else {return}
+        if reagente0.quantVert == reagente1.quantVert && (reagente0.quantVert != 6 && reagente1.quantVert != 6) {
             reagentes[1] = nil
             reagentes[0]?.addLadosForma()
-        }else{
+        } else {
             self.isReact = true
         }
     }
-    public func breakComposto(node:SKNode, location:CGPoint){
-        if reagentes[1] == nil{
+    public func breakComposto(node: SKNode, location: CGPoint) {
+        if reagentes[1] == nil {
             return
         }
         for reagente in reagentes {
-            if let vetReagente = reagente{
-                let product = Product(lados: [vetReagente.quantVert,nil])
+            if let vetReagente = reagente {
+                let product = Product(lados: [vetReagente.quantVert, nil])
                 node.addChild(product)
                 GameController.shared.arrayProduct.append(product)
                 product.position = location
@@ -117,18 +113,17 @@ class Product:SKSpriteNode{
         selfDestroy()
     }
     
-    public func absorved(product:Product){
+    public func absorved(product: Product) {
         self.reagentes[1] = product.reagentes[0]
         product.isReact = true
         composicao()
         addFormasComposto()
     }
     
-    public func selfDestroy(){
+    public func selfDestroy() {
         self.isDead = true
         self.removeAllChildren()
         self.removeFromParent()
     }
 
 }
-
