@@ -33,7 +33,7 @@ class GameSceneBreakChemicalBond: SKScene {
         addChild(verBeakerNode)
         
         let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
-        bunsenBurnerNode.size = CGSize(width: width*0.15, height: width*0.15)
+        bunsenBurnerNode.size = CGSize(width: width*0.14, height: width*0.14)
         bunsenBurnerNode.position = CGPoint(x: width*0.5, y: height*0.15)
         addChild(bunsenBurnerNode)
         bunsenBurnerNode.zPosition = 1
