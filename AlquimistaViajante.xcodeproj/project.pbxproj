@@ -535,7 +535,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.dev.mvinicius.AlquimistaViajanteAppleTv;
+				PRODUCT_BUNDLE_IDENTIFIER = Anna.Andrade.AlquimistaViajante;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -563,7 +563,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.dev.mvinicius.AlquimistaViajanteAppleTv;
+				PRODUCT_BUNDLE_IDENTIFIER = Anna.Andrade.AlquimistaViajante;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -698,7 +698,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
@@ -730,7 +730,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
