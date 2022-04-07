@@ -46,6 +46,7 @@ class GameSceneBreakChemicalBond: SKScene {
         #if os(tvOS)
         addTapGestureRecognizer()
         #endif
+        addLabelMini(title: "oi", text: "jkodvmsomov")
     }
     func assobrar() {
         for product in GC.arrayProduct {
