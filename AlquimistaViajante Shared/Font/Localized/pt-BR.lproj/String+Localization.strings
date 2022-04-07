@@ -18,8 +18,10 @@
 
 "tutorial2" = "agora, vamos fazer nossa primeira reação química. Clique no balão de fundo chato e, a seguir, agite o seu dispositivo para promover colisão entre os reagentes e, assim, formar os seus produtos!";
 
-"tutorial3" = "recuperar reagentes é uma habilidade muito importante para um químico. Para isso, um químico deve saber como quebrar ligações químicas. Para tanto, clique no bico de bunsen e sopre no microfone do dispositivo, até que você obtenha os reagentes originais.";
+"tutorial3" = "recuperar reagentes é uma habilidade muito importante para um químico. Para isso, um químico deve saber como quebrar ligações químicas. Para tanto, clique no bico de bunsen e assopre no microfone do dispositivo, até que você obtenha os reagentes originais.";
 
-"tutorial4" "um químico saber que reações químicas quase sempre geram misturas. Você pode obter produtos puros filtrando sua solução. Para isso, clique no filtro e pressione a tela do seu dispositivo até que o ponteiro do barômetro alcance a região azul do indicador."
+"tutorial4" = "um químico saber que reações químicas quase sempre geram misturas. Você pode obter produtos puros filtrando sua solução. Para isso, clique no filtro e pressione a tela do seu dispositivo até que o ponteiro do barômetro alcance a região azul do indicador.";
 
-"tutorial5" = "Agora você está apto a fazer reações químicas sozinho. Parabéns!"
+"tutorial5" = "Agora você está apto a fazer reações químicas sozinho. Parabéns!";
+
+"tutorialJunto" = "1- aperte no almofariz para adicionar elementos no béquer. 2- clique no balão de fundo chato e agite o dispositivo para fazer a reação química. 3- clique no bico de bunsen e assopre no microfone para obter reagentes originais dos compostos. 4- filtre e separe os elementos, para isso clique no filtro e pressione a tela do seu dispositivo até chegar na área azul do barômetro.";

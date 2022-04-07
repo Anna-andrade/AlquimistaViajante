@@ -10,9 +10,19 @@ import SpriteKit
 extension SKScene {
     func addLabelMini(title: String, text: String) {
         let backgroundNode = SKSpriteNode()
-        backgroundNode.color = .black
+        backgroundNode.color = .brown
         backgroundNode.size = CGSize(width: self.size.width/3, height: self.size.height/6)
         backgroundNode.zPosition = 10
+        
+        for i in 0...1 {
+                let trecoNode = SKSpriteNode(imageNamed: "treco")
+            let width = backgroundNode.size.width
+            let height = backgroundNode.size.height
+            backgroundNode.addChild(trecoNode)
+            trecoNode.size = CGSize(width: width*0.09, height: width*0.18)
+            trecoNode.position = CGPoint(x: -width*0.3+CGFloat(i)*width/2, y: height*0.6)
+           trecoNode.zPosition = 11
+            }
         
         let lblTitle = SKLabelNode()
         #if os(tvOS)
@@ -49,11 +59,21 @@ extension SKScene {
     
     func addLabelLab( text: String) {
         let backgroundNode = SKSpriteNode()
-        backgroundNode.color = .black
-        backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.2)
-        backgroundNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
+        backgroundNode.color = .brown
+        backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.35)
+//        backgroundNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.9)
         backgroundNode.zPosition = 10
 
+        for i in 0...1 {
+                let trecoNode = SKSpriteNode(imageNamed: "treco")
+            let width = self.size.width
+            let height = self.size.height
+           self.addChild(trecoNode)
+            trecoNode.size = CGSize(width: width*0.02, height: width*0.06)
+            trecoNode.position = CGPoint(x: width*0.3+CGFloat(i)*width/3.5, y: height*0.77)
+           trecoNode.zPosition = 11
+            }
+        
         let lbl = SKLabelNode()
         #if os(tvOS)
         lbl.fontSize = backgroundNode.size.width/18
@@ -64,11 +84,11 @@ extension SKScene {
         lbl.fontColor = SKColor.white
         lbl.fontName = "munro"
         lbl.text = text
-        lbl.position = CGPoint(x: 0, y: lbl.fontSize/2-backgroundNode.size.height/3)
+        lbl.position = CGPoint(x: 0, y: lbl.fontSize/2-backgroundNode.size.height/2)
         lbl.preferredMaxLayoutWidth = backgroundNode.size.width-10
 
         backgroundNode.addChild(lbl)
-        backgroundNode.position = CGPoint(x: self.size.width/2, y: self.size.height/1.75)
+        backgroundNode.position = CGPoint(x: self.size.width*0.45, y: self.size.height*0.6)
         addChild(backgroundNode)
     }
     
