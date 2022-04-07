@@ -55,5 +55,8 @@ class MortarButton: SKSpriteNode {
     func addProductScene() {
         GC.arrayProduct.append(Product(lados: lados))
         delegate?.loadScene()
+        if !GC.didTutorial[0]{
+            GC.tutotialCompleted()
+        }
     }
 }

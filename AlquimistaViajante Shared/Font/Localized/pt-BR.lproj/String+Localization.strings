@@ -14,6 +14,14 @@
 
 "Paragrafo3" = "Tenha em mente que métodos de separação de misturas não são as únicas alternativas para obter produtos de interesse. Frequentemente, precisamos reverter o sentido das reações químicas, e nossos produtos tornam-se reagentes, os quais terão suas ligações quebradas, formando seus componentes iniciais. Esta é uma estratégia interessante, pois você irá lidar com substâncias raras, de difícil obtenção e de alto custo. Este também é um conhecimento que você obterá na atenta leitura destas páginas.";
 
+"ReactionTitle" = "Xaqualhe";
+"Reaction" = "para misturar";
+
+"BreakChemicalBondTitle" = "Assobre";
+"BreakChemicalBond" = "para aquecer";
+
+"FiltrationTitle" = "Precione";
+"Filtration" = "para filtrar";
 "tutorial1" = "em primeiro lugar, vamos separar os reagentes para fazermos nossas reações. Clique no almofariz para adicionar os reagentes químicos no béquer.";
 
 "tutorial2" = "agora, vamos fazer nossa primeira reação química. Clique no balão de fundo chato e, a seguir, agite o seu dispositivo para promover colisão entre os reagentes e, assim, formar os seus produtos!";

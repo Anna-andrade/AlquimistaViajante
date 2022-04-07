@@ -50,7 +50,8 @@ extension SKScene {
     func addLabelLab( text: String) {
         let backgroundNode = SKSpriteNode()
         backgroundNode.color = .black
-        backgroundNode.size = CGSize(width: self.size.width/2.5, height: self.size.height/5)
+        backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.2)
+        backgroundNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.5)
         backgroundNode.zPosition = 10
 
         let lbl = SKLabelNode()

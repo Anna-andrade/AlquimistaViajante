@@ -530,7 +530,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = YJHS8SK8R5;
+				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajanteAppleTv/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -558,7 +558,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = YJHS8SK8R5;
+				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajanteAppleTv/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -704,7 +704,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = YJHS8SK8R5;
+				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We want to use your microphone to know wend the user is blowing";
@@ -737,7 +737,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = YJHS8SK8R5;
+				DEVELOPMENT_TEAM = NHY67K6358;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We want to use your microphone to know wend the user is blowing";
