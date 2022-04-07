@@ -11,6 +11,13 @@ class GameController {
     static var shared = GameController()
     var changeDelegate: ChangeSceneDelegate?
     var arrayProduct: [Product] = []
+    var didTutorial: [Bool] = [false, false, false, false, false]
+    
+    private init() {
+        if let array = UserDefaults.standard.value(forKey: "tutorial7") as? [Bool] {
+            didTutorial = array
+        }
+    }
     
     func eraseComponents() {
         for i in 0..<arrayProduct.count {
@@ -42,6 +49,11 @@ class GameController {
         for product in arrayProduct {
             product.removeFromParent()
         }
+    }
+    
+    func tutotialCompleted(indexTutorial:Int) {
+        didTutorial[indexTutorial] = true
+        UserDefaults.standard.set(didTutorial, forKey: "tutorial7")
     }
     
 }

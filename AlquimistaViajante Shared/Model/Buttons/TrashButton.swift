@@ -13,7 +13,7 @@ class TrashButton: SKButtonNavigation {
     let GC  = GameController.shared
     
     init( scene: SKScene) {
-        super.init(imageName: "trash", sceneToGo: scene)
+        super.init(imageName: "trash", sceneToGo: scene, tutorialFase: 0)
     }
     
     required init?(coder aDecoder: NSCoder) {

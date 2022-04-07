@@ -10,6 +10,7 @@ import SpriteKit
 
 class SKButtonNavigation: SKSpriteNode {
     
+    var tutorialFase: Int
     var imageName: String
     var sceneToGo: SKScene
     weak var delegateTexture: ChangeTextureButtonDelegate?
@@ -21,7 +22,8 @@ class SKButtonNavigation: SKSpriteNode {
         return isFocusable
     }
     
-    init(imageName: String, sceneToGo: SKScene) {
+    init(imageName: String, sceneToGo: SKScene, tutorialFase: Int) {
+        self.tutorialFase = tutorialFase
         self.sceneToGo = sceneToGo
         self.imageName = imageName
         let texture = SKTexture(imageNamed: imageName)
@@ -34,7 +36,8 @@ class SKButtonNavigation: SKSpriteNode {
         #endif
         
     }
-    init(imageName: String, sceneToGo: SKScene, imagePress: String) {
+    init(imageName: String, sceneToGo: SKScene, imagePress: String, tutorialFase: Int) {
+        self.tutorialFase = tutorialFase
         self.imagePress = imagePress
         self.sceneToGo = sceneToGo
         self.imageName = imageName
@@ -65,7 +68,10 @@ class SKButtonNavigation: SKSpriteNode {
     }
 #endif
     func changeScene() {
-        GameController.shared.removeProductFromScream()
-        changeDelegate?.changeScene(scene: sceneToGo)
+        if GameController.shared.didTutorial[tutorialFase] == true {
+            GameController.shared.removeProductFromScream()
+            changeDelegate?.changeScene(scene: sceneToGo)
+            GameController.shared.tutotialCompleted(indexTutorial: tutorialFase+1)
+        }
     }
 }

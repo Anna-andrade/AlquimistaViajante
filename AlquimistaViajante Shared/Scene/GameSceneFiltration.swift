@@ -66,7 +66,7 @@ class GameSceneFiltration: SKScene {
         addTapGestureRecognizer()
         #endif
         drawBackgroundWall(side: 1050)
-        addLabelMini(title: "oi", text: "jkodvmsomov")
+        addLabelMini(title: "FiltrationTitle".localized(), text: "Filtration".localized())
     }
 
     func createdBeaker() {

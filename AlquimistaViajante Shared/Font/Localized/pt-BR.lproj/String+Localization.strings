@@ -14,6 +14,14 @@
 
 "Paragrafo3" = "Tenha em mente que métodos de separação de misturas não são as únicas alternativas para obter produtos de interesse. Frequentemente, precisamos reverter o sentido das reações químicas, e nossos produtos tornam-se reagentes, os quais terão suas ligações quebradas, formando seus componentes iniciais. Esta é uma estratégia interessante, pois você irá lidar com substâncias raras, de difícil obtenção e de alto custo. Este também é um conhecimento que você obterá na atenta leitura destas páginas.";
 
+"ReactionTitle" = "Xaqualhe";
+"Reaction" = "para misturar";
+
+"BreakChemicalBondTitle" = "Assobre";
+"BreakChemicalBond" = "para aquecer";
+
+"FiltrationTitle" = "Precione";
+"Filtration" = "para filtrar";
 "tutorial1" = "em primeiro lugar, vamos separar os reagentes para fazermos nossas reações. Clique no almofariz para adicionar os reagentes químicos no béquer.";
 
 "tutorial2" = "agora, vamos fazer nossa primeira reação química. Clique no balão de fundo chato e, a seguir, agite o seu dispositivo para promover colisão entre os reagentes e, assim, formar os seus produtos!";
@@ -23,5 +31,3 @@
 "tutorial4" = "um químico saber que reações químicas quase sempre geram misturas. Você pode obter produtos puros filtrando sua solução. Para isso, clique no filtro e pressione a tela do seu dispositivo até que o ponteiro do barômetro alcance a região azul do indicador.";
 
 "tutorial5" = "Agora você está apto a fazer reações químicas sozinho. Parabéns!";
-
-"tutorialJunto" = "1- aperte no almofariz para adicionar elementos no béquer. 2- clique no balão de fundo chato e agite o dispositivo para fazer a reação química. 3- clique no bico de bunsen e assopre no microfone para obter reagentes originais dos compostos. 4- filtre e separe os elementos, para isso clique no filtro e pressione a tela do seu dispositivo até chegar na área azul do barômetro.";

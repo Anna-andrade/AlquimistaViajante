@@ -8,12 +8,13 @@ import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
+    let GC = GameController.shared
     lazy var width = self.size.width
     lazy var height = self.size.height
-    lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
-    lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-    lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
-    lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond(), tutorialFase: 1)
+    lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration(), tutorialFase: 2)
+    lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction(), tutorialFase: 0)
+    lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook(), tutorialFase: 0)
     lazy var mortarNode = MortarButton(size: CGSize(width: width*0.1, height: width*0.1), lados: [3, nil])
     lazy var trashNode = TrashButton(scene: self)
     var gesture = UITapGestureRecognizer()
@@ -23,8 +24,18 @@ class GameSceneLaboratory: SKScene {
     
     func setup() {
         removeAllChildren()
+        if GC.didTutorial[0] == false {
+            addLabelLab(text: "tutorial1".localized())
+        } else if GC.didTutorial[1] == false {
+            addLabelLab(text: "tutorial2".localized())
+        } else if GC.didTutorial[2] == false {
+            addLabelLab(text: "tutorial3".localized())
+        } else if GC.didTutorial[3] == false {
+            addLabelLab(text: "tutorial4".localized())
+        } else {
+            addLabelLab(text: "tutorial5".localized())
+        }
 
-//        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.1, height: width*0.1)
         bookNode.position = CGPoint(x: width*0.2, y: height*0.6)
@@ -70,7 +81,6 @@ class GameSceneLaboratory: SKScene {
         bookcaseNode.position = CGPoint(x: width*0.2, y: height*0.5)
         bookcaseNode.zPosition = 2
 
-        
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
         bunsenBurnerButton.size = CGSize(width: width*0.11, height: width*0.11)
@@ -102,7 +112,6 @@ class GameSceneLaboratory: SKScene {
         mortarNode.zPosition = 2
         drawBackgroundFloor(side: 1050)
         
-        addLabelLab(text: "tutorialJunto".localized())
 #if os(tvOS)
         addTapGestureRecognizer()
 #endif
