@@ -35,11 +35,23 @@ class GameSceneLaboratory: SKScene {
         trashNode.position = CGPoint(x: width*0.9, y: height*0.44)
         trashNode.zPosition = 3
         
-        let bgLabelNode = SKSpriteNode(imageNamed: "bgLabel")
-        self.addChild(bgLabelNode)
-        bgLabelNode.size = CGSize(width: width*0.5, height: width*0.5)
-        bgLabelNode.position = CGPoint(x: width*0.2, y: height*0.5)
-        bgLabelNode.zPosition = 3
+        let shelfNode = SKSpriteNode(imageNamed: "shelf")
+        self.addChild(shelfNode)
+        shelfNode.size = CGSize(width: width*0.8, height: width/7.9)
+        shelfNode.position = CGPoint(x: width*0.43, y: height*0.79)
+        shelfNode.zPosition = 1
+        
+        let treco1Node = SKSpriteNode(imageNamed: "treco")
+        self.addChild(treco1Node)
+        treco1Node.size = CGSize(width: width*0.04, height: width*0.1)
+        treco1Node.position = CGPoint(x: width*0.3, y: height*0.77)
+        treco1Node.zPosition = 3
+        
+        let treco2Node = SKSpriteNode(imageNamed: "treco2")
+        self.addChild(treco2Node)
+        treco2Node.size = CGSize(width: width*0.03, height: width*0.06)
+        treco2Node.position = CGPoint(x: width*0.6, y: height*0.77)
+        treco2Node.zPosition = 3
         
         let tableNode = SKSpriteNode(imageNamed: "table")
         self.addChild(tableNode)
@@ -58,11 +70,6 @@ class GameSceneLaboratory: SKScene {
         bookcaseNode.position = CGPoint(x: width*0.2, y: height*0.5)
         bookcaseNode.zPosition = 2
 
-        let shelfNode = SKSpriteNode(imageNamed: "shelf")
-        self.addChild(shelfNode)
-        shelfNode.size = CGSize(width: width*0.8, height: width/7.9)
-        shelfNode.position = CGPoint(x: width*0.43, y: height*0.79)
-        shelfNode.zPosition = 1
         
         bunsenBurnerButton.isUserInteractionEnabled = true
         self.addChild(bunsenBurnerButton)
