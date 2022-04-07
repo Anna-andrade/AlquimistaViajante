@@ -38,7 +38,7 @@ class GameSceneLaboratory: SKScene {
 
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.1, height: width*0.1)
-        bookNode.position = CGPoint(x: width*0.2, y: height*0.6)
+        bookNode.position = CGPoint(x: width*0.2, y: height*0.33)
         bookNode.zPosition = 3
         
         self.addChild(trashNode)
@@ -78,7 +78,7 @@ class GameSceneLaboratory: SKScene {
         let bookcaseNode = SKSpriteNode(imageNamed: "bookcase")
         self.addChild(bookcaseNode)
         bookcaseNode.size = CGSize(width: width*0.12, height: width*0.12)
-        bookcaseNode.position = CGPoint(x: width*0.2, y: height*0.5)
+        bookcaseNode.position = CGPoint(x: width*0.2, y: height*0.24)
         bookcaseNode.zPosition = 2
 
         bunsenBurnerButton.isUserInteractionEnabled = true
