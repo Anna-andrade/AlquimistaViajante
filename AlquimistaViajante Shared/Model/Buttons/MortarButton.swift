@@ -8,17 +8,17 @@
 import Foundation
 import SpriteKit
 
-class MortarButton:SKSpriteNode{
+class MortarButton: SKSpriteNode {
     weak var delegate: loadSceneDelegate?
     let GC = GameController.shared
     let lados: [Int?]
     var isFocusable: Bool = true
     
-    var canBecomeFocusable: Bool{
+    var canBecomeFocusable: Bool {
         return isFocusable
     }
     
-    init(size: CGSize, lados: [Int?]){
+    init(size: CGSize, lados: [Int?]) {
         self.lados = lados
         super.init(texture: nil, color: .clear, size: size)
         self.focusBehavior = .focusable
@@ -28,7 +28,7 @@ class MortarButton:SKSpriteNode{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func setup(){
+    func setup() {
         removeAllChildren()
         let mortarNode = SKSpriteNode(imageNamed: "mortar")
         self.addChild(mortarNode)
@@ -52,24 +52,8 @@ class MortarButton:SKSpriteNode{
         addProductScene()
     }
 #endif
-    func addProductScene(){
+    func addProductScene() {
         GC.arrayProduct.append(Product(lados: lados))
         delegate?.loadScene()
     }
-#if os(tvOS)
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator){
-        
-        if context.previouslyFocusedItem === self{
-            self.setScale(self.xScale/1.1)
-            self.setScale(self.yScale/1.1)
-            self.alpha = 0.5
-        }
-        
-        if context.nextFocusedItem === self{
-            self.setScale(self.xScale*1.1)
-            self.setScale(self.yScale*1.1)
-            self.alpha = 1
-        }
-    }
-#endif
 }

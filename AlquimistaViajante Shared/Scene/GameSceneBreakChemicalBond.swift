@@ -8,42 +8,76 @@
 import Foundation
 import SpriteKit
 
-class GameSceneBreakChemicalBond: SKScene{
+class GameSceneBreakChemicalBond: SKScene {
     
     let GC = GameController.shared
-    var beakerNode : BeakerNode?
+    var beakerNode: BeakerNode?
+    lazy var backButton = addBackButton()
+    
+    var gesture = UITapGestureRecognizer()
 
     override func didMove(to view: SKView) {
         
         let width = self.size.width
         let height = self.size.height
-        
-        let tableNode = SKSpriteNode(imageNamed: "table")
-        tableNode.size = CGSize(width: width, height: height/2)
-        tableNode.position = CGPoint(x: tableNode.size.width*0.5, y: tableNode.size.height*0.5)
-        addChild(tableNode)
-        tableNode.zPosition = 0
-        
-        beakerNode = BeakerNode(size: CGSize(width: width/2.5, height: width/2.5))
-        beakerNode?.position = CGPoint(x: width*0.64, y: height*0.8)
+             
+        beakerNode = BeakerNode(size: CGSize(width: width*0.3, height: width*0.3))
+        beakerNode?.position = CGPoint(x: width*0.492, y: height*0.55)
         beakerNode?.zPosition = 1
+        beakerNode?.isUserInteractionEnabled = true
+        beakerNode?.focusBehavior = .focusable
+        #if (tvOS)
+            beakerNode?.alpha = 0.75
+        #endif
         guard let verBeakerNode = beakerNode else { return }
         addChild(verBeakerNode)
         
         let bunsenBurnerNode = SKSpriteNode(imageNamed: "bunsenBurner")
-        bunsenBurnerNode.size = CGSize(width: width*0.25, height: height*0.25)
-        bunsenBurnerNode.position = CGPoint(x: bunsenBurnerNode.size.width*2, y: bunsenBurnerNode.size.height*0.875)
+        bunsenBurnerNode.size = CGSize(width: width*0.14, height: width*0.14)
+        bunsenBurnerNode.position = CGPoint(x: width*0.5, y: height*0.15)
         addChild(bunsenBurnerNode)
         bunsenBurnerNode.zPosition = 1
         
         drawBackgroundWall(side: 1050)
-        addBackButton()
+        
+        #if os(iOS)
+            backButton = addBackButton()
+        #endif
+        #if os(tvOS)
+        addTapGestureRecognizer()
+        #endif
     }
-    func assobrar(){
+    func assobrar() {
         for product in GC.arrayProduct {
             guard let verBeakerNode = beakerNode else { return }
             product.breakComposto(node: verBeakerNode, location: product.position)
             GC.eraseComponents()
         }
     }
+
+#if os(tvOS)
+    func addTapGestureRecognizer() {
+        gesture.addTarget(self, action: #selector(clicked))
+        self.view?.addGestureRecognizer(gesture)
+    }
+    @objc func clicked() {
+        if let verBeaker = beakerNode {
+            if backButton.isFocused == true {
+                verBeaker.removeAllChildren()
+                backButton.changeScene()
+            } else if verBeaker.isFocused == true {
+                assobrar()
+            }
+        }
+    }
+#endif
+   
 }
+
+#if os(tvOS)
+extension GameSceneBreakChemicalBond {
+    override var preferredFocusEnvironments: [UIFocusEnvironment] {
+        return [backButton]
+    }
+}
+#endif

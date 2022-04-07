@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ShakeDelegate: AnyObject{
+protocol ShakeDelegate: AnyObject {
     func shake()
 }
