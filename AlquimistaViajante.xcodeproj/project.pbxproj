@@ -25,6 +25,8 @@
 		06B7E90427FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */; };
 		06B7E90627FB8A37002AEDE5 /* TrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90527FB8A37002AEDE5 /* TrashButton.swift */; };
 		06B7E90727FB8A37002AEDE5 /* TrashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B7E90527FB8A37002AEDE5 /* TrashButton.swift */; };
+		06ED3A8F27FF536500332DDA /* SKScene+addLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED3A8E27FF536500332DDA /* SKScene+addLabel.swift */; };
+		06ED3A9027FF536500332DDA /* SKScene+addLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06ED3A8E27FF536500332DDA /* SKScene+addLabel.swift */; };
 		06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
 		06FDB76F27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */; };
 		4C1AACC027E26426003C83BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1AACBF27E26426003C83BA /* AppDelegate.swift */; };
@@ -78,6 +80,7 @@
 		0687006F27ED017E000E38F1 /* ShakeDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDelegate.swift; sourceTree = "<group>"; };
 		06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKSpriteNode+didUpdateFocus.swift"; sourceTree = "<group>"; };
 		06B7E90527FB8A37002AEDE5 /* TrashButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrashButton.swift; sourceTree = "<group>"; };
+		06ED3A8E27FF536500332DDA /* SKScene+addLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKScene+addLabel.swift"; sourceTree = "<group>"; };
 		06FDB76D27EA404B0036C8EE /* EnumEstadosFormas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumEstadosFormas.swift; sourceTree = "<group>"; };
 		4C1AACBD27E26426003C83BA /* AlquimistaViajanteAppleTv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlquimistaViajanteAppleTv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C1AACBF27E26426003C83BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +206,7 @@
 				DBE57A4527E3C7F200D99BBB /* SKScene+Background.swift */,
 				DB08E06327ECFFD4006D9E5F /* SKScene+AddBackButton.swift */,
 				06B7E90227FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift */,
+				06ED3A8E27FF536500332DDA /* SKScene+addLabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -409,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06AD714927E51B72008A4B90 /* Products.swift in Sources */,
+				06ED3A9027FF536500332DDA /* SKScene+addLabel.swift in Sources */,
 				4CCE1F2A27F4F9D20012DC55 /* LoadSceneDelegate.swift in Sources */,
 				06B7E90727FB8A37002AEDE5 /* TrashButton.swift in Sources */,
 				06AD714827E51B6F008A4B90 /* Reagents.swift in Sources */,
@@ -440,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C4D8EE027DFD4F000C413CB /* GameSceneReaction.swift in Sources */,
+				06ED3A8F27FF536500332DDA /* SKScene+addLabel.swift in Sources */,
 				4C4D8EDC27DFCA4200C413CB /* SKButtonNavigation.swift in Sources */,
 				06B7E90627FB8A37002AEDE5 /* TrashButton.swift in Sources */,
 				DB08E06427ECFFD4006D9E5F /* SKScene+AddBackButton.swift in Sources */,
@@ -523,8 +529,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajanteAppleTv/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -535,7 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.dev.mvinicius.AlquimistaViajanteAppleTv;
+				PRODUCT_BUNDLE_IDENTIFIER = Anna.Andrade.AlquimistaViajante;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -551,8 +557,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "Brand Assets";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajanteAppleTv/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -563,7 +569,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = br.dev.mvinicius.AlquimistaViajanteAppleTv;
+				PRODUCT_BUNDLE_IDENTIFIER = Anna.Andrade.AlquimistaViajante;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -697,11 +703,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We want to use your microphone to know wend the user is blowing";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -710,6 +716,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,11 +736,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We want to use your microphone to know wend the user is blowing";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -742,6 +749,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

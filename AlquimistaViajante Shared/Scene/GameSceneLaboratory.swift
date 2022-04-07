@@ -94,6 +94,8 @@ class GameSceneLaboratory: SKScene {
         mortarNode.position = CGPoint(x: width*0.4, y: height*0.25)
         mortarNode.zPosition = 2
         drawBackgroundFloor(side: 1050)
+        
+        addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
 #if os(tvOS)
         addTapGestureRecognizer()
 #endif
