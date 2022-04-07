@@ -15,7 +15,7 @@ class GameController {
     var indexTutorial = 0
     
     private init(){
-        if let array = UserDefaults.value(forKey: "tutotial") as? [Bool] {
+        if let array = UserDefaults.standard.value(forKey: "tutorial1") as? [Bool] {
             didTutorial = array
             for i in 0..<didTutorial.count {
                 if didTutorial[i] {
@@ -61,7 +61,7 @@ class GameController {
     func tutotialCompleted(){
         didTutorial[indexTutorial] = true
         indexTutorial += 1
-        UserDefaults.standard.set(didTutorial, forKey: "tutorial")
+        UserDefaults.standard.set(didTutorial, forKey: "tutorial1")
     }
     
 }
