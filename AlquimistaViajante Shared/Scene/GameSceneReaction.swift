@@ -46,7 +46,7 @@ class GameSceneReaction: SKScene {
         #endif
         
         drawBackgroundWall(side: 1050)
-        addLabelMini(title: "oi", text: "jkodvmsomov")
+        addLabelMini(title: "ReactionTitle".localized(), text: "Reaction".localized())
     }
 
     func shake() {
