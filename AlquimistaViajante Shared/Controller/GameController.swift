@@ -11,7 +11,7 @@ class GameController {
     static var shared = GameController()
     var changeDelegate: ChangeSceneDelegate?
     var arrayProduct: [Product] = []
-    var didTutorial :[Bool] = [false,false,false,false]
+    var didTutorial :[Bool] = [false,false,false,false,false]
     var indexTutorial = 0
     
     private init(){
