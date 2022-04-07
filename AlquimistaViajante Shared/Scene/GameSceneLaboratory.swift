@@ -8,12 +8,13 @@ import Foundation
 import SpriteKit
 
 class GameSceneLaboratory: SKScene {
+    let GC = GameController.shared
     lazy var width = self.size.width
     lazy var height = self.size.height
-    lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond())
-    lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration())
-    lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction())
-    lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook())
+    lazy var bunsenBurnerButton = SKButtonNavigation(imageName: "bunsenBurner", sceneToGo: GameSceneBreakChemicalBond(), tutorialFase: 2)
+    lazy var glassFunnelButton = SKButtonNavigation(imageName: "glassFunnel", sceneToGo: GameSceneFiltration(), tutorialFase: 3)
+    lazy var flatBottomFlaskButton = SKButtonNavigation(imageName: "flatBottomFlask", sceneToGo: GameSceneReaction(), tutorialFase: 1)
+    lazy var bookNode = SKButtonNavigation(imageName: "book", sceneToGo: GameSceneBook(), tutorialFase: 0)
     lazy var mortarNode = MortarButton(size: CGSize(width: width*0.1, height: width*0.1), lados: [3, nil])
     lazy var trashNode = TrashButton(scene: self)
     var gesture = UITapGestureRecognizer()
@@ -23,8 +24,24 @@ class GameSceneLaboratory: SKScene {
     
     func setup() {
         removeAllChildren()
+        if GC.didTutorial[0] == false {
+            bunsenBurnerButton.isUserInteractionEnabled = false
+            glassFunnelButton.isUserInteractionEnabled = false
+            flatBottomFlaskButton.isUserInteractionEnabled = false
+            addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
+        } else if GC.didTutorial[1] == false {
+            bunsenBurnerButton.isUserInteractionEnabled = false
+            glassFunnelButton.isUserInteractionEnabled = false
+            addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
+        } else if GC.didTutorial[2] == false {
+            glassFunnelButton.isUserInteractionEnabled = false
+            addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
+        } else if GC.didTutorial[3] == false {
+            addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
+        } else {
+            addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
+        }
 
-//        let bookNode = SKSpriteNode(imageNamed: "book")
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.1, height: width*0.1)
         bookNode.position = CGPoint(x: width*0.2, y: height*0.6)
@@ -102,7 +119,6 @@ class GameSceneLaboratory: SKScene {
         mortarNode.zPosition = 2
         drawBackgroundFloor(side: 1050)
         
-        addLabelLab(text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley")
 #if os(tvOS)
         addTapGestureRecognizer()
 #endif
