@@ -13,3 +13,12 @@
 "Paragrafo2" = "Do not forget, products are rarely formed with 100% purity. Indeed, we need often to perform blend purification procedures so that we can obtain purified products of interest. You will learn how to perform these procedures in this book.";
 
 "Paragrafo3" = "Keep in mind that mixing separation methods are not the only alternatives to obtaining products of interest. Often, we need to reverse the way of chemical reactions, and our products become reagents, which will have their chemical bond broken, forming their initial components. This is an interesting strategy as you will deal with rare, difficult-to-obtain and high-cost substances. This knowledge you will get in the attentive reading of these pages.";
+
+"ReactionTitle" = "Shake";
+"Reaction" = "to misk";
+
+"BreakChemicalBondTitle" = "Blow";
+"BreakChemicalBond" = "to heat";
+
+"FiltrationTitle" = "Press";
+"Filtration" = "to filter";
