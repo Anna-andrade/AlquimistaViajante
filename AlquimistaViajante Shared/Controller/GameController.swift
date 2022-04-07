@@ -11,18 +11,11 @@ class GameController {
     static var shared = GameController()
     var changeDelegate: ChangeSceneDelegate?
     var arrayProduct: [Product] = []
-    var didTutorial :[Bool] = [false,false,false,false,false]
-    var indexTutorial = 0
+    var didTutorial: [Bool] = [false, false, false, false, false]
     
-    private init(){
-        if let array = UserDefaults.standard.value(forKey: "tutorial1") as? [Bool] {
+    private init() {
+        if let array = UserDefaults.standard.value(forKey: "tutorial7") as? [Bool] {
             didTutorial = array
-            for i in 0..<didTutorial.count {
-                if didTutorial[i] {
-                    indexTutorial = i
-                }
-            }
-            
         }
     }
     
@@ -58,10 +51,9 @@ class GameController {
         }
     }
     
-    func tutotialCompleted(){
+    func tutotialCompleted(indexTutorial:Int) {
         didTutorial[indexTutorial] = true
-        indexTutorial += 1
-        UserDefaults.standard.set(didTutorial, forKey: "tutorial1")
+        UserDefaults.standard.set(didTutorial, forKey: "tutorial7")
     }
     
 }

@@ -13,7 +13,7 @@ extension SKScene {
         let width = self.size.width
         let height = self.size.height
 
-        let addBackButton = SKButtonNavigation(imageName: "backButton", sceneToGo: GameSceneLaboratory(), imagePress: "backButtonPress",tutorialFase: 0)
+        let addBackButton = SKButtonNavigation(imageName: "backButton", sceneToGo: GameSceneLaboratory(), imagePress: "backButtonPress", tutorialFase: 0)
         addBackButton.size = CGSize(width: width*0.1, height: width*0.1)
         addBackButton.position = CGPoint(x: width*0.1, y: height*0.9)
         addBackButton.zPosition = 2
