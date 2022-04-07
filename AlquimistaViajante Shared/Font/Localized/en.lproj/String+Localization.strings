@@ -27,8 +27,9 @@
 
 "tutorial2" = "Now, let’s make our first chemical reaction. To do so, click in the flat bottom flask, then shake your device to promote collision between the reagents and form the products!";
 
-"tutorial3" = "Recovering reagents is a very important skill for a chemist. Therefore, a chemist should know how to break chemical bonds of the products. Click in the Bunsen burner and blow air at the microfone of your device, until you obtain the original reagents.";
+"tutorial3" = "Recovering reagents is a very important skill. For that, you must break chemical bonds. To do so, click in the Bunsen burner and blow at the microphone of your device"
 
-"tutorial4" = "A chemist should know that chemical reactions form mistures all the time. You can obtain pure compounds filtering your solution. To do so, click in the filter e press the screen of your device until the pointer of the barometer reaches the blue mark."
+"tutorial4" = "A chemist should know that chemical reactions form mistures all the time. You can obtain pure compounds filtering your solution. To do so, click in the filter e press the screen of your device until the pointer of the barometer reaches the blue mark.";
 
 "tutorial5" = "Now you're able to perform chemical reactions by your own! Conglatulations!"
+
