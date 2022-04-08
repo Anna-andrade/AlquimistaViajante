@@ -28,7 +28,7 @@ extension SKScene {
         #if os(tvOS)
         lblTitle.fontSize = backgroundNode.size.width/5
         #else
-        lblTitle.fontSize = backgroundNode.size.width/6
+        lblTitle.fontSize = backgroundNode.size.width/8
         #endif
         lblTitle.numberOfLines = 0
         lblTitle.fontColor = SKColor.white
@@ -41,7 +41,7 @@ extension SKScene {
         #if os(tvOS)
         lbl.fontSize = backgroundNode.size.width/10
         #else
-        lbl.fontSize = backgroundNode.size.width/12
+        lbl.fontSize = backgroundNode.size.width/16
         #endif
         lbl.numberOfLines = 0
         lbl.fontColor = SKColor.white
@@ -78,7 +78,7 @@ extension SKScene {
         #if os(tvOS)
         lbl.fontSize = backgroundNode.size.width/18
         #else
-        lbl.fontSize = backgroundNode.size.width/22
+        lbl.fontSize = backgroundNode.size.width/24
         #endif
         lbl.numberOfLines = 0
         lbl.fontColor = SKColor.white
