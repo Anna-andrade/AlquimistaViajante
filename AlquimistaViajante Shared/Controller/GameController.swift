@@ -10,6 +10,7 @@ import Foundation
 class GameController {
     static var shared = GameController()
     var changeDelegate: ChangeSceneDelegate?
+    var points = 0
     var arrayProduct: [Product] = []
     var didTutorial: [Bool] = [false, false, false, false, false]
     
@@ -55,5 +56,6 @@ class GameController {
         didTutorial[indexTutorial] = true
         UserDefaults.standard.set(didTutorial, forKey: "tutorial7")
     }
+    
     
 }
