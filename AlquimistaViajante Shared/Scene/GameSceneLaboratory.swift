@@ -32,9 +32,9 @@ class GameSceneLaboratory: SKScene {
             addLabelLab(text: "tutorial3".localized())
         } else if GC.didTutorial[3] == false {
             addLabelLab(text: "tutorial4".localized())
-        } else {
+        } else if GC.didTutorial[4] == false  {
             addLabelLab(text: "tutorial5".localized())
-        }
+        } 
 
         self.addChild(bookNode)
         bookNode.size = CGSize(width: width*0.1, height: width*0.1)
@@ -116,6 +116,13 @@ class GameSceneLaboratory: SKScene {
         addTapGestureRecognizer()
 #endif
     }
+//    #if os(iOS)
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        if !GC.didTutorial[4] {
+//            GC.tutotialCompleted(indexTutorial: 4)
+//        }
+//    }
+//    #endif
 #if os(tvOS)
     func addTapGestureRecognizer() {
         gesture.addTarget(self, action: #selector(clicked))

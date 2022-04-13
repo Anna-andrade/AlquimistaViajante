@@ -12,10 +12,10 @@ class GameController {
     var changeDelegate: ChangeSceneDelegate?
     var points = 0
     var arrayProduct: [Product] = []
-    var didTutorial: [Bool] = [false, false, false, false, false]
+    var didTutorial: [Bool] = [false, false, false, false, false, false]
     
     private init() {
-        if let array = UserDefaults.standard.value(forKey: "tutorial7") as? [Bool] {
+        if let array = UserDefaults.standard.value(forKey: "tutorial8") as? [Bool] {
             didTutorial = array
         }
     }
@@ -54,7 +54,7 @@ class GameController {
     
     func tutotialCompleted(indexTutorial:Int) {
         didTutorial[indexTutorial] = true
-        UserDefaults.standard.set(didTutorial, forKey: "tutorial7")
+        UserDefaults.standard.set(didTutorial, forKey: "tutorial8")
     }
     
     
