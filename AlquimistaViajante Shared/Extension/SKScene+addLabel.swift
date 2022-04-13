@@ -62,7 +62,6 @@ extension SKScene {
         backgroundNode.color = .brown
        // backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.35)
         backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.2)
-        backgroundNode.position = CGPoint(x: self.size.width*0.8, y: self.size.height*2)
         backgroundNode.zPosition = 2
 
         for i in 0...1 {
@@ -71,7 +70,7 @@ extension SKScene {
             let height = backgroundNode.size.height
             backgroundNode.addChild(trecoNode)
             trecoNode.size = CGSize(width: width*0.05, height: width*0.1)
-            trecoNode.position = CGPoint(x: -width*0.5+CGFloat(i)*width*0.8, y: height*0.7)
+            trecoNode.position = CGPoint(x: -width*0.4+CGFloat(i)*width*0.8, y: height*0.6)
            trecoNode.zPosition = 3
             }
         
@@ -89,7 +88,7 @@ extension SKScene {
         lbl.preferredMaxLayoutWidth = backgroundNode.size.width-10
 
         backgroundNode.addChild(lbl)
-        backgroundNode.position = CGPoint(x: self.size.width*0.45, y: self.size.height*0.6)
+        backgroundNode.position = CGPoint(x: self.size.width*0.45, y: self.size.height*0.65)
         addChild(backgroundNode)
     }
     
