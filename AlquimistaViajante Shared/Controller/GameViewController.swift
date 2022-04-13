@@ -26,7 +26,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         GC.changeDelegate = self
         ManagerGameCenter.authenticateUser(from: self)
-        ManagerGameCenter.showAvatarGameCenter(isVisible: true)
 #if os(iOS)
         recordingSession = AVAudioSession.sharedInstance()
 

@@ -20,7 +20,7 @@ extension SKScene {
             let height = backgroundNode.size.height
             backgroundNode.addChild(trecoNode)
             trecoNode.size = CGSize(width: width*0.09, height: width*0.15)
-            trecoNode.position = CGPoint(x: -width*0.2+CGFloat(i)*width/1.5, y: height*0.6)
+          trecoNode.position = CGPoint(x: width*0.5+CGFloat(i)*width, y: height*0.6)
            trecoNode.zPosition = 11
             }
         
@@ -60,17 +60,18 @@ extension SKScene {
     func addLabelLab( text: String) {
         let backgroundNode = SKSpriteNode()
         backgroundNode.color = .brown
-        backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.35)
-//        backgroundNode.position = CGPoint(x: self.size.width*0.5, y: self.size.height*0.9)
+       // backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.35)
+        backgroundNode.size = CGSize(width: self.size.width*0.5, height: self.size.height*0.2)
+        backgroundNode.position = CGPoint(x: self.size.width*0.8, y: self.size.height*2)
         backgroundNode.zPosition = 2
 
         for i in 0...1 {
                 let trecoNode = SKSpriteNode(imageNamed: "treco")
-            let width = self.size.width
-            let height = self.size.height
-           self.addChild(trecoNode)
-            trecoNode.size = CGSize(width: width*0.02, height: width*0.06)
-            trecoNode.position = CGPoint(x: width*0.1+CGFloat(i)*width/2, y: height*0.8)
+            let width = backgroundNode.size.width
+            let height = backgroundNode.size.height
+            backgroundNode.addChild(trecoNode)
+            trecoNode.size = CGSize(width: width*0.05, height: width*0.1)
+            trecoNode.position = CGPoint(x: -width*0.5+CGFloat(i)*width*0.8, y: height*0.7)
            trecoNode.zPosition = 3
             }
         

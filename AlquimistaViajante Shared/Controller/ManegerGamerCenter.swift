@@ -14,15 +14,16 @@ class ManagerGameCenter: GKGameCenterViewController, GKGameCenterControllerDeleg
     static func authenticateUser(from: UIViewController) -> Void {
         GKLocalPlayer.local.authenticateHandler = { vc, error in
             if (vc == nil && error == nil) {
+                self.showAvatarGameCenter(isVisible: true)
                 return
             }
             guard error == nil else { return }
-            
             from.present(vc!, animated: true, completion: nil)
         }
     }
     
     static func showAvatarGameCenter(isVisible: Bool) -> Void {
+        print("Autenticação: \(GKLocalPlayer.local.isAuthenticated)")
         if (GKLocalPlayer.local.isAuthenticated) {
             GKAccessPoint.shared.location = .topTrailing
             GKAccessPoint.shared.showHighlights = false
