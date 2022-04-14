@@ -52,6 +52,7 @@ class GameSceneBreakChemicalBond: SKScene {
         for product in GC.arrayProduct {
             guard let verBeakerNode = beakerNode else { return }
             product.breakComposto(node: verBeakerNode, location: product.position)
+            GC.points += 1
             GC.eraseComponents()
         }
     }

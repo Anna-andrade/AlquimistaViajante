@@ -53,6 +53,8 @@ class MortarButton: SKSpriteNode {
     }
 #endif
     func addProductScene() {
+        GC.points += 1
+        ManagerGameCenter.setHighScore(score: GameController.shared.points)
         GC.arrayProduct.append(Product(lados: lados))
         if !GC.didTutorial[0] {
             GC.tutotialCompleted(indexTutorial: 0)

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		064E994628060D3700823BD5 /* ManegerGamerCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064E994528060D3700823BD5 /* ManegerGamerCenter.swift */; };
+		064E994728060D3700823BD5 /* ManegerGamerCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064E994528060D3700823BD5 /* ManegerGamerCenter.swift */; };
+		064E994A2806114700823BD5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064E99492806114700823BD5 /* GameKit.framework */; };
+		064E994C280611CD00823BD5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 064E994B280611CD00823BD5 /* GameKit.framework */; };
 		0655C6D627F2262600E0FF07 /* FlaskButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D527F2262600E0FF07 /* FlaskButtons.swift */; };
 		0655C6D727F2262600E0FF07 /* FlaskButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D527F2262600E0FF07 /* FlaskButtons.swift */; };
 		0655C6D927F22E2400E0FF07 /* ChangeSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */; };
@@ -71,6 +75,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		064E994528060D3700823BD5 /* ManegerGamerCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManegerGamerCenter.swift; sourceTree = "<group>"; };
+		064E99492806114700823BD5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		064E994B280611CD00823BD5 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS15.4.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		0655C6D527F2262600E0FF07 /* FlaskButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlaskButtons.swift; sourceTree = "<group>"; };
 		0655C6D827F22E2400E0FF07 /* ChangeSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeSceneDelegate.swift; sourceTree = "<group>"; };
 		0655C6DB27F24DEA00E0FF07 /* MortarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MortarButton.swift; sourceTree = "<group>"; };
@@ -121,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064E994C280611CD00823BD5 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,12 +136,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				064E994A2806114700823BD5 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		064E99482806114700823BD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				064E994B280611CD00823BD5 /* GameKit.framework */,
+				064E99492806114700823BD5 /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0688FF9727EA6BD700C930A3 /* Protocolos */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +212,7 @@
 		4C4D8ED427DFC0C700C413CB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				064E994528060D3700823BD5 /* ManegerGamerCenter.swift */,
 				4C513DDA27E4FCDA00F6AC56 /* GameController.swift */,
 				DBD6476527DFBC710094B1B6 /* GameViewController.swift */,
 			);
@@ -259,6 +278,7 @@
 				4C1AACBE27E26426003C83BA /* AlquimistaViajanteAppleTv */,
 				DBD6475B27DFBC710094B1B6 /* Products */,
 				DB1814F527F255E800039C8F /* Recovered References */,
+				064E99482806114700823BD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -425,6 +445,7 @@
 				4CCE1F2427F4BEC20012DC55 /* GameController.swift in Sources */,
 				0655C6DD27F24DEA00E0FF07 /* MortarButton.swift in Sources */,
 				4CF87B5227F6384100AF1FD9 /* GameViewController.swift in Sources */,
+				064E994728060D3700823BD5 /* ManegerGamerCenter.swift in Sources */,
 				06B7E90427FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */,
 				DB08E05D27E90712006D9E5F /* GameSceneBreakChemicalBond.swift in Sources */,
 				B3F02BB827EBA9CE00AB0392 /* GameSceneBook.swift in Sources */,
@@ -457,6 +478,7 @@
 				0655C6E327F3A41A00E0FF07 /* LoadSceneDelegate.swift in Sources */,
 				DBE57A4627E3C7F200D99BBB /* SKScene+Background.swift in Sources */,
 				B3F1C8F427ECFC1400EBD4A8 /* String+Localization.swift in Sources */,
+				064E994628060D3700823BD5 /* ManegerGamerCenter.swift in Sources */,
 				06FDB76E27EA404B0036C8EE /* EnumEstadosFormas.swift in Sources */,
 				06B7E90327FB825E002AEDE5 /* SKSpriteNode+didUpdateFocus.swift in Sources */,
 				B3F02BB727EBA9CE00AB0392 /* GameSceneBook.swift in Sources */,
@@ -530,11 +552,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajanteAppleTv/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -558,11 +581,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajanteAppleTv/Info.plist;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -704,13 +728,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We want to use your microphone to know wend the user is blowing";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
@@ -726,7 +751,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -737,13 +762,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = NHY67K6358;
+				DEVELOPMENT_TEAM = YJHS8SK8R5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AlquimistaViajante/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We want to use your microphone to know wend the user is blowing";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = gamekit;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeLeft;
@@ -759,7 +785,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

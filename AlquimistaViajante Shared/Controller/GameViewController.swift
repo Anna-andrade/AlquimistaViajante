@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         GC.changeDelegate = self
+        ManagerGameCenter.authenticateUser(from: self)
 #if os(iOS)
         recordingSession = AVAudioSession.sharedInstance()
 
@@ -165,6 +166,13 @@ extension GameViewController: AVAudioRecorderDelegate {
        }
             
         return decibel
+    }
+    
+    func showGameLeaderBoard() {
+        ManagerGameCenter.setHighScore(score: GC.points)
+        if (!ManagerGameCenter().toSpecificPage(from: self, to: .leaderboards)) {
+                    print("Not connected")
+                }
     }
 }
 

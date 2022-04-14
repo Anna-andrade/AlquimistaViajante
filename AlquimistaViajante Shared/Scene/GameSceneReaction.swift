@@ -90,6 +90,8 @@ extension GameSceneReaction: SKPhysicsContactDelegate {
         if productFinal.isReact == false && productAbsorvido.isReact == false {
             productAbsorvido.selfDestroy()
             productFinal.absorved(product: productAbsorvido)
+            GC.points += 1
+            ManagerGameCenter.setHighScore(score: GameController.shared.points)
             GC.eraseComponents()
         }
     }
