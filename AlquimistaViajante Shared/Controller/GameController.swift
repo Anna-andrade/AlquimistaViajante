@@ -15,7 +15,7 @@ class GameController {
     var didTutorial: [Bool] = [false, false, false, false, false, false]
     
     private init() {
-        if let array = UserDefaults.standard.value(forKey: "tutorial8") as? [Bool] {
+        if let array = UserDefaults.standard.value(forKey: "tutorial9") as? [Bool] {
             didTutorial = array
         }
     }
@@ -54,7 +54,7 @@ class GameController {
     
     func tutotialCompleted(indexTutorial:Int) {
         didTutorial[indexTutorial] = true
-        UserDefaults.standard.set(didTutorial, forKey: "tutorial8")
+        UserDefaults.standard.set(didTutorial, forKey: "tutorial9")
     }
     
     

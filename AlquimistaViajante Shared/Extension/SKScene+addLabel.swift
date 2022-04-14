@@ -84,7 +84,7 @@ extension SKScene {
         lbl.fontColor = SKColor.white
         lbl.fontName = "munro"
         lbl.text = text
-        lbl.position = CGPoint(x: 0, y: lbl.fontSize/2-backgroundNode.size.height/2.5)
+        lbl.position = CGPoint(x: 0, y: lbl.fontSize/2-backgroundNode.size.height/2.1)
         lbl.preferredMaxLayoutWidth = backgroundNode.size.width-10
 
         backgroundNode.addChild(lbl)
