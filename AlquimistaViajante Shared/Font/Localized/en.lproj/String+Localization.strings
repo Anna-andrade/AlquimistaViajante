@@ -15,13 +15,13 @@
 "Paragrafo3" = "Keep in mind that mixing separation methods are not the only alternatives to obtaining products of interest. Often, we need to reverse the way of chemical reactions, and our products become reagents, which will have their chemical bond broken, forming their initial components. This is an interesting strategy as you will deal with rare, difficult-to-obtain and high-cost substances. This knowledge you will get in the attentive reading of these pages.";
 
 "ReactionTitle" = "Shake";
-"Reaction" = "to misk";
+"Reaction" = "to mix it";
 
 "BreakChemicalBondTitle" = "Blow";
-"BreakChemicalBond" = "to heat";
+"BreakChemicalBond" = "to heat it";
 
 "FiltrationTitle" = "Press";
-"Filtration" = "to filter";
+"Filtration" = "to filter it";
 
 "tutorial1" = "In the first place, let’s add the reagents we need to make a chemical reaction. Click in the mortar to add the reagents in the beaker.";
 
@@ -31,4 +31,4 @@
 
 "tutorial4" = "A chemist should know that chemical reactions form mistures all the time. You can obtain pure compounds filtering your solution. To do so, click in the filter e press the screen of your device until the pointer of the barometer reaches the blue mark.";
 
-"tutorial5" = "Now you're able to perform chemical reactions by your own! Conglatulations!";
+"tutorial5" = "Now you're able to perform chemical reactions by your own! Congratulations!";
